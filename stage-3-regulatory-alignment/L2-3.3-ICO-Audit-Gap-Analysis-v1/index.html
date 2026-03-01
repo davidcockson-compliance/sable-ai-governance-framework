@@ -1,0 +1,2314 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for UK HR/recruitment AI providers. Built under UK GDPR, DPA 2018, Data (Use and Access) Act 2025, and Equality Act 2010. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../L2-3.2-Equality-Act-2010-Compliance-Map-v1/">
+      
+      
+        <link rel="next" href="../L2-3.4-DPIA-Template-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>ICO Audit Gap Analysis - Sable AI — UK Recruitment AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ico-ai-in-recruitment-audit-gap-analysis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-header__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sable AI — UK Recruitment AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ICO Audit Gap Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-nav__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sable AI — UK Recruitment AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Source-Summary-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regulatory Source Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.3-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.4-Governance-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.5-Roles-and-Responsibilities-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles and Responsibilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L2-3.1-UK-GDPR-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UK GDPR Mapping Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L2-3.2-Equality-Act-2010-Compliance-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equality Act 2010 Compliance Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-ico-audit-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About the ICO Audit Programme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-gap-analysis-ico-seven-key-recommendation-themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1 — Gap Analysis: ICO Seven Key Recommendation Themes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1 — Gap Analysis: ICO Seven Key Recommendation Themes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fair-processing-in-ai-bias-and-accuracy-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fair Processing in AI — Bias and Accuracy Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-adequate-and-accurate-bias-monitoring-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Adequate and Accurate Bias Monitoring Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-transparency-informing-candidates-about-ai-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Transparency — Informing Candidates About AI Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-data-minimisation-avoiding-excess-collection-and-unlawful-repurposing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Minimisation — Avoiding Excess Collection and Unlawful Repurposing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-risk-assessments-completing-dpias-adequately-and-proactively" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Risk Assessments — Completing DPIAs Adequately and Proactively
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-role-allocation-and-contracting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Role Allocation and Contracting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-human-review-of-ai-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Human Review of AI Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-supplementary-ico-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 — Supplementary ICO Findings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2 — Supplementary ICO Findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-discriminatory-search-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Discriminatory Search Functionality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-inferred-protected-characteristic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Inferred Protected Characteristic Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-dpia-completeness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 DPIA Completeness
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 — Summary Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-framework-coverage-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4 — Framework Coverage Assessment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#items-requiring-human-review-before-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Items Requiring Human Review Before Completion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L2-3.4-DPIA-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-4.1-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-4.2-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-4.3-Incident-Response-Plan-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.1-Data-Processing-Agreement-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Processing Agreement Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.2-Candidate-Transparency-Notice-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candidate Transparency Notice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Scout Worked Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Scout Worked Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-UK-GDPR-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout UK GDPR Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-ico-audit-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About the ICO Audit Programme
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-gap-analysis-ico-seven-key-recommendation-themes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1 — Gap Analysis: ICO Seven Key Recommendation Themes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1 — Gap Analysis: ICO Seven Key Recommendation Themes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fair-processing-in-ai-bias-and-accuracy-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fair Processing in AI — Bias and Accuracy Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-adequate-and-accurate-bias-monitoring-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Adequate and Accurate Bias Monitoring Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-transparency-informing-candidates-about-ai-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Transparency — Informing Candidates About AI Processing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-data-minimisation-avoiding-excess-collection-and-unlawful-repurposing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Data Minimisation — Avoiding Excess Collection and Unlawful Repurposing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-risk-assessments-completing-dpias-adequately-and-proactively" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Risk Assessments — Completing DPIAs Adequately and Proactively
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-role-allocation-and-contracting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Role Allocation and Contracting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-human-review-of-ai-outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Human Review of AI Outputs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-supplementary-ico-findings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 — Supplementary ICO Findings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2 — Supplementary ICO Findings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-discriminatory-search-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Discriminatory Search Functionality
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-inferred-protected-characteristic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Inferred Protected Characteristic Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-dpia-completeness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 DPIA Completeness
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 — Summary Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-framework-coverage-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 4 — Framework Coverage Assessment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#items-requiring-human-review-before-completion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Items Requiring Human Review Before Completion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../L2-3.1-UK-GDPR-Mapping-Matrix-v1/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Stage 3 — Regulatory Alignment
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework/edit/main/stage-3-regulatory-alignment/L2-3.3-ICO-Audit-Gap-Analysis-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="ico-ai-in-recruitment-audit-gap-analysis">ICO AI in Recruitment Audit — Gap Analysis</h1>
+<p><strong>Project:</strong> Sable AI Ltd — AI Governance Framework
+<strong>Stage:</strong> Stage 3 — Regulatory Alignment
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-03-01
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Sable AI Ltd data</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document maps the findings and recommendations from the ICO's <em>AI and Recruitment: Outcomes of our AI Audits</em> report (November 2024) against the Sable AI Ltd governance framework. Its function is to confirm what the framework covers, identify where coverage is partial, and flag genuine gaps requiring additional action.</p>
+<p>The ICO's November 2024 report is the most directly applicable enforcement benchmark for Scout: it reflects live audit findings from companies operating CV screening and candidate shortlisting AI tools — the exact use case for which Sable AI Ltd builds and sells Scout. Any recruitment AI provider that cannot demonstrate a response to this report's recommendations faces material regulatory exposure.</p>
+<p><strong>Source document:</strong> ICO, <em>AI and Recruitment: Outcomes of our AI Audits</em>, November 2024 (hereafter: ICO Recruitment Outcomes Report).</p>
+<p><strong>How to use this document:</strong> Sable AI Ltd and any organisation adapting this framework should work through the gap column and confirm, for each "Gap — action required" and "Partially addressed" row, what specific actions are planned and by when. This document is intended to be a living instrument, updated as framework documents are completed and operational controls are implemented.</p>
+<hr />
+<h2 id="about-the-ico-audit-programme">About the ICO Audit Programme</h2>
+<p>The ICO conducted a programme of audits of AI recruitment tool providers and their customers. Key quantitative outcomes:</p>
+<ul>
+<li><strong>296 recommendations</strong> made across all audit engagements</li>
+<li><strong>42 advisory notes</strong> issued</li>
+<li><strong>97%</strong> of recommendations accepted and actioned by recipients</li>
+<li>Audits covered CV screening, candidate scoring, candidate sourcing, and related AI-enabled recruitment tools</li>
+</ul>
+<p>The ICO identified seven headline recommendation themes applicable to all organisations designing and using AI recruitment tools. These form the primary structure of this gap analysis. Additional findings are addressed in the supplementary section.</p>
+<hr />
+<h2 id="part-1-gap-analysis-ico-seven-key-recommendation-themes">Part 1 — Gap Analysis: ICO Seven Key Recommendation Themes</h2>
+<h3 id="1-fair-processing-in-ai-bias-and-accuracy-monitoring">1. Fair Processing in AI — Bias and Accuracy Monitoring</h3>
+<p><strong>ICO finding:</strong> Many providers monitored the accuracy and bias of their AI tools. However, the ICO witnessed instances where there was a lack of accuracy testing. The ICO stated that being "better than random" is insufficient to demonstrate that AI is processing personal information fairly. Providers and recruiters must monitor for potential or actual fairness, accuracy, or bias issues in AI and its outputs, and take appropriate action.</p>
+<table>
+<thead>
+<tr>
+<th>ICO recommendation</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitor AI outputs for bias and accuracy issues</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming)</td>
+<td><strong>Partially addressed</strong> — protocol is planned; no live monitoring controls yet in place</td>
+</tr>
+<tr>
+<td>Establish alert thresholds and escalation for bias signals</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming), <code>L3-4.1-Monitoring-Framework-v1.md</code> (forthcoming)</td>
+<td><strong>Partially addressed</strong> — monitoring framework is planned</td>
+</tr>
+<tr>
+<td>Take corrective action when bias or accuracy issues are detected</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming — includes remediation process)</td>
+<td><strong>Partially addressed</strong> — remediation process defined in protocol (forthcoming)</td>
+</tr>
+<tr>
+<td>Demonstrate fairness beyond accuracy alone</td>
+<td><code>L1-2.2-Risk-Classification-Framework-v1.md</code> (high-risk classification and controls)</td>
+<td><strong>Partially addressed</strong> — risk classification identifies the requirement; operational controls are in monitoring protocol (forthcoming)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall status for this theme: Partially addressed.</strong> The framework acknowledges and plans for this obligation across two forthcoming documents. Gap closes on completion of Stage 4.</p>
+<hr />
+<h3 id="2-adequate-and-accurate-bias-monitoring-data">2. Adequate and Accurate Bias Monitoring Data</h3>
+<p><strong>ICO finding:</strong> AI providers and recruiters must ensure that any special category data processed to monitor for bias and discriminatory outputs is adequate and accurate enough to effectively fulfil this purpose. Inferred or estimated data will not be adequate and accurate enough, and will therefore not comply with data protection law. The ICO found that some providers inferred gender, ethnicity, and other protected characteristics from CV content or candidate names — this processing often occurred without a lawful basis and without the candidate's knowledge.</p>
+<table>
+<thead>
+<tr>
+<th>ICO recommendation</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Do not use inferred or estimated protected characteristic data for bias monitoring</td>
+<td><code>L2-3.2-Equality-Act-2010-Compliance-Map-v1.md</code> (flags inference risk), <code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Art. 9 controls)</td>
+<td><strong>Partially addressed</strong> — the compliance map and GDPR matrix flag the risk and the legal constraint; a specific prohibition on inference-based monitoring requires operational implementation</td>
+</tr>
+<tr>
+<td>Use only adequate and accurate data sources for bias monitoring</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming — addresses this tension directly per Section 7 spec)</td>
+<td><strong>Gap — action required</strong> — the protocol must explicitly specify approved data sources and prohibit inferred data; this has not yet been operationalised</td>
+</tr>
+<tr>
+<td>Ensure a lawful basis exists before processing special category data for monitoring</td>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Art. 9 analysis), <code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — includes Art. 9 risk)</td>
+<td><strong>Partially addressed</strong> — lawful basis question is identified and flagged [LEGAL REVIEW REQUIRED]; no confirmed lawful basis route is yet implemented</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall status for this theme: Partially addressed / Gap.</strong> This is the most legally complex recommendation in the report. The framework identifies the tension between bias monitoring (which requires demographic data) and UK GDPR Art. 9 (which prohibits processing of most special category data without an explicit lawful route). Resolution requires legal advice before the monitoring protocol can be finalised. [LEGAL REVIEW REQUIRED]</p>
+<hr />
+<h3 id="3-transparency-informing-candidates-about-ai-processing">3. Transparency — Informing Candidates About AI Processing</h3>
+<p><strong>ICO finding:</strong> Recruiters must ensure that they inform candidates how their personal information will be processed by AI. The ICO found that detailed privacy information for candidates was consistently absent or inadequate across many providers audited. Providers should either supply this information themselves or ensure the recruiting organisation provides it.</p>
+<table>
+<thead>
+<tr>
+<th>ICO recommendation</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provide candidates with detailed privacy information about AI processing</td>
+<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming)</td>
+<td><strong>Partially addressed</strong> — a candidate-facing template is planned in Stage 5; not yet drafted</td>
+</tr>
+<tr>
+<td>Transparency notice must be provided before or at the point of CV processing</td>
+<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming — includes timing guidance)</td>
+<td><strong>Partially addressed</strong> — delivery timing is a design element of the forthcoming template</td>
+</tr>
+<tr>
+<td>Disclose that AI is used in candidate screening (signposting obligation per DSIT guidance)</td>
+<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming), <code>L1-2.4-Governance-Policy-v1.md</code> (transparency principle)</td>
+<td><strong>Partially addressed</strong> — governance policy establishes the obligation at a policy level; operational delivery is in the forthcoming template</td>
+</tr>
+<tr>
+<td>Address Art. 13/14 UK GDPR disclosure requirements for automated decision-making</td>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Arts. 13, 14, 22C disclosure obligations)</td>
+<td><strong>Addressed</strong> — GDPR matrix specifies disclosure obligations; delivery via transparency notice (forthcoming)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall status for this theme: Partially addressed.</strong> This gap closes on completion of <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> in Stage 5. The ICO audit found this to be a near-universal failing — the transparency notice is therefore a high-priority deliverable.</p>
+<hr />
+<h3 id="4-data-minimisation-avoiding-excess-collection-and-unlawful-repurposing">4. Data Minimisation — Avoiding Excess Collection and Unlawful Repurposing</h3>
+<p><strong>ICO finding:</strong> The ICO was concerned to find tools that collected far more personal information than was necessary. In some cases, personal information was scraped and combined with data from millions of profiles on job networking sites and social media, then used to build searchable candidate databases. Recruiters and candidates were rarely aware of this repurposing. The ICO confirmed this practice was unlawful.</p>
+<table>
+<thead>
+<tr>
+<th>ICO recommendation</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limit data collection to what is necessary for the stated purpose</td>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Art. 5(1)(c) data minimisation control), <code>L1-2.3-Data-Flow-Map-v1.md</code> (data intake controls)</td>
+<td><strong>Addressed</strong> — the GDPR matrix specifies data minimisation obligations; the data flow map defines what data enters Scout's processing pipeline</td>
+</tr>
+<tr>
+<td>Do not scrape or aggregate candidate data from social media without a lawful basis</td>
+<td><code>L1-2.3-Data-Flow-Map-v1.md</code> (defines permissible data sources), <code>L1-2.4-Governance-Policy-v1.md</code> (prohibited use cases)</td>
+<td><strong>Addressed</strong> — Scout's defined data inputs are CV documents submitted via customer workflows; social media aggregation is not part of Scout's defined scope [ASSUMPTION A-002]</td>
+</tr>
+<tr>
+<td>Do not repurpose candidate data for uses incompatible with the original collection purpose</td>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Art. 5(1)(b) purpose limitation control)</td>
+<td><strong>Addressed</strong> — purpose limitation is addressed in the GDPR matrix</td>
+</tr>
+<tr>
+<td>Ensure candidates are aware of how their data is being used and by whom</td>
+<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming)</td>
+<td><strong>Partially addressed</strong> — as per Theme 3 above</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall status for this theme: Addressed</strong> (within the scope of Scout's assumed architecture). The ICO's concern about social media aggregation applies to sourcing tools rather than inbound-application screeners. Scout's assumed data model — processing CVs submitted by candidates through customer workflows — does not include social media scraping. However, this assumption must be verified against the actual product [ASSUMPTION].</p>
+<hr />
+<h3 id="5-risk-assessments-completing-dpias-adequately-and-proactively">5. Risk Assessments — Completing DPIAs Adequately and Proactively</h3>
+<p><strong>ICO finding:</strong> The majority of AI providers had completed a DPIA before processing personal information. However, in some cases DPIAs were completed retrospectively or just prior to the audit. The ICO found that in many cases DPIAs were not sufficiently detailed. Common deficiencies included: absence of a detailed data flow map; failure to consider how data protection principles would be met; inadequate necessity and proportionality assessment; and no consideration of alternative approaches that might achieve the same outcome with less personal information.</p>
+<table>
+<thead>
+<tr>
+<th>ICO recommendation</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complete a DPIA before commencing processing, not retrospectively</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — current document, Part 7 note: completion must precede live processing)</td>
+<td><strong>Addressed</strong> — DPIA template is complete as of this run; Sable AI Ltd must complete the DPIA before Scout processes production candidate data [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>DPIA must include a detailed map of data flows through the AI system</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — Section 1.7), <code>L1-2.3-Data-Flow-Map-v1.md</code></td>
+<td><strong>Addressed</strong> — data flow map is a dedicated Stage 2 document; DPIA references it</td>
+</tr>
+<tr>
+<td>DPIA must include meaningful assessment of necessity and proportionality</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — Section 2)</td>
+<td><strong>Addressed</strong> — DPIA template includes a necessity and proportionality section</td>
+</tr>
+<tr>
+<td>DPIA must consider alternative approaches using less personal information</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — Section 2.3)</td>
+<td><strong>Addressed</strong> — alternatives considered in DPIA Section 2</td>
+</tr>
+<tr>
+<td>DPIA must assess risks to data subjects' rights and freedoms</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — Section 3)</td>
+<td><strong>Addressed</strong> — risk identification section covers rights and freedoms risks</td>
+</tr>
+<tr>
+<td>DPIA must be kept current and reviewed when processing changes</td>
+<td><code>L1-2.4-Governance-Policy-v1.md</code> (review cycle obligation), <code>L3-4.1-Monitoring-Framework-v1.md</code> (forthcoming — triggers for DPIA review)</td>
+<td><strong>Partially addressed</strong> — governance policy specifies review cycle; specific triggers are in monitoring framework (forthcoming)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall status for this theme: Addressed</strong> (template level). The DPIA template provides a sufficiently detailed structure. Gap risk: Sable AI Ltd must ensure the DPIA is populated with real operational data (not assumed values) and completed before Scout processes live candidate data. [ASSUMPTION]</p>
+<hr />
+<h3 id="6-role-allocation-and-contracting">6. Role Allocation and Contracting</h3>
+<p><strong>ICO finding:</strong> Several AI providers incorrectly defined themselves as processors rather than controllers, and had not complied with data protection principles as a result. Some attempted to pass all compliance responsibility to recruiters through deliberately broad or unclear contracts. Contracts were often too vague and failed to specify: what personal information would be processed and how; the responsibilities of each party; technical and organisational measures; or how data would be handled if the contract ended.</p>
+<table>
+<thead>
+<tr>
+<th>ICO recommendation</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Correctly identify whether the AI provider is a controller, processor, or joint controller</td>
+<td><code>L1-2.2-Risk-Classification-Framework-v1.md</code> (controller/processor analysis), <code>L1-2.3-Data-Flow-Map-v1.md</code> (role identification in each data path)</td>
+<td><strong>Addressed</strong> — risk classification framework includes controller/processor determination for each customer type; the data flow map addresses agency and in-house HR customer paths separately</td>
+</tr>
+<tr>
+<td>Contracts must specify what personal data is processed and how</td>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming — Appendix A and B)</td>
+<td><strong>Partially addressed</strong> — DPA template is planned; not yet drafted</td>
+</tr>
+<tr>
+<td>Contracts must clearly set out responsibilities of each party</td>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming), <code>L1-2.5-Roles-and-Responsibilities-v1.md</code></td>
+<td><strong>Partially addressed</strong> — internal RACI is complete; customer-facing contract is forthcoming</td>
+</tr>
+<tr>
+<td>Contracts must specify technical and organisational security measures</td>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming)</td>
+<td><strong>Partially addressed</strong> — DPA template is planned; not yet drafted</td>
+</tr>
+<tr>
+<td>Contracts must address what happens to personal data in AI models at contract end</td>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming — end-of-contract provisions per Section 7 spec)</td>
+<td><strong>Partially addressed</strong> — addressed in the DPA template specification; not yet drafted</td>
+</tr>
+<tr>
+<td>Address the joint controller question for agency customers</td>
+<td><code>L1-2.3-Data-Flow-Map-v1.md</code> (agency customer path and joint controller note), <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming — Appendix A joint controller clauses)</td>
+<td><strong>Partially addressed</strong> — data flow map identifies the joint controller risk; DPA Appendix A will include Art. 26 arrangement; [LEGAL REVIEW REQUIRED] on joint controller determination</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall status for this theme: Partially addressed.</strong> This gap closes substantially on completion of <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> in Stage 5.</p>
+<hr />
+<h3 id="7-human-review-of-ai-outputs">7. Human Review of AI Outputs</h3>
+<p><strong>ICO finding:</strong> The ICO recommended that organisations introduce robust and meaningful human reviews or quality checks of AI outputs so that issues are addressed at an early stage. The ICO also recommended implementing a feedback mechanism for recruiters to report errors. The ICO stated that recruiters should not use AI tools to make automated recruitment decisions where the AI is not designed for this purpose.</p>
+<table>
+<thead>
+<tr>
+<th>ICO recommendation</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Introduce robust and meaningful human review of AI outputs</td>
+<td><code>L1-2.2-Risk-Classification-Framework-v1.md</code> (Art. 22 safeguards; mandatory human review as a control), <code>L1-2.5-Roles-and-Responsibilities-v1.md</code> (human review responsibility assigned)</td>
+<td><strong>Addressed</strong> — mandatory human review before any candidate contact is a core assumption of Scout's design [ASSUMPTION A-007] and is embedded in the risk framework</td>
+</tr>
+<tr>
+<td>Implement a feedback mechanism for recruiters to report AI errors</td>
+<td><code>L3-4.1-Monitoring-Framework-v1.md</code> (forthcoming — includes error-reporting mechanism), <code>L3-4.3-Incident-Response-Plan-v1.md</code> (forthcoming — escalation pathway)</td>
+<td><strong>Partially addressed</strong> — planned in Stage 4 documents; not yet operational</td>
+</tr>
+<tr>
+<td>Do not allow AI to make autonomous recruitment decisions beyond its designed scope</td>
+<td><code>L1-2.2-Risk-Classification-Framework-v1.md</code> (use-case boundary controls), <code>L1-2.4-Governance-Policy-v1.md</code> (approved and prohibited use cases)</td>
+<td><strong>Addressed</strong> — governance policy defines approved use cases; Scout is scoped as a shortlisting and screening support tool, not an autonomous decision-maker</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall status for this theme: Addressed</strong> (at policy and framework level). Operational implementation of the error-reporting mechanism requires Stage 4 monitoring documents.</p>
+<hr />
+<h2 id="part-2-supplementary-ico-findings">Part 2 — Supplementary ICO Findings</h2>
+<p>Beyond the seven key recommendations, the ICO's report identified additional specific findings. These are addressed below.</p>
+<h3 id="21-discriminatory-search-functionality">2.1 Discriminatory Search Functionality</h3>
+<p><strong>ICO finding:</strong> Features in some tools could lead to discrimination by having search functionality that allowed recruiters to filter out candidates with certain protected characteristics.</p>
+<table>
+<thead>
+<tr>
+<th>ICO finding</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Do not build or offer filtering functionality that enables exclusion of candidates by protected characteristic</td>
+<td><code>L1-2.4-Governance-Policy-v1.md</code> (prohibited use cases), <code>L2-3.2-Equality-Act-2010-Compliance-Map-v1.md</code> (indirect discrimination risk)</td>
+<td><strong>Addressed</strong> at policy level. Scout's assumed scope does not include explicit protected-characteristic filter controls [ASSUMPTION]. The governance policy must explicitly prohibit adding such features; the equality compliance map identifies the legal risk</td>
+</tr>
+<tr>
+<td>Audit existing UI and API for unintended protected-characteristic filtering routes</td>
+<td>Not currently addressed by any framework document</td>
+<td><strong>Gap — action required.</strong> A specific design review / UI audit requirement is not currently documented in the framework. Recommend adding this as a standing item in the monitoring framework (forthcoming <code>L3-4.1</code>) or as a named control in the governance policy.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="22-inferred-protected-characteristic-data">2.2 Inferred Protected Characteristic Data</h3>
+<p><strong>ICO finding:</strong> Some providers estimated or inferred gender, ethnicity, and other characteristics from CV content or candidate names. This inferred data was not accurate enough to monitor bias effectively and was often processed without a lawful basis or the candidate's knowledge.</p>
+<table>
+<thead>
+<tr>
+<th>ICO finding</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Do not infer protected characteristics from name, CV content, or demographic proxies</td>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Art. 9 prohibition on processing without lawful basis), <code>L2-3.2-Equality-Act-2010-Compliance-Map-v1.md</code> (proxy discrimination risk)</td>
+<td><strong>Partially addressed</strong> — the legal prohibition is identified; an explicit operational prohibition on inference is not yet documented</td>
+</tr>
+<tr>
+<td>Explicit prohibition on name-based ethnicity inference or age inference from career timeline</td>
+<td>Not currently contained in any framework document as a named engineering constraint</td>
+<td><strong>Gap — action required.</strong> A named engineering control or model configuration constraint prohibiting inference of protected characteristics should be added. This could be addressed in <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming) or in <code>L1-2.2-Risk-Classification-Framework-v1.md</code> as an additional system-level control.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="23-dpia-completeness">2.3 DPIA Completeness</h3>
+<p><strong>ICO finding:</strong> DPIAs in many cases did not include: a detailed data flow map; consideration of data protection principles; meaningful necessity and proportionality assessment; or consideration of alternatives using less personal information.</p>
+<table>
+<thead>
+<tr>
+<th>ICO finding</th>
+<th>Framework document(s)</th>
+<th>Gap status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DPIA must map data flows in detail</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (Section 1.7), <code>L1-2.3-Data-Flow-Map-v1.md</code></td>
+<td><strong>Addressed</strong></td>
+</tr>
+<tr>
+<td>DPIA must address necessity and proportionality</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (Section 2)</td>
+<td><strong>Addressed</strong></td>
+</tr>
+<tr>
+<td>DPIA must consider alternatives to current approach</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (Section 2.3)</td>
+<td><strong>Addressed</strong></td>
+</tr>
+<tr>
+<td>DPIA must not be completed retrospectively — must precede live processing</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (completion requirement)</td>
+<td><strong>Addressed</strong> — explicitly noted in the DPIA template</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-3-summary-table">Part 3 — Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>ICO Theme</th>
+<th>Gap Status</th>
+<th>Stage 4 or 5 action required?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Fair processing / bias monitoring</td>
+<td>Partially addressed</td>
+<td>Yes — <code>L3-4.2</code></td>
+</tr>
+<tr>
+<td>2. Adequate bias monitoring data</td>
+<td>Partially addressed / Gap</td>
+<td>Yes — <code>L3-4.2</code> + legal advice</td>
+</tr>
+<tr>
+<td>3. Transparency to candidates</td>
+<td>Partially addressed</td>
+<td>Yes — <code>L4-5.2</code></td>
+</tr>
+<tr>
+<td>4. Data minimisation</td>
+<td>Addressed</td>
+<td>No</td>
+</tr>
+<tr>
+<td>5. DPIAs</td>
+<td>Addressed</td>
+<td>No (template complete; Sable AI must populate)</td>
+</tr>
+<tr>
+<td>6. Role allocation and contracting</td>
+<td>Partially addressed</td>
+<td>Yes — <code>L4-5.1</code></td>
+</tr>
+<tr>
+<td>7. Human review</td>
+<td>Addressed (policy level)</td>
+<td>Partially — <code>L3-4.1</code>, <code>L3-4.3</code></td>
+</tr>
+<tr>
+<td>2.1 Discriminatory search functionality</td>
+<td>Partially addressed / Gap</td>
+<td>UI audit control needed</td>
+</tr>
+<tr>
+<td>2.2 Inferred protected characteristics</td>
+<td>Gap</td>
+<td>Engineering constraint needed — <code>L3-4.2</code> or <code>L1-2.2</code> update</td>
+</tr>
+<tr>
+<td>2.3 DPIA completeness</td>
+<td>Addressed</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="part-4-framework-coverage-assessment">Part 4 — Framework Coverage Assessment</h2>
+<p><strong>Addressed (no further action at framework level):</strong> 4 of 10 themes are fully addressed within the existing framework documents. These are: data minimisation (Theme 4), DPIA obligation and completeness (Theme 5), human review at policy level (Theme 7), and DPIA completeness (Supplementary 2.3).</p>
+<p><strong>Partially addressed (gaps close on completion of Stage 4/5):</strong> Themes 1, 3, 6, and 7 (partial) will be addressed on completion of <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code>, <code>L3-4.1-Monitoring-Framework-v1.md</code>, <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code>, and <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code>.</p>
+<p><strong>Genuine gaps requiring specific action beyond framework documents:</strong></p>
+<ol>
+<li>
+<p><strong>Theme 2 / Supplementary 2.2 — Inferred protected characteristics and bias monitoring data lawfulness.</strong> The framework identifies the legal risk but does not yet contain a named engineering control prohibiting inference of protected characteristics, nor a confirmed lawful route for demographic monitoring data. This requires both a legal advice instruction and an operational control in the bias monitoring protocol or risk classification framework. [LEGAL REVIEW REQUIRED]</p>
+</li>
+<li>
+<p><strong>Supplementary 2.1 — UI/feature audit for discriminatory filtering.</strong> No standing audit requirement for recruitment tool UI and API exists in the framework. Recommend adding a periodic design review obligation to <code>L3-4.1-Monitoring-Framework-v1.md</code>.</p>
+</li>
+</ol>
+<hr />
+<h2 id="items-requiring-human-review-before-completion">Items Requiring Human Review Before Completion</h2>
+<ul>
+<li>[LEGAL REVIEW REQUIRED] — Confirm the lawful basis under UK GDPR Art. 9 (and DPA 2018 Schedule 1) for processing special category data to monitor for bias in Scout's outputs. Inferred data has been confirmed as unlawful by the ICO. The permitted route (if any) for voluntary diversity monitoring data supplied by candidates requires legal advice.</li>
+<li>[ASSUMPTION] — Scout's data model is assumed not to include social media scraping or profile aggregation from external sources. This assumption must be verified against the actual product architecture before relying on the data minimisation "Addressed" conclusion.</li>
+<li>[ASSUMPTION A-007] — Mandatory human review before candidate contact is a core design assumption. This must be confirmed as a live operational control, not merely a policy commitment.</li>
+</ul>
+<hr />
+<p><em>This document should be updated each time a new framework document is completed, as gap statuses will change. It is not a static record.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

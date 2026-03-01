@@ -1,0 +1,2550 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for UK HR/recruitment AI providers. Built under UK GDPR, DPA 2018, Data (Use and Access) Act 2025, and Equality Act 2010. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../../stage-3-regulatory-alignment/L2-3.4-DPIA-Template-v1/">
+      
+      
+        <link rel="next" href="../L3-4.2-Bias-Monitoring-Protocol-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Monitoring Framework - Sable AI — UK Recruitment AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monitoring-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-header__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sable AI — UK Recruitment AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Monitoring Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-nav__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sable AI — UK Recruitment AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Source-Summary-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regulatory Source Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.3-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.4-Governance-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.5-Roles-and-Responsibilities-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles and Responsibilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.1-UK-GDPR-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UK GDPR Mapping Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.2-Equality-Act-2010-Compliance-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equality Act 2010 Compliance Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.3-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.4-DPIA-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-regulatory-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Regulatory Basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-monitoring-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Monitoring Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-metrics-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Metrics Register
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Metrics Register">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-shortlisting-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Shortlisting Performance Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-human-review-quality-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Human Review Quality Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-candidate-facing-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Candidate-Facing Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-model-performance-and-drift-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Model Performance and Drift Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-bias-proxy-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Bias Proxy Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-data-governance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Data Governance Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-infrastructure-and-api-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Infrastructure and API Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dashboard-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Dashboard Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Dashboard Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-monthly-kpi-report-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Monthly KPI Report (internal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-automated-alerting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Automated Alerting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-tooling-recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Tooling Recommendation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-monitoring-review-cadence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Monitoring Review Cadence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-escalation-and-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Escalation and Governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Cross-References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-regulatory-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Regulatory Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-4.2-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-4.3-Incident-Response-Plan-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.1-Data-Processing-Agreement-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Processing Agreement Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.2-Candidate-Transparency-Notice-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candidate Transparency Notice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Scout Worked Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Scout Worked Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-UK-GDPR-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout UK GDPR Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-regulatory-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Regulatory Basis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-monitoring-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Monitoring Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-metrics-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Metrics Register
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Metrics Register">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-shortlisting-performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Shortlisting Performance Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-human-review-quality-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Human Review Quality Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-candidate-facing-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Candidate-Facing Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-model-performance-and-drift-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Model Performance and Drift Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-bias-proxy-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Bias Proxy Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-data-governance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Data Governance Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-infrastructure-and-api-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Infrastructure and API Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-dashboard-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Dashboard Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Dashboard Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-monthly-kpi-report-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Monthly KPI Report (internal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-automated-alerting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Automated Alerting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-tooling-recommendation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Tooling Recommendation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-monitoring-review-cadence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Monitoring Review Cadence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-escalation-and-governance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Escalation and Governance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Cross-References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-regulatory-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Regulatory Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Stage 4 — Monitoring & Controls
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework/edit/main/stage-4-monitoring-controls/L3-4.1-Monitoring-Framework-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="monitoring-framework">Monitoring Framework</h1>
+<p><strong>Project:</strong> Sable AI Ltd — AI Governance Framework
+<strong>Stage:</strong> Stage 4 — Monitoring &amp; Operational Controls
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-03-01
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Sable AI Ltd data</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This document establishes the operational monitoring framework for Scout, Sable AI Ltd's AI-powered CV screening and candidate shortlisting tool [ASSUMPTION A-002]. It defines the key performance indicators, measurement methods, alert thresholds, and governance processes required to ensure Scout continues to operate accurately, fairly, and in compliance with UK GDPR, Equality Act 2010, and ICO expectations after deployment.</p>
+<p>Monitoring is a legal obligation, not an optional operational practice. UK GDPR Article 5(1)(a)–(e) requires that personal data processing remains lawful, fair, accurate, and limited throughout the processing lifecycle. The ICO's AI in Recruitment Outcomes Report (November 2024) confirms that the ICO actively assesses whether AI providers have "regularly monitored accuracy and bias and swiftly addressed issues throughout the AI lifecycle." The DSIT Responsible AI in Recruitment Guide (March 2024) further confirms that continuous monitoring is required to detect model drift, errors, and bias emerging during live operation.</p>
+<p><strong>Scope:</strong> This framework covers all processing of candidate personal data by Scout, including CV ingestion, Anthropic Claude API processing [ASSUMPTION A-005], structured output generation, and human reviewer interface interactions [ASSUMPTION A-007]. It applies to Sable AI Ltd as data processor and to Sable AI Ltd's customers who are controllers.</p>
+<hr />
+<h2 id="2-regulatory-basis">2. Regulatory Basis</h2>
+<table>
+<thead>
+<tr>
+<th>Obligation</th>
+<th>Source</th>
+<th>Relevance to Scout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ongoing accuracy and fairness</td>
+<td>UK GDPR Art. 5(1)(a)–(d); Art. 25</td>
+<td>Accuracy of shortlisting outputs; fairness to candidates across processing lifecycle</td>
+</tr>
+<tr>
+<td>Data minimisation in monitoring</td>
+<td>UK GDPR Art. 5(1)(c)</td>
+<td>Monitoring methods must not collect excessive personal data</td>
+</tr>
+<tr>
+<td>Regular testing of controls</td>
+<td>UK GDPR Art. 32(1)(d)</td>
+<td>Regular testing and evaluation of technical and organisational security measures</td>
+</tr>
+<tr>
+<td>Breach documentation</td>
+<td>UK GDPR Art. 33(5)</td>
+<td>All breaches recorded regardless of reportability to ICO</td>
+</tr>
+<tr>
+<td>Accountability</td>
+<td>UK GDPR Art. 5(2); Art. 24</td>
+<td>Demonstrate compliance with all monitoring obligations through documented evidence</td>
+</tr>
+<tr>
+<td>Human review of AI outputs</td>
+<td>UK GDPR Art. 22; ICO AI in Recruitment Outcomes Report (Nov 2024)</td>
+<td>Human review before candidate contact; genuine override capability</td>
+</tr>
+<tr>
+<td>Bias and fairness monitoring</td>
+<td>ICO AI in Recruitment Outcomes Report (Nov 2024); DSIT Responsible AI in Recruitment Guide (March 2024)</td>
+<td>Four-fifths rule; periodic testing; KPI reporting to senior management</td>
+</tr>
+<tr>
+<td>Model drift detection</td>
+<td>DSIT Responsible AI in Recruitment Guide (March 2024)</td>
+<td>Post-deployment performance monitoring to prevent accuracy decay</td>
+</tr>
+<tr>
+<td>Evidence retention</td>
+<td>ICO AI in Recruitment Outcomes Report (Nov 2024); UK GDPR Art. 5(2)</td>
+<td>Retain test results and records of remediation actions taken</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-monitoring-principles">3. Monitoring Principles</h2>
+<p><strong>3.1 Proactive, not reactive</strong></p>
+<p>Monitoring must detect issues before they cause candidate harm. Waiting for complaints to surface bias or accuracy problems is insufficient. The DSIT Responsible AI in Recruitment Guide states that "a failure to proactively monitor for these risks can result in the emergence of harms and a reduction in system efficacy." The ICO expects evidence of proactive monitoring, not merely reactive incident records.</p>
+<p><strong>3.2 Evidence-based governance</strong></p>
+<p>All monitoring results must be documented and retained. The ICO expects AI providers to "report key performance indicators for accuracy and bias regularly to senior managers and key stakeholders" and to retain "test results or reports and evidence of actions taken to address issues" (ICO AI in Recruitment Outcomes Report, November 2024).</p>
+<p><strong>3.3 Human feedback as a monitoring input</strong></p>
+<p>Automated metric monitoring must be supplemented by structured human feedback channels — from recruiters and from candidates — because automated performance testing cannot identify every possible harm (DSIT Responsible AI in Recruitment Guide, Contestability and Redress section). Complaints, challenge requests, and recruiter feedback are monitoring inputs, not merely customer service events.</p>
+<p><strong>3.4 Data minimisation</strong></p>
+<p>Monitoring methods must not collect personal data beyond what is strictly necessary for the monitoring purpose. This constraint applies with particular force to demographic data used for bias monitoring. See <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> for the full legal framework governing demographic data collection and use.</p>
+<p><strong>3.5 Proportionality</strong></p>
+<p>Monitoring intensity must be appropriate for an early-stage company [ASSUMPTION A-001]. This framework is designed to be implementable by a 10–15 person team without a dedicated compliance function. Metric collection should be largely automated; manual review time should be targeted at high-risk outputs and threshold breaches.</p>
+<hr />
+<h2 id="4-metrics-register">4. Metrics Register</h2>
+<p>All metrics below are grouped by category. Each metric includes its definition, measurement method, frequency, alert threshold, and responsible owner. Owners are defined by role per <code>L1-2.5-Roles-and-Responsibilities-v1.md</code>.</p>
+<h3 id="41-shortlisting-performance-metrics">4.1 Shortlisting Performance Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Definition</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
+<th>Alert Threshold</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-01</td>
+<td>Shortlisting accuracy rate</td>
+<td>% of Scout shortlist recommendations that a trained human reviewer confirms as appropriate to advance, based on structured sampling</td>
+<td>Random sample of completed shortlisting runs — minimum 5% of outputs per month or 50 outputs (whichever is higher) [ASSUMPTION]</td>
+<td>Monthly</td>
+<td>&lt;80% accuracy on sampled outputs triggers investigation</td>
+<td>CTO</td>
+</tr>
+<tr>
+<td>M-02</td>
+<td>Human review compliance rate</td>
+<td>% of Scout shortlisting outputs formally reviewed by a human recruiter before any candidate contact is made</td>
+<td>Automated flag: candidate contact recorded in Scout audit log before review completion event is logged [ASSUMPTION A-020]</td>
+<td>Continuous (automated); weekly summary report</td>
+<td>&lt;100% is a compliance breach — any instance triggers immediate investigation</td>
+<td>Customer Success Lead</td>
+</tr>
+<tr>
+<td>M-03</td>
+<td>Human override rate</td>
+<td>% of Scout outputs where a human reviewer changes the recommendation (advances a candidate Scout rated below threshold, or rejects one rated above)</td>
+<td>Review audit log — count of override decisions as % of total reviews completed</td>
+<td>Monthly</td>
+<td>&gt;25% override rate may indicate model accuracy degradation requiring investigation [ASSUMPTION]</td>
+<td>CTO</td>
+</tr>
+<tr>
+<td>M-04</td>
+<td>Confidence score distribution</td>
+<td>Distribution of Scout's internal relevance or confidence scores across all shortlisted and rejected candidates per shortlisting run</td>
+<td>API output log analysis — distribution statistics per run</td>
+<td>Per-run; monthly aggregate trend</td>
+<td>Unexpected spike in low-confidence outputs, or marked compression of score range, triggers investigation</td>
+<td>Engineering Lead</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-human-review-quality-metrics">4.2 Human Review Quality Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Definition</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
+<th>Alert Threshold</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-05</td>
+<td>Review completion time</td>
+<td>Average time from Scout output delivery to human review completion</td>
+<td>Timestamped review events in Scout audit log [ASSUMPTION A-020]</td>
+<td>Weekly</td>
+<td>&gt;5 business days average may indicate reviewers bypassing the review step [ASSUMPTION]</td>
+<td>Customer Success Lead</td>
+</tr>
+<tr>
+<td>M-06</td>
+<td>Reviewer challenge rate</td>
+<td>% of candidate shortlisting decisions formally flagged by a reviewer as potentially biased, inaccurate, or requiring re-assessment</td>
+<td>Challenge log entries as % of total reviews</td>
+<td>Monthly</td>
+<td>Any non-zero rate triggers bias investigation protocol per <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
+<td>CTO</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-candidate-facing-metrics">4.3 Candidate-Facing Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Definition</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
+<th>Alert Threshold</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-07</td>
+<td>Candidate complaint rate</td>
+<td>Number of candidates who raise a formal complaint about Scout's assessment of their application, including requests for human review on fairness or accuracy grounds</td>
+<td>Complaints register; intake via customer escalation path</td>
+<td>Monthly</td>
+<td>&gt;1% of candidates processed in any month triggers investigation and DPIA review consideration [ASSUMPTION]</td>
+<td>CTO (acting DPO)</td>
+</tr>
+<tr>
+<td>M-08</td>
+<td>Art. 22 right to human review request rate</td>
+<td>Number of candidates invoking their right under UK GDPR Art. 22 to request human review of a solely automated decision, or exercising the right to contest under Art. 22(3)</td>
+<td>Rights request log maintained by CTO (acting DPO)</td>
+<td>Monthly</td>
+<td>Any sustained volume over 3 consecutive months triggers DPIA review and transparency notice update</td>
+<td>CTO (acting DPO)</td>
+</tr>
+<tr>
+<td>M-09</td>
+<td>Transparency notice delivery rate</td>
+<td>% of candidate data processing events where a compliant transparency notice has been delivered by the recruiter customer prior to Scout processing [ASSUMPTION A-019]</td>
+<td>Customer attestation; periodic contractual audit</td>
+<td>Quarterly</td>
+<td>&lt;100% is a contractual breach requiring customer remediation action</td>
+<td>Customer Success Lead</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-model-performance-and-drift-metrics">4.4 Model Performance and Drift Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Definition</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
+<th>Alert Threshold</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-10</td>
+<td>Shortlisting rate stability</td>
+<td>% of candidates shortlisted per run, tracked over time — stable rates suggest model consistency; unexplained shifts indicate potential drift</td>
+<td>Aggregate run-level statistics from Scout audit log; rolling 3-month baseline</td>
+<td>Per-run; monthly trend analysis</td>
+<td>&gt;15 percentage point shift from rolling 3-month baseline triggers investigation [ASSUMPTION]</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>M-11</td>
+<td>Canary accuracy test</td>
+<td>Whether a set of predefined test CVs with known expected outputs continue to produce consistent Scout recommendations following any model, prompt, or configuration change</td>
+<td>Canary test suite — minimum 10 test CVs covering range of seniority, background, and CV format [ASSUMPTION]</td>
+<td>Before any model or prompt change is deployed; monthly otherwise</td>
+<td>Any canary test failure blocks deployment of the relevant change until investigation complete</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>M-12</td>
+<td>Output format compliance</td>
+<td>% of Scout outputs conforming to the expected structured format: required fields present; no hallucinated content fields; no narrative content outside specification</td>
+<td>Automated output schema validation at API response layer</td>
+<td>Per-run</td>
+<td>&gt;1% format non-compliance in any single run</td>
+<td>Engineering Lead</td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-bias-proxy-metrics">4.5 Bias Proxy Metrics</h3>
+<p>The following metrics address the obligation to monitor for discriminatory impact in Scout's shortlisting outputs. They involve a direct tension between the duty to monitor for bias and UK GDPR constraints on processing demographic (special category) personal data. The legal framework governing the permissible approach to each metric is set out in detail in <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code>. [LEGAL REVIEW REQUIRED] before implementing any approach to demographic data collection for monitoring purposes.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Definition</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
+<th>Alert Threshold</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-13</td>
+<td>Adverse impact ratio — voluntary demographic data</td>
+<td>Where candidate demographic data has been collected on a legally permissible basis (see <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> §3–4): shortlisting rate ratio between the lowest-performing protected-characteristic group and the highest-performing group</td>
+<td>Statistical analysis of shortlisting outcomes segmented by demographic group — applies four-fifths rule (see <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> §5)</td>
+<td>Monthly where data available; otherwise quarterly aggregate</td>
+<td>Adverse impact ratio &lt;0.80 for any monitored group triggers bias investigation per <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
+<td>CTO</td>
+</tr>
+<tr>
+<td>M-14</td>
+<td>Employment gap shortlisting rate</td>
+<td>Shortlisting rate for candidates whose CVs contain employment gaps of &gt;12 months, compared to candidates without such gaps — employment gaps are a recognised proxy for pregnancy/maternity, disability, and caring responsibilities [ASSUMPTION]</td>
+<td>Manual review of sampled rejection outputs where employment gap identified in CV</td>
+<td>Quarterly</td>
+<td>&gt;10% relative rejection-rate difference between gap and no-gap CVs triggers prompt review and bias investigation</td>
+<td>CTO</td>
+</tr>
+<tr>
+<td>M-15</td>
+<td>Aggregate shortlisting rate consistency</td>
+<td>Comparison of overall shortlisting rates across different customer job roles and sectors over time, to detect unexplained rate compression or expansion that might indicate a systemic bias signal</td>
+<td>Aggregate run statistics by customer segment from Scout audit log</td>
+<td>Monthly</td>
+<td>&gt;20 percentage point difference in shortlisting rate across comparable job categories [ASSUMPTION]</td>
+<td>Engineering Lead</td>
+</tr>
+</tbody>
+</table>
+<h3 id="46-data-governance-metrics">4.6 Data Governance Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Definition</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
+<th>Alert Threshold</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-16</td>
+<td>Candidate data retention compliance</td>
+<td>% of candidate personal data records deleted or pseudonymised in accordance with the agreed retention policy [ASSUMPTION A-013: retention periods not yet formally defined]</td>
+<td>Automated check against data creation date and agreed retention period</td>
+<td>Monthly</td>
+<td>Any records exceeding policy retention period triggers immediate deletion and documentation</td>
+<td>CTO (acting DPO)</td>
+</tr>
+<tr>
+<td>M-17</td>
+<td>Data access audit</td>
+<td>Review of all access to candidate personal data in Scout — recruiter users, Sable AI Ltd internal staff, Anthropic sub-processor [ASSUMPTION A-005] — against the access control policy</td>
+<td>Access log review against authorised access list</td>
+<td>Quarterly</td>
+<td>Any access event not matching the authorised access list triggers investigation</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>M-18</td>
+<td>DPIA currency</td>
+<td>Whether <code>L2-3.4-DPIA-Template-v1.md</code> remains current following any material change to Scout's processing: new model version, new data field, new customer segment, new processing purpose</td>
+<td>Manual review trigger on change events; annual calendar trigger otherwise</td>
+<td>Annually; on every material change event</td>
+<td>DPIA not reviewed within 12 months, or following any material change, triggers formal DPIA review</td>
+<td>CTO (acting DPO)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="47-infrastructure-and-api-metrics">4.7 Infrastructure and API Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Metric</th>
+<th>Definition</th>
+<th>Measurement Method</th>
+<th>Frequency</th>
+<th>Alert Threshold</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-19</td>
+<td>Anthropic API availability</td>
+<td>% uptime of the Anthropic Claude API measured at Scout's integration point [ASSUMPTION A-005]</td>
+<td>API health check from Scout application; Anthropic status page monitoring</td>
+<td>Continuous; daily summary report</td>
+<td>Any unplanned outage &gt;30 minutes triggers escalation to Engineering Lead and Customer Success Lead</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>M-20</td>
+<td>API error rate</td>
+<td>% of Anthropic API calls returning a 4xx or 5xx error response</td>
+<td>Scout application error log</td>
+<td>Continuous; daily summary</td>
+<td>&gt;1% error rate in any 1-hour window triggers investigation</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>M-21</td>
+<td>API response latency</td>
+<td>Average time from Scout sending a CV processing request to receiving a structured output from the Anthropic Claude API</td>
+<td>Scout application instrumentation</td>
+<td>Continuous; daily summary</td>
+<td>&gt;10 seconds average latency or &gt;30 second p99 latency in any hour triggers investigation [ASSUMPTION]</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>M-22</td>
+<td>Data transmission integrity</td>
+<td>Confirmation that only extracted CV text and job description text — not raw document files or additional personal data fields — are transmitted to the Anthropic API [ASSUMPTION A-011]</td>
+<td>Quarterly code-level data-flow audit; payload sampling review post each material code change</td>
+<td>Quarterly</td>
+<td>Any payload found to contain personal data beyond CV and JD text triggers immediate investigation and customer notification</td>
+<td>Engineering Lead</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-dashboard-design">5. Dashboard Design</h2>
+<p>The ICO expects organisations to "report key performance indicators for accuracy and bias regularly to senior managers and key stakeholders" and to retain evidence of action taken. For an early-stage company [ASSUMPTION A-001], this means a lightweight but structured governance reporting process, not a complex enterprise BI platform.</p>
+<h3 id="51-monthly-kpi-report-internal">5.1 Monthly KPI Report (internal)</h3>
+<p>A one-page structured monthly report covering the metrics above. Format: metric | current value | alert threshold | status (GREEN / AMBER / RED) | action required.</p>
+<p><strong>Distribution:</strong> Founder/CEO, CTO, Engineering Lead, Customer Success Lead.</p>
+<p><strong>Required content as a minimum:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-01 Shortlisting accuracy rate</td>
+<td>Include sample size and methodology note</td>
+</tr>
+<tr>
+<td>M-02 Human review compliance rate</td>
+<td>Flag any breach instances by customer</td>
+</tr>
+<tr>
+<td>M-03 Human override rate</td>
+<td>Flag &gt;25% instances</td>
+</tr>
+<tr>
+<td>M-07 Candidate complaint rate</td>
+<td>Include complaint type breakdown</td>
+</tr>
+<tr>
+<td>M-10 Shortlisting rate stability</td>
+<td>Trend chart (3-month rolling)</td>
+</tr>
+<tr>
+<td>M-13 Adverse impact ratio</td>
+<td>Where demographic data is available and permissible; note if unavailable</td>
+</tr>
+<tr>
+<td>M-19 API availability</td>
+<td>Monthly uptime percentage</td>
+</tr>
+<tr>
+<td>Incident summary</td>
+<td>Count and severity classification of any incidents per <code>L3-4.3-Incident-Response-Plan-v1.md</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-automated-alerting">5.2 Automated Alerting</h3>
+<p>The following metrics must trigger automated alerts to the responsible owner immediately on threshold breach:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Alert channel</th>
+<th>Escalation recipient</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-02 Human review compliance</td>
+<td>Real-time application alert</td>
+<td>Customer Success Lead; CTO</td>
+</tr>
+<tr>
+<td>M-11 Canary test failure</td>
+<td>Pre-deployment automated block; Engineering alert</td>
+<td>Engineering Lead; CTO</td>
+</tr>
+<tr>
+<td>M-12 Output format compliance</td>
+<td>Per-run application alert</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>M-19 API availability</td>
+<td>Real-time monitoring alert</td>
+<td>Engineering Lead; Customer Success Lead</td>
+</tr>
+<tr>
+<td>M-20 API error rate</td>
+<td>Real-time monitoring alert</td>
+<td>Engineering Lead</td>
+</tr>
+</tbody>
+</table>
+<p>All other metrics: surface in the monthly KPI report. AMBER status requires a documented explanation. RED status requires a written action plan within 5 business days [ASSUMPTION].</p>
+<h3 id="53-tooling-recommendation">5.3 Tooling Recommendation</h3>
+<p>[ASSUMPTION] At an early stage, a full observability or BI platform is likely disproportionate. The recommended approach is:</p>
+<ul>
+<li><strong>Audit log:</strong> Scout application audit log exports to a controlled-access shared store (engineering-managed)</li>
+<li><strong>Monthly report:</strong> Produced by Engineering Lead from log export; reviewed by CTO; distributed to above recipients via internal document channel</li>
+<li><strong>Automated alerts:</strong> Delivered via existing engineering monitoring tooling (e.g., application error monitoring with Slack or email webhook notifications)</li>
+<li><strong>Escalation:</strong> Scale to a purpose-built analytics stack as the company grows, as customer volume increases, or as ICO audit risk increases</li>
+</ul>
+<hr />
+<h2 id="6-monitoring-review-cadence">6. Monitoring Review Cadence</h2>
+<table>
+<thead>
+<tr>
+<th>Review type</th>
+<th>Frequency</th>
+<th>Trigger</th>
+<th>Output</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly KPI report</td>
+<td>Monthly</td>
+<td>Calendar</td>
+<td>Monthly KPI report (Section 5.1)</td>
+<td>Engineering Lead (produce); CTO (review and sign off)</td>
+</tr>
+<tr>
+<td>Bias monitoring report</td>
+<td>Monthly where demographic data available; quarterly minimum</td>
+<td>Calendar and post-model change</td>
+<td>Adverse impact report per <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
+<td>CTO</td>
+</tr>
+<tr>
+<td>Canary / accuracy test</td>
+<td>Monthly and pre-deployment</td>
+<td>Calendar and code/prompt/model change</td>
+<td>Test pass/fail report; deployment gate decision</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>Data access audit</td>
+<td>Quarterly</td>
+<td>Calendar</td>
+<td>Access review report</td>
+<td>Engineering Lead</td>
+</tr>
+<tr>
+<td>DPIA review</td>
+<td>Annual; post-material change</td>
+<td>Calendar and change event</td>
+<td>Updated DPIA per <code>L2-3.4-DPIA-Template-v1.md</code></td>
+<td>CTO (acting DPO)</td>
+</tr>
+<tr>
+<td>Full framework review</td>
+<td>Annual</td>
+<td>Calendar</td>
+<td>Revised monitoring framework; updated thresholds</td>
+<td>CTO</td>
+</tr>
+<tr>
+<td>External bias audit</td>
+<td>Annual minimum; post-significant bias finding</td>
+<td>Calendar</td>
+<td>External audit report; recommendations</td>
+<td>CTO (to commission)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-escalation-and-governance">7. Escalation and Governance</h2>
+<p><strong>7.1 Threshold breach response</strong></p>
+<p>Any metric breaching a RED threshold must be:
+1. Logged in the Scout incident register (reference <code>L3-4.3-Incident-Response-Plan-v1.md</code> for severity classification)
+2. Assigned a named owner and a remediation deadline (within 5 business days [ASSUMPTION])
+3. Reported in the next monthly KPI report with root cause analysis and corrective action</p>
+<p><strong>7.2 Governance escalation</strong></p>
+<p>Where a RED threshold breach relates to any of the following, the matter must be escalated to the Founder/CEO in addition to the CTO:
+- M-02 Human review compliance (Art. 22 safeguards breach)
+- M-07 or M-08 Candidate complaints or rights requests
+- M-13 Adverse impact ratio below 0.80 for any monitored group</p>
+<p><strong>7.3 External notification triggers</strong></p>
+<p>Monitoring findings may trigger external reporting obligations. The conditions and timelines for notifying the ICO under UK GDPR Art. 33 and for considering EHRC engagement are set out in <code>L3-4.3-Incident-Response-Plan-v1.md</code>.</p>
+<p><strong>7.4 Evidence retention</strong></p>
+<p>All monitoring reports, test results, alert records, and action plans must be retained for a minimum of 3 years [ASSUMPTION A-021]. The ICO expects organisations to be able to produce test results and remediation evidence on request.</p>
+<hr />
+<h2 id="8-cross-references">8. Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
+<td>Detailed methodology for M-13–M-15 bias proxy metrics; legal framework for demographic data collection; adverse impact ratio calculation; remediation process</td>
+</tr>
+<tr>
+<td><code>L3-4.3-Incident-Response-Plan-v1.md</code></td>
+<td>Incident definitions, severity levels P1–P3, external notification obligations triggered by monitoring findings</td>
+</tr>
+<tr>
+<td><code>L1-2.5-Roles-and-Responsibilities-v1.md</code></td>
+<td>RACI for monitoring responsibilities</td>
+</tr>
+<tr>
+<td><code>L2-3.4-DPIA-Template-v1.md</code></td>
+<td>DPIA review triggered by material changes detected through monitoring</td>
+</tr>
+<tr>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code></td>
+<td>UK GDPR obligations mapping including Art. 22 and Art. 5</td>
+</tr>
+<tr>
+<td><code>L2-3.2-Equality-Act-2010-Compliance-Map-v1.md</code></td>
+<td>Equality Act discrimination risk context for bias metrics</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-regulatory-sources">9. Regulatory Sources</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Relevant provisions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UK GDPR</td>
+<td>Art. 5(1)(a)–(e), Art. 5(2), Art. 22, Art. 24, Art. 25, Art. 32(1)(d), Art. 33(5)</td>
+</tr>
+<tr>
+<td>ICO AI in Recruitment Outcomes Report (November 2024)</td>
+<td>Bias monitoring; human review; adverse impact ratio; evidence retention; senior reporting obligations</td>
+</tr>
+<tr>
+<td>DSIT Responsible AI in Recruitment Guide (March 2024)</td>
+<td>Model drift; ongoing monitoring; iterative bias audits; contestability</td>
+</tr>
+<tr>
+<td>ICO Guide to Accountability and Governance</td>
+<td>Documentation standards; review cycles; breach registers</td>
+</tr>
+<tr>
+<td>ICO Personal Data Breaches Guidance</td>
+<td>Breach documentation and recording requirements</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

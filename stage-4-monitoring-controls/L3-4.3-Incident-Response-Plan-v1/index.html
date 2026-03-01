@@ -1,0 +1,2369 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for UK HR/recruitment AI providers. Built under UK GDPR, DPA 2018, Data (Use and Access) Act 2025, and Equality Act 2010. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../L3-4.2-Bias-Monitoring-Protocol-v1/">
+      
+      
+        <link rel="next" href="../../stage-5-commercial-packaging/L4-5.1-Data-Processing-Agreement-Template-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Incident Response Plan - Sable AI — UK Recruitment AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#incident-response-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-header__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sable AI — UK Recruitment AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Incident Response Plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-nav__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sable AI — UK Recruitment AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Source-Summary-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regulatory Source Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.3-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.4-Governance-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.5-Roles-and-Responsibilities-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles and Responsibilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.1-UK-GDPR-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UK GDPR Mapping Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.2-Equality-Act-2010-Compliance-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equality Act 2010 Compliance Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.3-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.4-DPIA-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-4.1-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-4.2-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Plan
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-incident-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Incident Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-incident-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Incident Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-severity-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Severity Levels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Severity Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p1-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P1 — Critical
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2-high" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P2 — High
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p3-medium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P3 — Medium
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-severity-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Severity Summary Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-controller-vs-processor-notification-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Controller vs. Processor — Notification Paths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Controller vs. Processor — Notification Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-agency-customer-potential-joint-controller-arrangement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 — Agency Customer (Potential Joint Controller Arrangement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-in-house-hr-customer-controller-processor-arrangement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 — In-House HR Customer (Controller-Processor Arrangement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-anthropic-sub-processor-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 — Anthropic Sub-Processor Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ico-notification-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ICO Notification Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-discrimination-incidents-and-the-ehrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Discrimination Incidents and the EHRC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-root-cause-analysis-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Root Cause Analysis Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-incident-and-near-miss-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Incident and Near-Miss Register
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-candidate-redress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Candidate Redress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-raci-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. RACI Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-plan-review-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Plan Review and Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.1-Data-Processing-Agreement-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Processing Agreement Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.2-Candidate-Transparency-Notice-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candidate Transparency Notice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Scout Worked Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Scout Worked Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-UK-GDPR-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout UK GDPR Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-incident-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Incident Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-incident-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Incident Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-severity-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Severity Levels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Severity Levels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#p1-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P1 — Critical
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2-high" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P2 — High
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p3-medium" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        P3 — Medium
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-severity-summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Severity Summary Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-controller-vs-processor-notification-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Controller vs. Processor — Notification Paths
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Controller vs. Processor — Notification Paths">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-agency-customer-potential-joint-controller-arrangement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 — Agency Customer (Potential Joint Controller Arrangement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-in-house-hr-customer-controller-processor-arrangement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 — In-House HR Customer (Controller-Processor Arrangement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-anthropic-sub-processor-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 — Anthropic Sub-Processor Path
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ico-notification-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ICO Notification Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-discrimination-incidents-and-the-ehrc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Discrimination Incidents and the EHRC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-root-cause-analysis-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Root Cause Analysis Template
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-incident-and-near-miss-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Incident and Near-Miss Register
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-candidate-redress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Candidate Redress
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-raci-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. RACI Reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-plan-review-and-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Plan Review and Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../L3-4.1-Monitoring-Framework-v1/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Stage 4 — Monitoring & Controls
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework/edit/main/stage-4-monitoring-controls/L3-4.3-Incident-Response-Plan-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="incident-response-plan">Incident Response Plan</h1>
+<p><strong>Project:</strong> Sable AI Ltd — AI Governance Framework
+<strong>Stage:</strong> Stage 4 — Monitoring &amp; Controls
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-03-01
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Sable AI Ltd data</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This plan governs the detection, classification, response, notification, documentation, and remediation of incidents arising from Sable AI Ltd's Scout system — an AI-powered CV screening and candidate shortlisting tool [ASSUMPTION: A-002].</p>
+<p>This plan applies to:
+- All personal data breaches involving candidate data processed by Scout
+- Discriminatory or biased shortlisting outputs
+- Model hallucination or accuracy failures affecting candidate assessments
+- Third-party service incidents (Anthropic API outage or data breach) affecting Scout operations [ASSUMPTION: A-005]
+- UK GDPR Article 22 safeguard failures (automated decisions without mandatory human review) [ASSUMPTION: A-007]</p>
+<p><strong>Related documents:</strong>
+- <code>L1-2.5-Roles-and-Responsibilities-v1.md</code> — RACI and accountability structure
+- <code>L3-4.1-Monitoring-Framework-v1.md</code> — detection metrics and alert thresholds
+- <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> — bias monitoring and bias incident escalation
+- <code>L2-3.4-DPIA-Template-v1.md</code> — residual risk assessment for Scout processing
+- <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> — contractual notification obligations by customer type (forthcoming)
+- <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> — candidate communication templates (forthcoming)</p>
+<p><strong>[LEGAL REVIEW REQUIRED]:</strong> Sable AI Ltd's notification obligations under UK GDPR Arts. 33 and 34 differ depending on whether it acts as a joint controller or processor in each customer relationship (see Section 6). This plan requires legal review before operational use.</p>
+<hr />
+<h2 id="2-incident-definition">2. Incident Definition</h2>
+<p>An <strong>incident</strong> is any event that has affected, or has the potential to affect, the confidentiality, integrity, or availability of personal data processed by Scout; or that has resulted in, or may result in, discriminatory outcomes, accuracy failures, or harm to candidates' rights, freedoms, or legitimate interests.</p>
+<p>UK GDPR Art. 4(12) defines a personal data breach as:</p>
+<blockquote>
+<p>"a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored or otherwise processed"</p>
+</blockquote>
+<p>ICO guidance confirms this extends to any security incident affecting the "confidentiality, integrity or availability of personal data" — including, expressly, events causing discrimination, damage to reputation, or "any other significant economic or social disadvantage to the natural person concerned" (ICO, Personal Data Breaches).</p>
+<p>For Scout specifically, discrimination risk is treated as a first-class incident category, not a secondary concern to a data breach. Both must be managed and documented.</p>
+<p><strong>Near-misses</strong> — events that could have caused an incident but did not — must also be logged (Section 10). ICO guidance states: "you should ensure that you record all breaches, regardless of whether or not they need to be reported to the ICO." Near-misses do not require ICO notification but must be documented to satisfy the UK GDPR Art. 5(2) accountability principle.</p>
+<hr />
+<h2 id="3-incident-types">3. Incident Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+<th>Primary Regulatory Hook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Personal Data Breach</td>
+<td>Unauthorised access to, disclosure of, alteration of, or loss of candidate personal data (CVs, assessments, shortlisting scores, contact details) — whether caused by Sable AI Ltd or by Anthropic as sub-processor [ASSUMPTION: A-005]</td>
+<td>UK GDPR Arts. 32–34; ICO breach guidance</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td>Discriminatory Shortlisting Output</td>
+<td>Scout produces shortlisting results that systematically disadvantage candidates on the basis of a protected characteristic under the Equality Act 2010 (race/ethnicity, disability, age, sex, pregnancy/maternity, or others)</td>
+<td>Equality Act 2010; UK GDPR Art. 5(1)(a) lawfulness/fairness; ICO AI in Recruitment Outcomes Report (Nov 2024)</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Model Hallucination / Accuracy Failure</td>
+<td>Scout produces materially false candidate assessments — e.g., attributes qualifications, skills, or characteristics not present in the source CV; or produces outputs with significant accuracy degradation from baseline</td>
+<td>UK GDPR Art. 5(1)(d) accuracy principle; ICO AI in Recruitment findings</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Art. 22 Safeguard Failure</td>
+<td>A candidate is progressed or rejected on the basis of Scout's output without mandatory human review [ASSUMPTION: A-007], in potential breach of UK GDPR Art. 22 safeguards</td>
+<td>UK GDPR Art. 22; ICO AI in Recruitment: "Prevent using AI outputs to make automated recruitment decisions"</td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Third-Party Service Incident</td>
+<td>Anthropic API outage, data breach at Anthropic, or suspension of service affecting Scout's availability or the security of candidate data processed by Anthropic [ASSUMPTION: A-005]</td>
+<td>UK GDPR Art. 33(2) (processor-to-controller notification); DPA sub-processor obligations</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-severity-levels">4. Severity Levels</h2>
+<h3 id="p1-critical">P1 — Critical</h3>
+<p><strong>Definition:</strong> Incident has caused, or is likely to cause, significant harm to a material number of candidates; involves a large-scale personal data breach; constitutes a confirmed pattern of discriminatory shortlisting; or triggers an immediate UK GDPR Art. 33 ICO notification obligation.</p>
+<p><strong>P1 criteria — any one sufficient:</strong>
+- Personal data breach affecting 50 or more candidate records [ASSUMPTION: A-008 — threshold not confirmed against DPIA risk assessment; verify before operational use]
+- Confirmed discriminatory shortlisting affecting a protected characteristic group across multiple roles or customers
+- Complete Anthropic service outage persisting more than four hours, preventing Scout from operating [ASSUMPTION: A-005]
+- ICO investigation, enforcement action, or formal request for information received
+- Evidence of systematic Art. 22 safeguard failure (not an isolated single instance) [ASSUMPTION: A-007]
+- Candidate personal data exposure in a public-facing or widely accessible context</p>
+<p><strong>Detection-to-escalation timeline:</strong>
+| Step | Action | Deadline |
+|---|---|---|
+| 1 | Detecting party notifies CTO/AI Lead [ASSUMPTION: A-001] | Within 1 hour of detection |
+| 2 | CTO/AI Lead notifies Founder/CEO | Within 2 hours of detection |
+| 3 | Founder/CEO + CTO assess ICO notification obligation | Within 4 hours of detection |
+| 4 | If ICO notification required: submit initial notification | Within 72 hours of becoming aware (UK GDPR Art. 33(1)) |
+| 5 | If Anthropic-side breach: notify customer-controller after receiving Anthropic's notification | Without undue delay (UK GDPR Art. 33(2)) |
+| 6 | Notify affected customer(s) | Within 24 hours of confirmed incident |</p>
+<p><strong>External notification requirements:</strong></p>
+<p><strong>ICO (UK GDPR Art. 33):</strong> Where the breach is likely to result in a risk to the rights and freedoms of natural persons, Sable AI Ltd must notify the ICO without undue delay and no later than 72 hours after becoming aware (Art. 33(1)). Notification must contain at minimum (Art. 33(3)):
+- (a) Nature of the breach; categories and approximate number of data subjects and records
+- (b) DPO/contact point name and contact details
+- (c) Likely consequences of the breach
+- (d) Measures taken or proposed, including mitigation</p>
+<p>Where full investigation is incomplete within 72 hours, phased reporting is permitted (UK GDPR Art. 33(4); ICO guidance: "provide whatever relevant information you have" and update "without undue delay"). Use template at Section 7.</p>
+<p><strong>Candidate notification (UK GDPR Art. 34):</strong> Where the breach is likely to result in a <strong>high risk</strong> to the rights and freedoms of candidates, notification to affected individuals is required "without undue delay" (Art. 34(1)). Notification must be in plain language and include the Art. 33(3)(b)(c)(d) information (Art. 34(2)). Where individual notification involves disproportionate effort (large-scale breach), a public communication is required instead (Art. 34(3)(c)). Exemptions: (i) encryption renders data unintelligible to unauthorised persons (Art. 34(3)(a)); (ii) subsequent measures neutralise the high risk (Art. 34(3)(b)).</p>
+<p><strong>EHRC:</strong> See Section 8. Seek legal advice before taking any action. Do not assume proactive EHRC notification is required.</p>
+<p><strong>Required actions:</strong>
+1. Contain: disable the affected feature, revoke access, or isolate the affected data
+2. Preserve evidence: logs, API call records, model outputs, reviewer actions
+3. Open a P1 incident ticket and record the exact time of detection
+4. Notify legal counsel [ASSUMPTION: A-001 — legal counsel arrangement not confirmed]
+5. Assess ICO notification within 4 hours; document the decision and reasoning
+6. Prepare ICO notification (Section 7)
+7. Notify affected customers; co-ordinate candidate communication through customer
+8. Assess candidate notification requirement; document the decision
+9. Begin root cause analysis within 24 hours (template: Section 9)
+10. Document all actions and decisions with timestamps (UK GDPR Art. 33(5))</p>
+<hr />
+<h3 id="p2-high">P2 — High</h3>
+<p><strong>Definition:</strong> Incident has caused, or may cause, harm to a limited number of candidates; involves a personal data breach affecting a small number of records; constitutes a single confirmed discriminatory output; or involves a Scout accuracy failure affecting specific shortlisting decisions.</p>
+<p><strong>P2 criteria — any one sufficient:</strong>
+- Personal data breach affecting 1–49 candidate records [ASSUMPTION: A-008 — threshold not confirmed]
+- Single confirmed discriminatory shortlisting output for a candidate with a protected characteristic
+- Model hallucination or materially false assessment identified for one or more specific candidates (Type C incident)
+- Art. 22 safeguard failure for an individual candidate (single instance) [ASSUMPTION: A-007]
+- Scout accuracy degradation above the threshold defined in <code>L3-4.1-Monitoring-Framework-v1.md</code>
+- Partial Anthropic API outage causing intermittent Scout failures [ASSUMPTION: A-005]</p>
+<p><strong>Detection-to-escalation timeline:</strong>
+| Step | Action | Deadline |
+|---|---|---|
+| 1 | Detecting party notifies Engineering Lead | Within 2 hours of detection |
+| 2 | Engineering Lead and CTO confirm P2 classification | Within 4 hours of detection |
+| 3 | If personal data breach confirmed: notify Founder/CEO | Within 4 hours of detection |
+| 4 | Notify affected customer(s) if their data is affected | Within 48 hours |</p>
+<p><strong>External notification requirements:</strong></p>
+<p><strong>ICO:</strong> Assess whether the breach is "unlikely to result in a risk to the rights and freedoms of natural persons" — if so, ICO notification is not required, but the decision and reasoning must be documented (ICO guidance). If risk is assessed as likely: 72-hour notification applies as for P1. Where a single candidate's data is affected and appropriate mitigations are in place (e.g., pseudonymisation or encryption), risk may be assessed as low — but this assessment must be recorded.</p>
+<p><strong>Candidate notification:</strong> Assess whether the high-risk threshold under Art. 34(1) is met. For a small-scale breach where data is encrypted or pseudonymised, notification may not be required (Art. 34(3)(a)). Document the decision in the incident register.</p>
+<p><strong>EHRC:</strong> See Section 8. Seek legal advice if a confirmed discriminatory output suggests a systemic or recurring issue.</p>
+<p><strong>Required actions:</strong>
+1. Investigate and contain the issue; suspend the affected output if needed
+2. Determine the scope: how many candidates are affected?
+3. Assess ICO notification requirement; document the decision with reasoning
+4. For discriminatory outputs (Type B): withdraw the affected shortlist; notify the customer; flag the affected candidate(s) for fair reconsideration
+5. For accuracy failures (Type C): correct the record where possible; notify the affected candidate(s) via the customer
+6. Begin RCA within 48 hours (template: Section 9)
+7. Cross-reference <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> for activated bias incident thresholds</p>
+<hr />
+<h3 id="p3-medium">P3 — Medium</h3>
+<p><strong>Definition:</strong> Potential issue requiring investigation; no confirmed harm to any candidate; near-miss event; individual candidate complaint about a Scout output; minor data quality or availability issue.</p>
+<p><strong>P3 criteria — any one sufficient:</strong>
+- Suspected but unconfirmed bias signal from monitoring (below alert threshold; requires investigation)
+- Individual candidate complaint or challenge to a Scout shortlisting outcome
+- Minor API error rate above baseline (within operational recovery tolerance)
+- Single data quality issue identified in Scout outputs
+- Near-miss: an event that would have caused a P1 or P2 incident if not caught</p>
+<p><strong>Detection-to-escalation timeline:</strong>
+| Step | Action | Deadline |
+|---|---|---|
+| 1 | Detecting party logs the event in the incident register | Within 24 hours |
+| 2 | Engineering Lead investigates | Within 72 hours |
+| 3 | If investigation reveals P2 or P1 criteria are met: re-classify immediately | On identification |</p>
+<p><strong>External notification requirements:</strong> No immediate ICO or external notification required. Document the event and investigation outcome. If re-classified to P2 or P1: notification obligations apply from the point of re-classification.</p>
+<p><strong>Required actions:</strong>
+1. Log the event in the incident register (Section 10)
+2. Investigate within 72 hours
+3. If candidate complaint: acknowledge receipt within five business days [ASSUMPTION: A-009 — acknowledgement SLA not confirmed]; investigate and respond
+4. If bias signal: initiate bias investigation per <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code>
+5. Document findings; escalate or close</p>
+<hr />
+<h2 id="5-severity-summary-table">5. Severity Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Recruitment AI Examples</th>
+<th>Detection-to-Escalation</th>
+<th>ICO Notification</th>
+<th>Candidate Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1 — Critical</strong></td>
+<td>Large-scale CV data breach; confirmed discriminatory shortlisting pattern across roles; systematic Art. 22 failure; complete Scout outage &gt;4 hrs</td>
+<td>1 hr to CTO; 2 hrs to CEO</td>
+<td>Required within 72 hrs where risk to rights and freedoms (Art. 33(1))</td>
+<td>Required without undue delay where high risk to individuals (Art. 34(1))</td>
+</tr>
+<tr>
+<td><strong>P2 — High</strong></td>
+<td>Small-scale breach (1–49 records); single confirmed discriminatory output; model hallucination affecting individual candidate(s); isolated Art. 22 failure</td>
+<td>2 hrs to Engineering Lead; 4 hrs to CTO</td>
+<td>Assess and document decision; notify if risk likely</td>
+<td>Assess high-risk threshold; document decision</td>
+</tr>
+<tr>
+<td><strong>P3 — Medium</strong></td>
+<td>Suspected bias signal (unconfirmed); candidate complaint; near-miss; minor data quality issue; minor API errors</td>
+<td>24 hrs to Engineering Lead</td>
+<td>Not required — log and document</td>
+<td>Not required — address through complaints process</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-controller-vs-processor-notification-paths">6. Controller vs. Processor — Notification Paths</h2>
+<p>Sable AI Ltd's notification obligations under UK GDPR Arts. 33–34 depend on its role in each customer relationship. <strong>[LEGAL REVIEW REQUIRED]</strong> Refer to <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming) for contractual notification obligations by customer type.</p>
+<h3 id="61-agency-customer-potential-joint-controller-arrangement">6.1 — Agency Customer (Potential Joint Controller Arrangement)</h3>
+<p>Where a recruitment agency uses Scout to screen candidates on behalf of employer clients, Sable AI Ltd may be a <strong>joint controller</strong> rather than a processor [ASSUMPTION: A-003]. Joint controller arrangements are governed by UK GDPR Art. 26.</p>
+<p>Under this arrangement:
+- Both Sable AI Ltd and the agency customer may have independent ICO notification obligations
+- Sable AI Ltd's Art. 33 clock runs from when Sable AI Ltd becomes aware of the breach
+- The DPA with agency customers must specify which party leads ICO notification and candidate communication
+- Both parties must be notified and co-ordinate on the response</p>
+<h3 id="62-in-house-hr-customer-controller-processor-arrangement">6.2 — In-House HR Customer (Controller-Processor Arrangement)</h3>
+<p>Where a corporate HR team uses Scout as a tool, the customer is the <strong>sole controller</strong> and Sable AI Ltd is the <strong>processor</strong>.</p>
+<p>Under UK GDPR Art. 33(2), Sable AI Ltd must notify the customer-controller <strong>without undue delay</strong> after becoming aware of a personal data breach — regardless of whether the 72-hour ICO notification threshold is met. The customer-controller then assesses whether to notify the ICO. Sable AI Ltd must provide sufficient information for the controller to comply with its Art. 33 obligation.</p>
+<h3 id="63-anthropic-sub-processor-path">6.3 — Anthropic Sub-Processor Path</h3>
+<p>Anthropic is a sub-processor of Sable AI Ltd [ASSUMPTION: A-005]. In the event of an incident affecting candidate data processed by Anthropic:
+- Anthropic must notify Sable AI Ltd without undue delay under the terms of the Data Processing Agreement [ASSUMPTION: A-005 — a valid DPA with Anthropic is in place]
+- Sable AI Ltd's 72-hour Art. 33 clock starts from receipt of Anthropic's notification (or from any other point at which Sable AI Ltd becomes aware)
+- Sable AI Ltd must then notify the relevant customer-controller (or co-ordinate with a joint controller) and assess ICO notification</p>
+<hr />
+<h2 id="7-ico-notification-template">7. ICO Notification Template</h2>
+<p>Use for all P1 incidents and applicable P2 incidents where the risk-to-rights threshold is met. Submit via the ICO self-service reporting portal.</p>
+<pre><code>INCIDENT REFERENCE:        [Internal ticket number]
+DATE/TIME INCIDENT DETECTED: [DD/MM/YYYY HH:MM]
+DATE/TIME INCIDENT OCCURRED:  [DD/MM/YYYY HH:MM — if known; otherwise state unknown]
+DATE/TIME ICO NOTIFIED:       [DD/MM/YYYY HH:MM]
+PHASED REPORT:                [ ] Initial notification — further details to follow
+                              [ ] Full notification
+
+── ORGANISATION ────────────────────────────────────────
+Name:                   Sable AI Ltd
+ICO registration no.:   [ASSUMPTION: A-001 — not verified; confirm before use]
+DPO / Contact point:    [Name, email, direct telephone]
+
+── NATURE OF BREACH (Art. 33(3)(a)) ────────────────────
+Breach type(s):         [ ] Confidentiality  [ ] Integrity  [ ] Availability
+Description:
+Categories of personal data involved:
+Approx. no. of data subjects affected:
+Approx. no. of personal data records affected:
+
+── LIKELY CONSEQUENCES (Art. 33(3)(c)) ─────────────────
+[Describe the likely consequences for affected candidates and any discrimination,
+financial, or reputational harm.]
+
+── MEASURES TAKEN OR PROPOSED (Art. 33(3)(d)) ──────────
+Containment measures taken:
+Mitigation measures taken or proposed:
+Remediation actions planned:
+
+── PHASED REPORTING NOTE ────────────────────────────────
+If initial notification: reason full information not yet available:
+Expected date of follow-up notification:
+
+── ADDITIONAL NOTES ─────────────────────────────────────
+[Any other information relevant to the ICO's assessment]
+</code></pre>
+<p><strong>Note on phased reporting:</strong> UK GDPR Art. 33(4) permits phased notification where full investigation is ongoing. ICO guidance confirms: "provide whatever relevant information you have" and update "without undue further delay." Always notify within 72 hours even with incomplete information, then follow up.</p>
+<hr />
+<h2 id="8-discrimination-incidents-and-the-ehrc">8. Discrimination Incidents and the EHRC</h2>
+<p><strong>[LEGAL REVIEW REQUIRED]</strong></p>
+<p>The Equality and Human Rights Commission (EHRC) is the statutory body responsible for enforcing equality legislation in Great Britain, including the Equality Act 2010.</p>
+<p><strong>Important caveat on notification obligation:</strong> The source materials reviewed for this framework — UK GDPR, ICO Personal Data Breaches guidance, ICO AI in Recruitment Outcomes Report (November 2024), and DSIT Responsible AI in Recruitment guidance — do not establish an express statutory obligation to proactively notify the EHRC upon confirming a discrimination incident. This position must be verified against the Equality Act 2010 enforcement provisions and any EHRC guidance on reporting obligations before this plan is used operationally. <strong>Do not treat EHRC notification as a confirmed mandatory requirement without independent legal advice.</strong></p>
+<p><strong>What is established:</strong>
+- The EHRC has statutory enforcement powers under the Equality Act 2006, including formal investigations, unlawful act notices, and applications for court injunctions
+- Where a confirmed discriminatory shortlisting pattern affects a protected group, the EHRC may investigate or take action following a complaint from an affected candidate or an enforcement referral
+- Voluntary proactive engagement with the EHRC may be advisable in serious P1 discrimination incidents as a demonstration of accountability and good faith</p>
+<p><strong>Recommended approach for P1 Type B incidents:</strong>
+1. Seek legal advice on EHRC notification or voluntary engagement before taking any step
+2. Do not make representations to the EHRC without legal counsel
+3. Document the incident and remediation actions taken as evidence of good faith compliance
+4. Cross-reference <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> for the remediation process following a confirmed discriminatory output</p>
+<hr />
+<h2 id="9-root-cause-analysis-template">9. Root Cause Analysis Template</h2>
+<p>Complete for all P1 incidents within seven days of containment. Complete for all P2 incidents within fourteen days.</p>
+<pre><code>INCIDENT REFERENCE:    [Internal ticket number]
+INCIDENT TYPE:         [ ] A — Data Breach  [ ] B — Discriminatory Output
+                       [ ] C — Accuracy Failure  [ ] D — Art. 22 Failure
+                       [ ] E — Third-Party Incident
+SEVERITY:              [ ] P1  [ ] P2  [ ] P3
+DATE INCIDENT OCCURRED: [DD/MM/YYYY]
+DATE RCA COMPLETED:    [DD/MM/YYYY]
+RCA LEAD:              [Name and role]
+
+── 1. INCIDENT DESCRIPTION ──────────────────────────────
+What happened?
+When was it detected?
+How was it detected?
+  [ ] Monitoring alert (source: __________________)
+  [ ] Human reviewer flag
+  [ ] Candidate complaint
+  [ ] Customer report
+  [ ] Anthropic notification [ASSUMPTION: A-005]
+  [ ] Other
+Who was affected (categories and approximate number of candidates)?
+
+── 2. TIMELINE ──────────────────────────────────────────
+[DD/MM/YYYY HH:MM]  — [Event]
+[DD/MM/YYYY HH:MM]  — [Event]
+[DD/MM/YYYY HH:MM]  — ICO notified (if applicable)
+[DD/MM/YYYY HH:MM]  — Candidate(s) notified (if applicable)
+
+── 3. ROOT CAUSE ANALYSIS ───────────────────────────────
+Immediate cause:
+Root cause:
+Contributing factors:
+  System / technical:
+  Process / operational:
+  Human:
+  Third-party / vendor [ASSUMPTION: A-005]:
+
+── 4. IMPACT ASSESSMENT ─────────────────────────────────
+Personal data affected:
+Candidate harm — actual:
+Candidate harm — potential:
+Discriminatory outcome — actual or potential:
+ICO notification triggered?
+  [ ] Yes — notified on [date]  [ ] No — documented reason: ___________
+Candidate notification triggered?
+  [ ] Yes — notified on [date]  [ ] No — documented reason: ___________
+
+── 5. ACTIONS TAKEN ─────────────────────────────────────
+Containment:
+Remediation:
+Candidate redress provided (if applicable):
+System or process changes made:
+
+── 6. CORRECTIVE ACTIONS ────────────────────────────────
+| Action                    | Owner | Target date | Status |
+|---------------------------|-------|-------------|--------|
+|                           |       |             |        |
+
+── 7. LESSONS LEARNED ───────────────────────────────────
+What detection or response worked well?
+What failed or was slower than required?
+What change would prevent recurrence?
+
+── 8. SIGN-OFF ──────────────────────────────────────────
+Completed by:   [Name, role]
+Reviewed by:    [CTO / Founder]
+Date:           [DD/MM/YYYY]
+</code></pre>
+<hr />
+<h2 id="10-incident-and-near-miss-register">10. Incident and Near-Miss Register</h2>
+<p>All incidents and near-misses must be logged and retained. UK GDPR Art. 33(5) requires documentation of "the facts relating to the personal data breach, its effects and the remedial action taken." ICO guidance confirms this requirement extends to all breaches regardless of whether ICO notification is required.</p>
+<p>ICO documentation guidance further states: "it is useful to mark any breaches against your record of processing activities, while also linking to the full breach documentation. This can help you monitor which processing activities the breaches relate to and identify any patterns or potential areas of concern."</p>
+<p><strong>Minimum register fields:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incident ID</td>
+<td>Sequential reference — [YEAR]-[NNN]</td>
+</tr>
+<tr>
+<td>Date detected</td>
+<td>DD/MM/YYYY</td>
+</tr>
+<tr>
+<td>Date of incident</td>
+<td>DD/MM/YYYY (if different from detection)</td>
+</tr>
+<tr>
+<td>Incident type</td>
+<td>A / B / C / D / E (see Section 3)</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td>P1 / P2 / P3 / Near-miss</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Brief description of what occurred</td>
+</tr>
+<tr>
+<td>Data subjects affected</td>
+<td>Approximate number</td>
+</tr>
+<tr>
+<td>ICO notification</td>
+<td>Yes — date / No — reason documented</td>
+</tr>
+<tr>
+<td>Candidate notification</td>
+<td>Yes — date / No — reason documented</td>
+</tr>
+<tr>
+<td>RCA completed</td>
+<td>Yes — reference / No — reason</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Open / Under investigation / Closed</td>
+</tr>
+<tr>
+<td>Closed date</td>
+<td>DD/MM/YYYY</td>
+</tr>
+</tbody>
+</table>
+<p>The incident register must be retained for a minimum period sufficient to demonstrate accountability under UK GDPR Art. 5(2) [ASSUMPTION: A-010 — minimum three years is recommended practice; verify with legal adviser before confirming retention period].</p>
+<hr />
+<h2 id="11-candidate-redress">11. Candidate Redress</h2>
+<p>Where a candidate has been adversely affected by a Scout incident (Type B discriminatory output, Type C accuracy failure, Type D Art. 22 safeguard failure), appropriate redress must be provided.</p>
+<p>DSIT Responsible AI in Recruitment guidance is explicit: "Where harms are identified through routes to contestability, appropriate redress should be made."</p>
+<p><strong>Redress options (select as appropriate for the incident):</strong>
+- Withdrawal of the affected shortlisting decision and rescreening by a human reviewer independent of the original Scout output
+- Exercise of the candidate's data subject rights: access to their data (UK GDPR Art. 15); rectification of inaccurate data (Art. 16); right to object to processing (Art. 21)
+- Direct communication to the candidate (delivered through the customer-controller) acknowledging that an issue occurred and explaining the corrective action taken
+- Referral to the recruiting organisation to ensure the candidate is fairly reconsidered for the role</p>
+<p><strong>[LEGAL REVIEW REQUIRED]:</strong> The appropriate form of redress and which party (Sable AI Ltd or the customer-controller) is responsible for delivering it to the candidate must be determined in the context of the applicable DPA arrangement. Refer to <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming).</p>
+<hr />
+<h2 id="12-raci-reference">12. RACI Reference</h2>
+<p>For the full RACI matrix governing incident response ownership, see <code>L1-2.5-Roles-and-Responsibilities-v1.md</code>.</p>
+<p>Summary of key roles for incident response [ASSUMPTION: A-001]:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Primary responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Founder/CEO</td>
+<td>P1 escalation authority; ICO notification decision; legal counsel engagement</td>
+</tr>
+<tr>
+<td>CTO (likely DPO [ASSUMPTION: A-001])</td>
+<td>P1 and P2 triage lead; technical containment; Art. 33 assessment; ICO notification preparation</td>
+</tr>
+<tr>
+<td>Engineering Lead</td>
+<td>P2 and P3 investigation; monitoring alert response; technical RCA</td>
+</tr>
+<tr>
+<td>Customer Success Lead</td>
+<td>Customer communication; candidate redress co-ordination</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-plan-review-and-testing">13. Plan Review and Testing</h2>
+<p>This plan must be reviewed:
+- <strong>Annually</strong> as a minimum — ICO accountability guidance confirms that obligations are "ongoing" and that controls must be reviewed at "appropriate intervals"
+- <strong>After any P1 incident</strong> — revise within 30 days of RCA completion and sign-off
+- <strong>After significant changes</strong> to Scout's architecture, data types processed, or customer base — per ICO documentation guidance that records must "reflect the current situation"</p>
+<p>This plan must be <strong>tested</strong> against a simulated incident scenario at least annually. ICO guidance states: "you need to be able to detect, investigate, report (both internally and externally) and document any breaches. Having robust policies, procedures and reporting structures helps you do this." Test outcomes must be documented and used to improve the plan.</p>
+<hr />
+<p><em>[LEGAL REVIEW REQUIRED throughout. This plan is a draft framework document built on unverified assumptions about Sable AI Ltd — not a legal compliance certification. All thresholds, timelines, escalation paths, and notification obligations must be verified against Sable AI Ltd's actual regulatory position, DPA arrangements, and legal advice before operational use.]</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

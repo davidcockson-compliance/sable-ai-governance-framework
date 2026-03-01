@@ -1,0 +1,3066 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for UK HR/recruitment AI providers. Built under UK GDPR, DPA 2018, Data (Use and Access) Act 2025, and Equality Act 2010. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../L3-4.1-Monitoring-Framework-v1/">
+      
+      
+        <link rel="next" href="../L3-4.3-Incident-Response-Plan-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Bias Monitoring Protocol - Sable AI — UK Recruitment AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bias-monitoring-protocol" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-header__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sable AI — UK Recruitment AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bias Monitoring Protocol
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-nav__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sable AI — UK Recruitment AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Source-Summary-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regulatory Source Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.1-AI-System-Inventory-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.3-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.4-Governance-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-2-governance-foundation/L1-2.5-Roles-and-Responsibilities-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles and Responsibilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.1-UK-GDPR-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UK GDPR Mapping Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.2-Equality-Act-2010-Compliance-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equality Act 2010 Compliance Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.3-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.4-DPIA-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-4.1-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-why-bias-monitoring-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Why Bias Monitoring Matters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Why Bias Monitoring Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-regulatory-obligation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Regulatory obligation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-equality-act-2010-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Equality Act 2010 risk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-what-the-ico-audit-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 What the ICO audit found
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-legal-constraint-demographic-data-for-bias-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Legal Constraint: Demographic Data for Bias Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Legal Constraint: Demographic Data for Bias Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-why-demographic-data-is-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Why demographic data is required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-why-demographic-data-is-legally-constrained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Why demographic data is legally constrained
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-the-purpose-limitation-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 The purpose limitation problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-permitted-approaches-to-demographic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Permitted approaches to demographic data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-demographic-parity-testing-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Demographic Parity Testing Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Demographic Parity Testing Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Procedure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-adverse-impact-ratio-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Adverse Impact Ratio Calculation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Adverse Impact Ratio Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-the-four-fifths-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 The four-fifths rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-limitations-of-the-four-fifths-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Limitations of the four-fifths rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-alert-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Alert thresholds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-keyword-and-language-bias-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Keyword and Language Bias Flags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Keyword and Language Bias Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-proxy-feature-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Proxy feature risk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-keyword-monitoring-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Keyword monitoring procedure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-alert-threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Alert threshold
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ab-outcome-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. A/B Outcome Tracking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. A/B Outcome Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-pre-change-baseline-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Pre-change baseline capture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-staging-environment-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Staging environment validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-post-deployment-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Post-deployment confirmation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-alert-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Alert thresholds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-alert-thresholds-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Alert Thresholds Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-escalation-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Escalation Path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-remediation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Remediation Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Remediation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-remediation-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Remediation options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-post-remediation-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Post-remediation testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-external-audit-cadence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. External Audit Cadence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. External Audit Cadence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-recommended-cadence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Recommended cadence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-audit-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Audit scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-audit-output-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Audit output requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-evidence-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Evidence Retention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Cross-References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-regulatory-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Regulatory Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L3-4.3-Incident-Response-Plan-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.1-Data-Processing-Agreement-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Processing Agreement Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.2-Candidate-Transparency-Notice-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candidate Transparency Notice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Scout Worked Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Scout Worked Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-UK-GDPR-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout UK GDPR Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose and Scope
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-why-bias-monitoring-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Why Bias Monitoring Matters
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Why Bias Monitoring Matters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-regulatory-obligation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Regulatory obligation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-equality-act-2010-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Equality Act 2010 risk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-what-the-ico-audit-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 What the ICO audit found
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-the-legal-constraint-demographic-data-for-bias-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. The Legal Constraint: Demographic Data for Bias Monitoring
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. The Legal Constraint: Demographic Data for Bias Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-why-demographic-data-is-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Why demographic data is required
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-why-demographic-data-is-legally-constrained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Why demographic data is legally constrained
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-the-purpose-limitation-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 The purpose limitation problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-permitted-approaches-to-demographic-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Permitted approaches to demographic data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-demographic-parity-testing-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Demographic Parity Testing Methodology
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Demographic Parity Testing Methodology">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Concept
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Procedure
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-adverse-impact-ratio-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Adverse Impact Ratio Calculation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Adverse Impact Ratio Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-the-four-fifths-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 The four-fifths rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-limitations-of-the-four-fifths-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Limitations of the four-fifths rule
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-alert-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Alert thresholds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-keyword-and-language-bias-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Keyword and Language Bias Flags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Keyword and Language Bias Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-proxy-feature-risk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Proxy feature risk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-keyword-monitoring-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Keyword monitoring procedure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-alert-threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Alert threshold
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ab-outcome-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. A/B Outcome Tracking
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. A/B Outcome Tracking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Purpose
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-pre-change-baseline-capture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Pre-change baseline capture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-staging-environment-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Staging environment validation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-post-deployment-confirmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Post-deployment confirmation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-alert-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Alert thresholds
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-alert-thresholds-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Alert Thresholds Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-escalation-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Escalation Path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-remediation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Remediation Process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Remediation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101-remediation-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Remediation options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-post-remediation-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Post-remediation testing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-external-audit-cadence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. External Audit Cadence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. External Audit Cadence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-recommended-cadence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Recommended cadence
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-audit-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Audit scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-audit-output-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Audit output requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-evidence-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Evidence Retention
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Cross-References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-regulatory-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Regulatory Sources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../L3-4.1-Monitoring-Framework-v1/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Stage 4 — Monitoring & Controls
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework/edit/main/stage-4-monitoring-controls/L3-4.2-Bias-Monitoring-Protocol-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="bias-monitoring-protocol">Bias Monitoring Protocol</h1>
+<p><strong>Project:</strong> Sable AI Ltd — AI Governance Framework
+<strong>Stage:</strong> Stage 4 — Monitoring &amp; Operational Controls
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-03-01
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Sable AI Ltd data</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This protocol defines the methods Sable AI Ltd uses to detect, measure, and respond to algorithmic bias in Scout's CV screening and candidate shortlisting outputs. It is the most novel document in this framework: unlike breach response or GDPR compliance mapping, bias monitoring for AI recruitment tools is an emerging practice with limited established precedent, and the legal framework governing how demographic data may be collected for monitoring purposes is unsettled.</p>
+<p><strong>This document must be read alongside <code>L3-4.1-Monitoring-Framework-v1.md</code></strong>, which defines the monitoring metrics (M-13–M-15) that this protocol operationalises, and <code>L2-3.2-Equality-Act-2010-Compliance-Map-v1.md</code>, which sets out the underlying Equality Act 2010 discrimination risk.</p>
+<p>[LEGAL REVIEW REQUIRED] — The entire approach to demographic data collection and use for bias monitoring described in this protocol requires review by a qualified data protection and employment lawyer before implementation. The legal constraints identified in Section 3 are significant, and the operational choices in Sections 4–8 must be validated against the actual Sable AI Ltd product architecture, customer contracts, and current applicable law.</p>
+<p><strong>Scope:</strong> This protocol covers all bias monitoring activity related to Scout's shortlisting outputs. It applies to Sable AI Ltd's internal monitoring obligations and to the monitoring expectations Sable AI Ltd should impose on its customers through contractual requirements.</p>
+<hr />
+<h2 id="2-why-bias-monitoring-matters">2. Why Bias Monitoring Matters</h2>
+<h3 id="21-regulatory-obligation">2.1 Regulatory obligation</h3>
+<p>The ICO has confirmed through live audit findings that AI providers processing candidate CVs are expected to proactively monitor for bias. The ICO's AI in Recruitment Outcomes Report (November 2024) states that AI providers assessed during the ICO's audit "had considered the potential for bias in their AI tools, usually by measuring potential bias using an adverse impact analysis methodology." This is not aspirational guidance — it reflects what the ICO found and expects during actual enforcement reviews.</p>
+<p>UK GDPR Articles 5(1)(a)–(e) (lawfulness, fairness, accuracy, data minimisation, storage limitation) and Article 25 (data protection by design and default) together require that Scout's processing does not produce systematically unfair outcomes for protected groups throughout the processing lifecycle. A failure to monitor for bias is itself a failure of the accountability principle (UK GDPR Art. 5(2)).</p>
+<h3 id="22-equality-act-2010-risk">2.2 Equality Act 2010 risk</h3>
+<p>Scout's shortlisting outputs may cause or amplify indirect discrimination against candidates with protected characteristics, including race or ethnic origin, sex, disability, age, and pregnancy or maternity. Where a candidate can demonstrate that Scout's operation put them at a particular disadvantage compared to candidates without that characteristic — and where Sable AI Ltd or its customer cannot objectively justify the practice — this constitutes indirect discrimination under Equality Act 2010 s.19. Regular bias monitoring is the primary operational control for detecting and preventing this outcome before it causes harm and before it becomes visible to the ICO or EHRC.</p>
+<p>See <code>L2-3.2-Equality-Act-2010-Compliance-Map-v1.md</code> for the full protected characteristic risk analysis.</p>
+<h3 id="23-what-the-ico-audit-found">2.3 What the ICO audit found</h3>
+<p>The ICO's November 2024 audit of AI recruitment providers found:</p>
+<ul>
+<li>The majority monitored for bias using adverse impact analysis, commonly applying the four-fifths (80%) rule as a minimum threshold</li>
+<li>Several providers used inferred or estimated demographic data — predicting gender or ethnicity from candidate names or CV content — to measure bias; the ICO found this approach to be both methodologically unreliable and in most cases unlawful under UK GDPR Art. 9</li>
+<li>Providers who identified bias took remediation actions including reducing the weightings of identified data points, excluding proxy features, and re-testing after changes</li>
+<li>Some providers used rollback as a remediation mechanism when bias was introduced by a system update</li>
+<li>AI providers were expected to retain test results and evidence of actions taken, and to report KPIs to senior management regularly</li>
+</ul>
+<p>This protocol is designed to position Scout at or above the standard observed in the ICO's audit.</p>
+<hr />
+<h2 id="3-the-legal-constraint-demographic-data-for-bias-monitoring">3. The Legal Constraint: Demographic Data for Bias Monitoring</h2>
+<p>This section addresses the most legally complex aspect of bias monitoring for recruitment AI directly, rather than deferring it to a legal review note.</p>
+<h3 id="31-why-demographic-data-is-required">3.1 Why demographic data is required</h3>
+<p>Bias monitoring that does not use demographic data — for example, monitoring only aggregate shortlisting rates without segmenting by protected characteristic — cannot reliably detect discriminatory impact. The four-fifths rule requires comparing shortlisting rates between demographic groups. Detecting whether a screening criterion acts as a proxy for a protected characteristic requires knowing which candidates belong to which group. Without demographic data, bias monitoring produces incomplete results.</p>
+<h3 id="32-why-demographic-data-is-legally-constrained">3.2 Why demographic data is legally constrained</h3>
+<p>Data about race or ethnic origin, disability, health, and sex (and inferences drawn to estimate these characteristics) constitutes <strong>special category personal data</strong> under UK GDPR Article 9. Processing such data requires:</p>
+<ol>
+<li>A lawful basis under UK GDPR Art. 6(1)</li>
+<li>An additional condition under UK GDPR Art. 9(2)</li>
+<li>In many cases, an appropriate policy document under DPA 2018 Schedule 1 Part 4</li>
+</ol>
+<p>The ICO has stated explicitly that inferred or estimated demographic data — for example, ethnicity or gender inferred from a candidate's name or CV content — <strong>is still special category data</strong> and must be treated as such. The ICO AI in Recruitment Outcomes Report (November 2024) found that providers using inferred data "did not always treat inferred information as special category data or identify an additional condition for processing" and that "processing special category data without a lawful basis and additional condition is unlikely to be lawful under the UK GDPR."</p>
+<p>The ICO further found that inferred demographic data is methodologically unreliable: AI providers using it "were generally unable to demonstrate that it was reliable and accurate enough to mitigate bias effectively in their AI tools."</p>
+<p><strong>Conclusion: Sable AI Ltd must not use inferred or estimated demographic data for bias monitoring purposes.</strong> [LEGAL REVIEW REQUIRED]</p>
+<h3 id="33-the-purpose-limitation-problem">3.3 The purpose limitation problem</h3>
+<p>The ICO's November 2024 report notes that some providers considered repurposing demographic data collected from successful candidates for equality monitoring of new hires — reusing this data to assess bias in the AI's selection outcomes. The ICO states that "repurposing information in this way is unlikely to comply with the UK GDPR purpose limitation principle and you will need an appropriate lawful basis for this purpose." [LEGAL REVIEW REQUIRED]</p>
+<h3 id="34-permitted-approaches-to-demographic-data">3.4 Permitted approaches to demographic data</h3>
+<p>The following approaches are considered in order of legal robustness:</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Legal basis route</th>
+<th>Key conditions</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Option A — Voluntary equality monitoring by candidates</strong></td>
+<td>Art. 6(1)(a) + Art. 9(2)(a) explicit consent</td>
+<td>Must be genuinely voluntary; no detriment if not provided; purpose clearly explained; separate from any other consent or application process</td>
+<td>Legally permissible if conditions strictly met — preferred approach where operationally feasible [LEGAL REVIEW REQUIRED]</td>
+</tr>
+<tr>
+<td><strong>Option B — Aggregate statistical testing without individual demographic data</strong></td>
+<td>No personal data processing involved</td>
+<td>Use statistical methods comparing overall shortlisting patterns over time — cannot test individual-level protected characteristic impact but can detect systemic anomalies</td>
+<td>Methodologically limited but avoids Art. 9 risk — appropriate as floor-level monitoring where Option A is unavailable</td>
+</tr>
+<tr>
+<td><strong>Option C — Inferred demographic data (e.g., name-origin classification)</strong></td>
+<td>Art. 9 condition required; data accuracy obligations apply</td>
+<td>ICO has stated this is unreliable and in most cases unlawful without Art. 9 condition — not a viable shortcut</td>
+<td><strong>Not recommended</strong> [LEGAL REVIEW REQUIRED]</td>
+</tr>
+<tr>
+<td><strong>Option D — Repurposed equality monitoring data</strong></td>
+<td>New Art. 6 basis required; purpose limitation constraint</td>
+<td>Very high legal risk without specific legal advice; purpose limitation issue is ICO-identified</td>
+<td><strong>Not recommended without specific legal sign-off</strong> [LEGAL REVIEW REQUIRED]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended approach for Sable AI Ltd [ASSUMPTION A-022]:</strong> Implement Option A (voluntary equality monitoring) for customers who can operationalise it within their candidate-facing processes, supplemented by Option B (aggregate statistical testing) as a baseline monitoring approach where voluntary data is unavailable or insufficient in volume. Options C and D are not to be implemented without explicit legal advice confirming a compliant lawful basis and condition. [LEGAL REVIEW REQUIRED]</p>
+<hr />
+<h2 id="4-demographic-parity-testing-methodology">4. Demographic Parity Testing Methodology</h2>
+<p><strong>Regulatory basis:</strong> ICO AI in Recruitment Outcomes Report (November 2024) — the majority of audited AI providers used adverse impact analysis; UK GDPR Art. 5(1)(a) (fairness); Equality Act 2010 s.19 (indirect discrimination); DSIT Responsible AI in Recruitment Guide (March 2024) — bias audit methodology.</p>
+<h3 id="41-concept">4.1 Concept</h3>
+<p>Demographic parity testing assesses whether Scout's shortlisting rate is consistent across demographic groups — i.e., that the probability of being shortlisted does not differ significantly by protected characteristic. A material disparity in shortlisting rates between groups is a bias signal requiring investigation, not an automatic finding of discrimination.</p>
+<p>Demographic parity is a necessary but not sufficient condition for fairness. Scout could achieve demographic parity while being inaccurate for all groups equally, or could be biased in ways not captured by aggregate shortlisting rates. It is used here as a minimum monitoring baseline, not as a complete fairness standard.</p>
+<h3 id="42-procedure">4.2 Procedure</h3>
+<ol>
+<li>
+<p><strong>Data pre-condition:</strong> Confirm that candidate demographic data has been collected under a legally compliant mechanism — Option A (voluntary equality monitoring) with appropriate Art. 6 + Art. 9 documentation in place. Do not proceed with individual-level demographic analysis without this confirmation. [LEGAL REVIEW REQUIRED]</p>
+</li>
+<li>
+<p><strong>Group definition:</strong> Monitor for the following protected characteristic groups, consistent with ICO AI in Recruitment Outcomes Report (November 2024) and DSIT guidance:</p>
+</li>
+<li>Sex (male / female / non-binary where data is provided by the candidate)</li>
+<li>Racial or ethnic origin (using categories provided by the candidate in voluntary monitoring — do not impose external classification schemes)</li>
+<li>Disability status (whether the candidate has declared a disability)</li>
+<li>Age group (recommended: 10-year bands — under 30, 30–39, 40–49, 50–59, 60+ [ASSUMPTION])</li>
+<li>
+<p>Other characteristics listed in Equality Act 2010 s.4 as data collection permits</p>
+</li>
+<li>
+<p><strong>Shortlisting rate calculation:</strong> For each monitored group G across a defined time period:</p>
+</li>
+<li>
+<p>Shortlisting rate(G) = candidates from group G shortlisted ÷ total candidates from group G submitted to Scout in the period</p>
+</li>
+<li>
+<p><strong>Adverse impact ratio calculation:</strong> See Section 5 below.</p>
+</li>
+<li>
+<p><strong>Minimum sample size:</strong> Statistical testing requires sufficient sample sizes to be meaningful. Demographic parity analysis should not be conducted on fewer than 50 candidates per group per reporting period. Where sample sizes are insufficient, record this limitation, apply Option B aggregate methods only, and note the constraint in the monthly monitoring report. [ASSUMPTION]</p>
+</li>
+<li>
+<p><strong>Documentation:</strong> All test parameters, sample sizes, group-level shortlisting rates, and adverse impact ratios must be recorded and retained per Section 12 of this protocol.</p>
+</li>
+</ol>
+<hr />
+<h2 id="5-adverse-impact-ratio-calculation">5. Adverse Impact Ratio Calculation</h2>
+<p><strong>Regulatory basis:</strong> ICO AI in Recruitment Outcomes Report (November 2024) — "In many cases they used the 'four fifths rule' as a minimum threshold. This means the selection rate for any group must be at least four fifths or 80% of the selection rate of the group with the highest rate."</p>
+<h3 id="51-the-four-fifths-rule">5.1 The four-fifths rule</h3>
+<p>The four-fifths (or 80%) rule is the standard adverse impact threshold referenced by the ICO in its 2024 recruitment AI audit. It defines an adverse impact signal as:</p>
+<blockquote>
+<p><strong>Adverse Impact Ratio (AIR) = Shortlisting rate of group G ÷ Shortlisting rate of the highest-performing group</strong></p>
+</blockquote>
+<p>Where AIR &lt; <strong>0.80</strong> for any group G, this constitutes a potential adverse impact finding requiring investigation and response per Section 9.</p>
+<p><strong>Worked example:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Candidates submitted</th>
+<th>Shortlisted</th>
+<th>Shortlisting rate</th>
+<th>AIR</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Group A</td>
+<td>100</td>
+<td>60</td>
+<td>60%</td>
+<td>1.00 (reference)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Group B</td>
+<td>80</td>
+<td>34</td>
+<td>42.5%</td>
+<td>0.71</td>
+<td>RED — below threshold</td>
+</tr>
+<tr>
+<td>Group C</td>
+<td>60</td>
+<td>30</td>
+<td>50%</td>
+<td>0.83</td>
+<td>GREEN — within tolerance</td>
+</tr>
+<tr>
+<td>Group D</td>
+<td>45</td>
+<td>36</td>
+<td>80%</td>
+<td>—</td>
+<td>Sample size may be too small to be meaningful — note limitation</td>
+</tr>
+</tbody>
+</table>
+<p>In this example, Group B's shortlisting rate triggers an investigation. Group A is the reference group (highest rate). Group C is within tolerance. Group D's result should be noted with a sample size caveat.</p>
+<h3 id="52-limitations-of-the-four-fifths-rule">5.2 Limitations of the four-fifths rule</h3>
+<p>The four-fifths rule is a minimum threshold indicator, not a definitive finding of unlawful discrimination. An AIR below 0.80 does not automatically mean Scout is operating unlawfully — it requires investigation to determine whether there is a non-discriminatory explanation (e.g., legitimate differences in qualifications, self-selection patterns, role-specific requirements). Similarly, an AIR above 0.80 does not guarantee the absence of discrimination at individual level or in relation to characteristics where monitoring data is unavailable.</p>
+<p>The ICO expects AI providers to investigate the cause of adverse impact findings and to act on them — not simply to record the threshold breach and move on.</p>
+<h3 id="53-alert-thresholds">5.3 Alert thresholds</h3>
+<table>
+<thead>
+<tr>
+<th>AIR value</th>
+<th>Alert level</th>
+<th>Required action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; 0.80 for any monitored group</td>
+<td><strong>RED</strong></td>
+<td>Immediate escalation to CTO; bias investigation per Section 9; remediation within 30 days [ASSUMPTION]</td>
+</tr>
+<tr>
+<td>0.80–0.85 for any monitored group</td>
+<td><strong>AMBER</strong></td>
+<td>Increase monitoring frequency; document reason; review within 30 days</td>
+</tr>
+<tr>
+<td>≥ 0.85 for all monitored groups</td>
+<td><strong>GREEN</strong></td>
+<td>Continue scheduled monitoring; note in monthly report</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-keyword-and-language-bias-flags">6. Keyword and Language Bias Flags</h2>
+<p><strong>Regulatory basis:</strong> DSIT Responsible AI in Recruitment Guide (March 2024) — bias monitoring should address proxy features for demographic characteristics; ICO AI in Recruitment Outcomes Report (November 2024) — proxy feature monitoring and remediation; Equality Act 2010 s.19 (indirect discrimination through neutral criteria with differential impact).</p>
+<h3 id="61-proxy-feature-risk">6.1 Proxy feature risk</h3>
+<p>Scout processes raw CV text, which may contain terms or features that act as statistical proxies for protected characteristics. If Scout's underlying model weights any of these features in a way that correlates with protected characteristic group membership, it may produce discriminatory shortlisting outcomes without explicitly processing any demographic data. Examples of proxy features relevant to recruitment AI:</p>
+<table>
+<thead>
+<tr>
+<th>Proxy feature</th>
+<th>Protected characteristic at risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Employment gaps (&gt;12 months)</td>
+<td>Pregnancy/maternity; disability; caring responsibilities</td>
+</tr>
+<tr>
+<td>Name-based patterns (name origin, cultural naming conventions)</td>
+<td>Race or ethnic origin</td>
+</tr>
+<tr>
+<td>Educational institution prestige or type</td>
+<td>Socioeconomic background; indirect ethnicity/geography proxy</td>
+</tr>
+<tr>
+<td>Sports or activities with demographic correlations</td>
+<td>Age; sex</td>
+</tr>
+<tr>
+<td>Language style, vocabulary register</td>
+<td>Socioeconomic background; first-language status</td>
+</tr>
+<tr>
+<td>Degree subject or field</td>
+<td>Sex (historically gendered subject distributions)</td>
+</tr>
+</tbody>
+</table>
+<p>The ICO audit (November 2024) specifically noted that inferred demographic proxies in CV text can cause discriminatory impacts even when no protected characteristic data is explicitly processed [ASSUMPTION A-017].</p>
+<h3 id="62-keyword-monitoring-procedure">6.2 Keyword monitoring procedure</h3>
+<ol>
+<li>
+<p><strong>Proxy feature audit (annual and post-change):</strong> Conduct a structured review of Scout's system prompt(s) and any scoring criteria or instructions passed to the Anthropic Claude API, to identify whether any terms or criteria could act as demographic proxies. This audit should be conducted by the CTO with external expert input where available [ASSUMPTION A-023]. Findings documented in the proxy feature audit register.</p>
+</li>
+<li>
+<p><strong>Rejection output sampling (quarterly):</strong> Draw a random sample of minimum 50 candidate rejection decisions per quarter. Review the CVs of rejected candidates for common themes: employment gaps, institution types, name origin patterns, activity keywords. Assess whether any theme correlates with a protected characteristic group. This review is conducted manually by the CTO or a designated reviewer.</p>
+</li>
+<li>
+<p><strong>Job description review (per submission):</strong> Where Sable AI Ltd has access to the job descriptions submitted by customers, review each job description for gendered or otherwise biased language (e.g., "rockstar", "aggressive", "nurturing", "young and dynamic") before or shortly after Scout processes it. Notify the customer of any problematic language identified. [ASSUMPTION]</p>
+</li>
+<li>
+<p><strong>Prompt review (pre-deployment):</strong> Following any update to Scout's system prompt or job description processing template, conduct a dedicated proxy-feature bias review before the update is deployed to production. Any prompt language that could introduce proxy feature weighting must be revised before go-live.</p>
+</li>
+</ol>
+<h3 id="63-alert-threshold">6.3 Alert threshold</h3>
+<p>Any proxy feature audit or rejection sampling exercise that identifies a feature in Scout's scoring logic correlating with a protected characteristic → <strong>RED alert</strong> → Immediate escalation to CTO → Remediation per Section 10.</p>
+<hr />
+<h2 id="7-ab-outcome-tracking">7. A/B Outcome Tracking</h2>
+<p><strong>Regulatory basis:</strong> DSIT Responsible AI in Recruitment Guide (March 2024) — example of rollback when a system update caused a drop in shortlisting rate for female applicants; ICO AI in Recruitment Outcomes Report (November 2024) — "sampling checks on changes to AI algorithms, to prevent introducing errors or bias into AI unintentionally."</p>
+<h3 id="71-purpose">7.1 Purpose</h3>
+<p>A/B outcome tracking compares Scout's shortlisting outcomes before and after a model or prompt change. It is the primary mechanism for detecting bias introduced by a system update. The DSIT Guide provides a direct operational precedent: following a new update, a supplier "conducts the bias audit which identifies a drop in the number of female applicants for positions... The supplier informs the organisation and rolls back the update until the issue can be identified and resolved."</p>
+<h3 id="72-pre-change-baseline-capture">7.2 Pre-change baseline capture</h3>
+<p>Before any material change to Scout's model version, system prompt, scoring criteria, or input/output format [ASSUMPTION]:</p>
+<ol>
+<li>Run Scout's canary test suite (M-11 in <code>L3-4.1-Monitoring-Framework-v1.md</code>) against a test CV set covering demographic proxy profiles: CVs with employment gaps; CVs with names drawn from different cultural origins; CVs from different educational institution types; CVs with varying language register</li>
+<li>Record baseline shortlisting rates and confidence score distributions for the test set</li>
+<li>Record the current adverse impact ratio from the most recent live monitoring period (where available)</li>
+</ol>
+<h3 id="73-staging-environment-validation">7.3 Staging environment validation</h3>
+<ol>
+<li>Deploy the proposed change to a staging environment before production</li>
+<li>Run the identical canary test suite in staging</li>
+<li>Compare staging results against baseline:</li>
+<li>Overall shortlisting rate: should remain within ±10% of baseline [ASSUMPTION]</li>
+<li>Adverse impact ratio by proxy group: should remain above 0.80 for all groups</li>
+<li>Confidence score distribution: should remain consistent</li>
+<li>If staging tests pass all checks: proceed to production deployment</li>
+<li>If any staging test fails: do not deploy; escalate to Engineering Lead and CTO; investigate root cause; roll back or revise</li>
+</ol>
+<h3 id="74-post-deployment-confirmation">7.4 Post-deployment confirmation</h3>
+<p>Following production deployment:
+1. Run abbreviated canary test on production immediately post-deploy
+2. Monitor M-10 (shortlisting rate stability) and M-13 (adverse impact ratio) for the first 30 days post-deployment at increased frequency</p>
+<h3 id="75-alert-thresholds">7.5 Alert thresholds</h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Alert level</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Staging shortlisting rate shift vs. baseline</td>
+<td>&gt;10%</td>
+<td>AMBER</td>
+<td>Investigation before deployment; document justification if proceeding</td>
+</tr>
+<tr>
+<td>Staging adverse impact ratio vs. baseline</td>
+<td>AIR &lt;0.80 (new finding not present in baseline)</td>
+<td>RED</td>
+<td><strong>Do not deploy</strong> — escalation; root cause investigation; rollback or redesign</td>
+</tr>
+<tr>
+<td>Post-deployment shortlisting rate shift</td>
+<td>&gt;15 percentage points from 3-month baseline</td>
+<td>AMBER</td>
+<td>Elevated monitoring; investigation within 5 business days</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-alert-thresholds-summary">8. Alert Thresholds Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Threshold</th>
+<th>Alert Level</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adverse impact ratio — live monitoring</td>
+<td>&lt;0.80 for any group</td>
+<td>RED</td>
+<td>Immediate escalation → bias investigation → remediation within 30 days</td>
+</tr>
+<tr>
+<td>Adverse impact ratio — live monitoring</td>
+<td>0.80–0.85 for any group</td>
+<td>AMBER</td>
+<td>Increase monitoring frequency; review within 30 days; document</td>
+</tr>
+<tr>
+<td>A/B staging test: shortlisting rate shift</td>
+<td>&gt;10% vs. baseline</td>
+<td>AMBER</td>
+<td>Investigate before deployment; document justification if proceeding</td>
+</tr>
+<tr>
+<td>A/B staging test: adverse impact ratio</td>
+<td>&lt;0.80 (new finding)</td>
+<td>RED</td>
+<td>Do not deploy; rollback; escalation</td>
+</tr>
+<tr>
+<td>Keyword/proxy audit: confirmed proxy feature in scoring logic</td>
+<td>Any confirmation</td>
+<td>RED</td>
+<td>Immediate escalation; prompt/model review; interim human override</td>
+</tr>
+<tr>
+<td>Candidate complaint citing bias</td>
+<td>Any</td>
+<td>AMBER minimum</td>
+<td>Trigger reviewer investigation; log in incident register; monthly aggregate escalation</td>
+</tr>
+<tr>
+<td>Reviewer challenge rate</td>
+<td>Non-zero</td>
+<td>AMBER</td>
+<td>Investigation per <code>L3-4.1-Monitoring-Framework-v1.md</code> M-06</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-escalation-path">9. Escalation Path</h2>
+<ol>
+<li>
+<p><strong>Detection:</strong> Monitoring system, Engineering Lead, or reviewer detects a threshold breach or bias signal → immediately logs in Scout incident register with metric, date, value, and threshold breached</p>
+</li>
+<li>
+<p><strong>Notification:</strong> Engineering Lead or monitoring owner notifies CTO within 1 business day of detection</p>
+</li>
+<li>
+<p><strong>Initial assessment (CTO, within 3 business days):</strong> Reviews output data, sampling methodology, adverse impact ratio calculation, and any available proxy feature audit results → determines root cause hypothesis and interim response</p>
+</li>
+<li>
+<p><strong>Bias investigation (CTO, within 5 business days [ASSUMPTION]):</strong></p>
+</li>
+<li>If root cause is identified: proceed directly to remediation per Section 10</li>
+<li>If root cause is unclear: commission targeted sampling review or external review as appropriate</li>
+<li>
+<p>Implement interim human override injection (Section 10.1) while investigation continues</p>
+</li>
+<li>
+<p><strong>Where discrimination impact is confirmed or strongly indicated:</strong></p>
+</li>
+<li>Invoke full remediation process (Section 10)</li>
+<li>Notify Founder/CEO</li>
+<li>Update DPIA record per <code>L2-3.4-DPIA-Template-v1.md</code></li>
+<li>Assess whether an ICO breach notification or voluntary report is required per <code>L3-4.3-Incident-Response-Plan-v1.md</code></li>
+<li>
+<p>Assess whether EHRC engagement is warranted [NOTE: EHRC notification trigger not confirmed in reviewed source documents — this should be verified against EHRC enforcement guidance before inclusion in operational policy] [LEGAL REVIEW REQUIRED]</p>
+</li>
+<li>
+<p><strong>Customer notification:</strong> Where a confirmed or suspected bias event affects a specific customer's shortlisting run, notify that customer within 5 business days of confirmation [ASSUMPTION]</p>
+</li>
+</ol>
+<hr />
+<h2 id="10-remediation-process">10. Remediation Process</h2>
+<p><strong>Regulatory basis:</strong> ICO AI in Recruitment Outcomes Report (November 2024) — providers took remediation actions "reducing the weightings of data points or excluding data points... typically repeated bias tests periodically at the least, or before launching changes"; DSIT Responsible AI in Recruitment Guide (March 2024) — rollback example; ICO extract on "swiftly addressed issues throughout the AI lifecycle."</p>
+<h3 id="101-remediation-options">10.1 Remediation options</h3>
+<p>The following remediation options are available in order of ascending disruption:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prompt adjustment</strong></td>
+<td>Revise Scout's system prompt to remove or reduce the weight of an identified proxy feature; re-test immediately post-change</td>
+<td>When proxy feature is identifiable in prompt logic; change is low-risk and reversible</td>
+</tr>
+<tr>
+<td><strong>Exclusion or de-weighting</strong></td>
+<td>Add identified proxy terms or features to an explicit exclusion list or reduce their weight in Scout's scoring instructions</td>
+<td>When prompt adjustment alone is insufficient; proxy feature clearly isolated</td>
+</tr>
+<tr>
+<td><strong>Human override injection</strong></td>
+<td>Require mandatory human review for all candidates meeting the profile of the affected group until root cause is resolved; override replaces automated shortlisting outcome</td>
+<td>Immediate interim measure when adverse impact is confirmed and root cause is unknown or cannot be immediately resolved</td>
+</tr>
+<tr>
+<td><strong>Model rollback</strong></td>
+<td>Revert to the previous stable model version or prompt version</td>
+<td>When bias was introduced by a specific update and the change cannot be safely remediated forward</td>
+</tr>
+<tr>
+<td><strong>Shortlisting suspension</strong></td>
+<td>Suspend Scout's shortlisting function for the affected role, customer, or customer segment while investigation continues</td>
+<td>Last resort where no interim remediation can be applied and the risk of continued discriminatory output is high</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-post-remediation-testing">10.2 Post-remediation testing</h3>
+<p>Following any remediation action, regardless of which option was applied:</p>
+<ol>
+<li>Run the full canary test suite to confirm the adverse impact has been resolved in testing</li>
+<li>Monitor the adverse impact ratio for the next live shortlisting batch at elevated frequency (weekly for the first month post-remediation [ASSUMPTION])</li>
+<li>Document: cause identified, remediation applied, canary test results, residual risk assessment, monitoring plan</li>
+<li>If adverse impact ratio remains below 0.80 after remediation: escalate to CTO for model redesign consideration and commission external audit</li>
+<li>If adverse impact ratio returns to or above 0.85 after remediation: revert to standard monitoring frequency; document resolution; retain all remediation records</li>
+</ol>
+<hr />
+<h2 id="11-external-audit-cadence">11. External Audit Cadence</h2>
+<p><strong>Regulatory basis:</strong> ICO AI in Recruitment Outcomes Report (November 2024) — "Engage cognitive behavioural and psychometric experts to regularly test and review AI logic, scoring, and outputs for potential accuracy or bias issues"; DSIT Responsible AI in Recruitment Guide (March 2024) — "The organisation asks their supplier to run repeated bias audits every six months, and/or when major updates to the system are released."</p>
+<h3 id="111-recommended-cadence">11.1 Recommended cadence</h3>
+<p>[ASSUMPTION A-023] Sable AI Ltd has not yet commissioned an external bias audit. The following cadence is the recommended minimum:</p>
+<table>
+<thead>
+<tr>
+<th>Trigger</th>
+<th>External audit scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Annual minimum</td>
+<td>Full bias audit of Scout's shortlisting outputs across all live customers; adverse impact analysis; proxy feature review; assessment of internal monitoring adequacy</td>
+</tr>
+<tr>
+<td>Following any RED-level bias finding</td>
+<td>Targeted audit of the affected component or workflow; independent assessment of root cause and remediation</td>
+</tr>
+<tr>
+<td>Before any major model update (version change; significant prompt restructure)</td>
+<td>Pre-deployment audit to validate that the change does not introduce new bias</td>
+</tr>
+<tr>
+<td>Before any significant customer or market expansion (new sector; new geographic market)</td>
+<td>Assessment of current bias controls for fitness in the new context</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-audit-scope">11.2 Audit scope</h3>
+<p>External auditors should be provided access to:
+- Scout's system prompt(s) and scoring logic documentation
+- Sample CV and job description datasets (pseudonymised where possible and where permissible)
+- Bias monitoring reports from the preceding 12 months
+- Human reviewer override logs
+- Adverse impact ratio calculations from the preceding period
+- Canary test suite and results</p>
+<h3 id="113-audit-output-requirements">11.3 Audit output requirements</h3>
+<p>External audit reports must include:
+- Adverse impact analysis for each monitored protected characteristic dimension
+- Assessment of proxy feature risk in Scout's processing logic
+- Comparison of Scout's methodology against current ICO and DSIT guidance
+- Remediation recommendations with prioritisation
+- Independent assessment of whether Sable AI Ltd's internal monitoring is adequate to detect the bias risks identified</p>
+<p>External audit reports must be retained for a minimum of 3 years [ASSUMPTION] and must be made available to the ICO on request.</p>
+<hr />
+<h2 id="12-evidence-retention">12. Evidence Retention</h2>
+<p><strong>Regulatory basis:</strong> ICO AI in Recruitment Outcomes Report (November 2024) — retain "test results or reports and evidence of actions you've taken to address issues"; UK GDPR Art. 5(2) — accountability; UK GDPR Art. 33(5) — breach documentation; ICO Guide to Accountability and Governance — linked evidence architecture.</p>
+<table>
+<thead>
+<tr>
+<th>Record type</th>
+<th>Minimum retention period</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monthly bias monitoring reports</td>
+<td>3 years [ASSUMPTION]</td>
+<td>Secure internal controlled-access store</td>
+</tr>
+<tr>
+<td>Adverse impact ratio calculations (per period)</td>
+<td>3 years</td>
+<td>Include sample sizes, group definitions, methodology notes</td>
+</tr>
+<tr>
+<td>Canary test results</td>
+<td>3 years</td>
+<td>Version-controlled; linked to associated model/prompt version</td>
+</tr>
+<tr>
+<td>A/B test results (pre/post deployment)</td>
+<td>3 years</td>
+<td>Linked to associated deployment record</td>
+</tr>
+<tr>
+<td>Keyword/proxy feature audit reports</td>
+<td>3 years</td>
+<td>Include date, scope, findings, and action taken</td>
+</tr>
+<tr>
+<td>Bias incident escalation and investigation records</td>
+<td>3 years</td>
+<td>Linked to incident register per <code>L3-4.3-Incident-Response-Plan-v1.md</code></td>
+</tr>
+<tr>
+<td>Remediation action records</td>
+<td>3 years</td>
+<td>Include cause, remediation applied, post-remediation test results</td>
+</tr>
+<tr>
+<td>External audit reports</td>
+<td>3 years minimum; longer where findings remain active</td>
+<td>Treated as accountability evidence under UK GDPR Art. 5(2)</td>
+</tr>
+<tr>
+<td>Demographic data used for Option A voluntary monitoring</td>
+<td>Retain only as long as needed for the monitoring purpose; delete when no longer required</td>
+<td>Requires Art. 9-compliant access controls and a separate retention policy [LEGAL REVIEW REQUIRED]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-cross-references">13. Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>L3-4.1-Monitoring-Framework-v1.md</code></td>
+<td>Metrics M-13–M-15 that this protocol operationalises; monitoring governance, dashboard design, review cadence</td>
+</tr>
+<tr>
+<td><code>L3-4.3-Incident-Response-Plan-v1.md</code></td>
+<td>Escalation path when bias finding meets incident threshold; ICO notification decision tree</td>
+</tr>
+<tr>
+<td><code>L2-3.2-Equality-Act-2010-Compliance-Map-v1.md</code></td>
+<td>Protected characteristics at risk; EHRC enforcement context; EA 2010 indirect discrimination analysis</td>
+</tr>
+<tr>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code></td>
+<td>Art. 9 lawful basis for demographic monitoring data; purpose limitation constraints; Art. 22 safeguards</td>
+</tr>
+<tr>
+<td><code>L2-3.4-DPIA-Template-v1.md</code></td>
+<td>DPIA update required on confirmation of bias finding; living-DPIA obligations</td>
+</tr>
+<tr>
+<td><code>L1-2.5-Roles-and-Responsibilities-v1.md</code></td>
+<td>RACI for bias monitoring responsibilities</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="14-regulatory-sources">14. Regulatory Sources</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Relevant provisions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UK GDPR</td>
+<td>Art. 5(1)(a)–(e), Art. 5(2), Art. 9(2), Art. 22, Art. 25; Recital 71 (profiling and fairness)</td>
+</tr>
+<tr>
+<td>DPA 2018</td>
+<td>Schedule 1 — conditions for processing special category data; Part 4 (appropriate policy document requirement)</td>
+</tr>
+<tr>
+<td>Equality Act 2010</td>
+<td>s.4 (protected characteristics); s.19 (indirect discrimination); s.20–21 (duty to make reasonable adjustments)</td>
+</tr>
+<tr>
+<td>ICO AI in Recruitment Outcomes Report (November 2024)</td>
+<td>Adverse impact ratio; four-fifths rule; inferred demographics findings; evidence retention; remediation examples</td>
+</tr>
+<tr>
+<td>DSIT Responsible AI in Recruitment Guide (March 2024)</td>
+<td>Bias audit definition and methodology; iterative bias audits; six-month cadence example; rollback precedent; contestability</td>
+</tr>
+<tr>
+<td>ICO Guide to Accountability and Governance</td>
+<td>Documentation obligations; review cycles; linked evidence architecture</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

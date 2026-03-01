@@ -1,0 +1,2119 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An open-source AI governance framework for UK HR/recruitment AI providers. Built under UK GDPR, DPA 2018, Data (Use and Access) Act 2025, and Equality Act 2010. A speculative demonstration piece — not a legal compliance certification.
+">
+      
+      
+        <meta name="author" content="David Cockson">
+      
+      
+      
+        <link rel="prev" href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Source-Summary-v1/">
+      
+      
+        <link rel="next" href="../L1-2.2-Risk-Classification-Framework-v1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>AI System Inventory - Sable AI — UK Recruitment AI Governance Framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-system-inventory-scout" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-header__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sable AI — UK Recruitment AI Governance Framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI System Inventory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sable AI — UK Recruitment AI Governance Framework" class="md-nav__button md-logo" aria-label="Sable AI — UK Recruitment AI Governance Framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sable AI — UK Recruitment AI Governance Framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    sable-ai-governance-framework
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DISCLAIMER/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disclaimer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ASSUMPTIONS-LOG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assumptions Log
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Regulatory Orientation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 1 — Regulatory Orientation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orientation Note
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-1-regulatory-orientation/STAGE1-Regulatory-Source-Summary-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regulatory Source Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Governance Foundation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 2 — Governance Foundation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI System Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-of-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose of This Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-system-registry-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. System Registry Entry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. System Registry Entry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-core-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Core Identity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-purpose-and-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Purpose and Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-underlying-model-and-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Underlying Model and Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-data-processed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Data Processed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-customer-segments-and-data-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Customer Segments and Data Relationships
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-human-oversight-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Human Oversight Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-regulatory-classification-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Regulatory Classification Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sub-processor-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sub-Processor Chain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-assumptions-flagged-in-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Assumptions Flagged in This Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cross-References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L1-2.2-Risk-Classification-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Classification Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L1-2.3-Data-Flow-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Flow Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L1-2.4-Governance-Policy-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../L1-2.5-Roles-and-Responsibilities-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles and Responsibilities
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 3 — Regulatory Alignment
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 3 — Regulatory Alignment
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.1-UK-GDPR-Mapping-Matrix-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UK GDPR Mapping Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.2-Equality-Act-2010-Compliance-Map-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equality Act 2010 Compliance Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.3-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-3-regulatory-alignment/L2-3.4-DPIA-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DPIA Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 4 — Monitoring & Controls
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 4 — Monitoring & Controls
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-4.1-Monitoring-Framework-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Monitoring Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-4.2-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-4-monitoring-controls/L3-4.3-Incident-Response-Plan-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Incident Response Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 5 — Commercial Packaging
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Stage 5 — Commercial Packaging
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.1-Data-Processing-Agreement-Template-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Processing Agreement Template
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stage-5-commercial-packaging/L4-5.2-Candidate-Transparency-Notice-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Candidate Transparency Notice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 2 — Scout Worked Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 2 — Scout Worked Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-System-Profile-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout System Profile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-UK-GDPR-Mapping-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout UK GDPR Mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-ICO-Audit-Gap-Analysis-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout ICO Audit Gap Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2-worked-examples/P2-Scout-Bias-Monitoring-Protocol-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scout Bias Monitoring Protocol
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-purpose-of-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Purpose of This Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-system-registry-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. System Registry Entry
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. System Registry Entry">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-core-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Core Identity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-purpose-and-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Purpose and Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-underlying-model-and-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Underlying Model and Infrastructure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-data-processed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Data Processed
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-customer-segments-and-data-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Customer Segments and Data Relationships
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-human-oversight-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Human Oversight Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-regulatory-classification-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Regulatory Classification Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-sub-processor-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Sub-Processor Chain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-assumptions-flagged-in-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Assumptions Flagged in This Document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cross-References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Stage 2 — Governance Foundation
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/davidcockson-compliance/sable-ai-governance-framework/edit/main/stage-2-governance-foundation/L1-2.1-AI-System-Inventory-v1.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="ai-system-inventory-scout">AI System Inventory — Scout</h1>
+<p><strong>Project:</strong> Sable AI Ltd — AI Governance Framework
+<strong>Stage:</strong> Stage 2 — Governance Foundation
+<strong>Status:</strong> Draft
+<strong>Version:</strong> v1
+<strong>Date:</strong> 2026-03-01
+<strong>Assumptions:</strong> Built on outline assumptions — not verified against real Sable AI Ltd data</p>
+<hr />
+<h2 id="1-purpose-of-this-document">1. Purpose of This Document</h2>
+<p>This document is the system registry entry for Scout, Sable AI Ltd's AI-powered CV screening and candidate shortlisting product. It records the technical and operational characteristics of Scout as the foundation for:</p>
+<ul>
+<li>Risk classification — <code>L1-2.2-Risk-Classification-Framework-v1.md</code></li>
+<li>Data flow mapping — <code>L1-2.3-Data-Flow-Map-v1.md</code></li>
+<li>Downstream regulatory alignment, monitoring, and commercial packaging documents</li>
+</ul>
+<p>All infrastructure and operational fields are populated from assumed company characteristics. Fields relying on unverified assumptions are marked <code>[ASSUMPTION]</code>.</p>
+<hr />
+<h2 id="2-system-registry-entry">2. System Registry Entry</h2>
+<h3 id="21-core-identity">2.1 Core Identity</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>System name</strong></td>
+<td>Scout</td>
+</tr>
+<tr>
+<td><strong>System owner</strong></td>
+<td>Sable AI Ltd</td>
+</tr>
+<tr>
+<td><strong>Version documented</strong></td>
+<td>Production deployment — version not confirmed [ASSUMPTION]</td>
+</tr>
+<tr>
+<td><strong>Date of this entry</strong></td>
+<td>2026-03-01</td>
+</tr>
+<tr>
+<td><strong>Registry maintained by</strong></td>
+<td>CTO / AI Lead [ASSUMPTION] — see <code>L1-2.5-Roles-and-Responsibilities-v1.md</code> (forthcoming)</td>
+</tr>
+<tr>
+<td><strong>Review frequency</strong></td>
+<td>Annual minimum; on material system change</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-purpose-and-function">2.2 Purpose and Function</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary purpose</strong></td>
+<td>AI-powered screening and shortlisting of job candidates based on CV content assessed against a job description</td>
+</tr>
+<tr>
+<td><strong>Secondary functions</strong></td>
+<td>Candidate ranking by suitability; structured assessment output for recruiter review</td>
+</tr>
+<tr>
+<td><strong>AI type</strong></td>
+<td>Natural language processing (NLP) via large language model (LLM) applied to text-based CV and job description content [ASSUMPTION]</td>
+</tr>
+<tr>
+<td><strong>Decision type produced</strong></td>
+<td>Recommendation and ranking — Scout produces a ranked or scored shortlist for mandatory human review; it does not issue final hiring decisions [ASSUMPTION — A-007]</td>
+</tr>
+<tr>
+<td><strong>Intended users</strong></td>
+<td>Recruiters and HR professionals employed by or contracted to Sable AI Ltd's customers</td>
+</tr>
+<tr>
+<td><strong>Deployment model</strong></td>
+<td>Software-as-a-service (SaaS) — customer-facing web application [ASSUMPTION]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-underlying-model-and-infrastructure">2.3 Underlying Model and Infrastructure</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Underlying AI model</strong></td>
+<td>Anthropic Claude API [ASSUMPTION — A-002]</td>
+</tr>
+<tr>
+<td><strong>Model provider</strong></td>
+<td>Anthropic PBC</td>
+</tr>
+<tr>
+<td><strong>Model function</strong></td>
+<td>Scout sends extracted CV text and job description content to the Claude API; the model returns a structured assessment or ranked shortlist output [ASSUMPTION]</td>
+</tr>
+<tr>
+<td><strong>Candidate data used for model training</strong></td>
+<td>No — [ASSUMPTION — A-005]: candidate data submitted through Scout is not used to train Anthropic's foundation models. This must be confirmed against the current Anthropic API usage policy and the terms of the Data Processing Agreement between Sable AI Ltd and Anthropic</td>
+</tr>
+<tr>
+<td><strong>Cloud hosting</strong></td>
+<td>AWS eu-west-2 (London region) [ASSUMPTION — A-004]</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>UK [ASSUMPTION — A-004] — any deviation would engage UK GDPR Chapter V international transfer obligations</td>
+</tr>
+<tr>
+<td><strong>Sub-processors</strong></td>
+<td>Anthropic PBC (AI model inference); AWS (infrastructure and storage) [ASSUMPTION]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-data-processed">2.4 Data Processed</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input data — candidate</strong></td>
+<td>CV text (unstructured document content); may include name, address, employment history, education, skills, dates, and any additional information included by the candidate [ASSUMPTION]</td>
+</tr>
+<tr>
+<td><strong>Input data — customer</strong></td>
+<td>Job description text; role criteria; screening parameters set by recruiter [ASSUMPTION]</td>
+</tr>
+<tr>
+<td><strong>Output data</strong></td>
+<td>Ranked or scored candidate shortlist; structured assessment commentary; suitability indicators [ASSUMPTION]</td>
+</tr>
+<tr>
+<td><strong>Special category data — intentional</strong></td>
+<td>Not intentionally collected or processed by Scout</td>
+</tr>
+<tr>
+<td><strong>Special category data — incidental / inferred</strong></td>
+<td>CV content may reveal or allow inference of: racial or ethnic origin; disability or health conditions; religion or belief; age; sex; pregnancy or maternity. The ICO's November 2024 AI in Recruitment Outcomes Report confirmed that "information intentionally inferred in this way is still special category data." Risk is assessed in <code>L1-2.2-Risk-Classification-Framework-v1.md</code>.</td>
+</tr>
+<tr>
+<td><strong>Data subjects</strong></td>
+<td>Job candidates — individuals who have submitted CVs for consideration for employment</td>
+</tr>
+<tr>
+<td><strong>Data volume / processing scale</strong></td>
+<td>Not confirmed [ASSUMPTION] — relevant to ICO high-risk processing threshold and Art. 35 DPIA trigger assessment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-customer-segments-and-data-relationships">2.5 Customer Segments and Data Relationships</h3>
+<table>
+<thead>
+<tr>
+<th>Customer type</th>
+<th>Description</th>
+<th>Controller / processor arrangement</th>
+<th>Key complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recruitment agency</strong></td>
+<td>UK recruitment agency using Scout to screen candidates on behalf of employer clients [ASSUMPTION — A-003]</td>
+<td>Complex — agency screens as processor for employer client; whether agency or employer (or both jointly) is the controller of candidate data depends on who determines the purposes of processing [ASSUMPTION — A-008]</td>
+<td>Potential joint controller arrangement between agency and employer under UK GDPR Art. 26 — assessed in <code>L1-2.3-Data-Flow-Map-v1.md</code></td>
+</tr>
+<tr>
+<td><strong>In-house HR team</strong></td>
+<td>Corporate HR function using Scout for direct-hire candidate screening [ASSUMPTION — A-003]</td>
+<td>Customer is controller of candidate data; Sable AI Ltd is processor [ASSUMPTION — A-008]</td>
+<td>Simpler controller-processor structure — customer DPA governs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-human-oversight-design">2.6 Human Oversight Design</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Human review requirement</strong></td>
+<td>Mandatory — [ASSUMPTION — A-007]: Scout outputs are subject to human review by a recruiter or HR professional before any candidate contact is made</td>
+</tr>
+<tr>
+<td><strong>Review mechanism</strong></td>
+<td>Design and operational rigour of human review step not confirmed [ASSUMPTION]</td>
+</tr>
+<tr>
+<td><strong>Significance for Art. 22A</strong></td>
+<td>Whether Scout's operation constitutes "solely automated" processing under Art. 22A UK GDPR (as inserted by the Data (Use and Access) Act 2025) depends on whether the mandatory human review is genuinely meaningful. The ICO requires that "the human involvement has to be active and not just a token gesture." This determination is made in <code>L1-2.2-Risk-Classification-Framework-v1.md</code>. [LEGAL REVIEW REQUIRED]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-regulatory-classification-summary">3. Regulatory Classification Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Regulatory instrument</th>
+<th>Preliminary classification</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UK GDPR / DUAA 2025 Arts. 22A–22D</td>
+<td>To be assessed — conditional on human review quality</td>
+<td>See <code>L1-2.2-Risk-Classification-Framework-v1.md</code></td>
+</tr>
+<tr>
+<td>UK GDPR Art. 35</td>
+<td>DPIA required</td>
+<td>ICO confirms AI-based CV screening is high-risk processing — DPIA must be completed before processing begins</td>
+</tr>
+<tr>
+<td>Equality Act 2010</td>
+<td>High discrimination risk</td>
+<td>Automated CV screening risks indirect discrimination against multiple protected characteristics under s. 19</td>
+</tr>
+<tr>
+<td>DPA 2018 / UK GDPR Art. 9</td>
+<td>Special category data risk</td>
+<td>Inferred characteristics (ethnicity, disability) may be special category data requiring Art. 9(2) condition and DPA 2018 Schedule 1 condition</td>
+</tr>
+</tbody>
+</table>
+<p>Full risk tier assignment is in <code>L1-2.2-Risk-Classification-Framework-v1.md</code>.</p>
+<hr />
+<h2 id="4-sub-processor-chain">4. Sub-Processor Chain</h2>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>Role</th>
+<th>Headquarters</th>
+<th>Data sent</th>
+<th>DPA in place</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Anthropic PBC</strong></td>
+<td>AI model inference (Claude API)</td>
+<td>USA [ASSUMPTION]</td>
+<td>Extracted CV text and job description content [ASSUMPTION]</td>
+<td>[ASSUMPTION — A-005]: DPA assumed to be in place</td>
+<td>International transfer: if Anthropic processes data outside the UK, UK GDPR Chapter V applies — adequacy decision or appropriate safeguards required. Must be confirmed.</td>
+</tr>
+<tr>
+<td><strong>AWS (eu-west-2)</strong></td>
+<td>Cloud infrastructure and data storage</td>
+<td>USA (region: UK) [ASSUMPTION]</td>
+<td>All Scout application data [ASSUMPTION]</td>
+<td>[ASSUMPTION]: AWS DPA assumed — standard for AWS commercial terms</td>
+<td>AWS eu-west-2 is UK-based; confirm that no data is processed outside this region without appropriate transfer safeguards</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-assumptions-flagged-in-this-document">5. Assumptions Flagged in This Document</h2>
+<table>
+<thead>
+<tr>
+<th>Assumption ID</th>
+<th>Statement</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-002</td>
+<td>Scout uses the Anthropic Claude API as its underlying AI model</td>
+<td>🔴 Unverified</td>
+</tr>
+<tr>
+<td>A-003</td>
+<td>Customers include UK recruitment agencies (B2B) and in-house HR teams at UK corporates</td>
+<td>🔴 Unverified</td>
+</tr>
+<tr>
+<td>A-004</td>
+<td>Hosting is on AWS eu-west-2 (London region)</td>
+<td>🔴 Unverified</td>
+</tr>
+<tr>
+<td>A-005</td>
+<td>Candidate data is not used for model training; DPA with Anthropic is in place</td>
+<td>🔴 Unverified</td>
+</tr>
+<tr>
+<td>A-007</td>
+<td>Scout outputs are subject to mandatory human review before candidate contact</td>
+<td>🔴 Unverified</td>
+</tr>
+<tr>
+<td>A-008</td>
+<td>Sable AI Ltd's primary role is as data processor to its customers</td>
+<td>🔴 Unverified</td>
+</tr>
+<tr>
+<td>A-010</td>
+<td>Scout is deployed as a SaaS web application accessed by customer users via browser</td>
+<td>🔴 Unverified</td>
+</tr>
+<tr>
+<td>A-011</td>
+<td>Only extracted CV text and job description text are transmitted to the Anthropic Claude API — no raw document files or additional personal data fields</td>
+<td>🔴 Unverified</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-cross-references">6. Cross-References</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>L1-2.2-Risk-Classification-Framework-v1.md</code></td>
+<td>Risk tier assignment based on this inventory</td>
+</tr>
+<tr>
+<td><code>L1-2.3-Data-Flow-Map-v1.md</code></td>
+<td>End-to-end data flow from this system profile</td>
+</tr>
+<tr>
+<td><code>L1-2.4-Governance-Policy-v1.md</code> (forthcoming)</td>
+<td>Governance obligations applying to Scout</td>
+</tr>
+<tr>
+<td><code>L1-2.5-Roles-and-Responsibilities-v1.md</code> (forthcoming)</td>
+<td>Accountability owners for Scout</td>
+</tr>
+<tr>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (forthcoming)</td>
+<td>Full UK GDPR obligation mapping for Scout's processing activities</td>
+</tr>
+<tr>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming)</td>
+<td>Full DPIA for Scout's CV screening workflow</td>
+</tr>
+<tr>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming)</td>
+<td>Customer DPA templates (agency and in-house HR variants)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>This document is a draft built on assumed company characteristics. All [ASSUMPTION] fields must be validated against actual Sable AI Ltd operational data before use. Legal review is required before this framework is used for compliance purposes.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.path", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
