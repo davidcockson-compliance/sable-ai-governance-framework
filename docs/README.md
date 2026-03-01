@@ -35,7 +35,7 @@ AI system inventory, risk classification, data flow map, governance policy, and 
 UK GDPR compliance matrix, Equality Act 2010 discrimination risk map, ICO audit gap analysis, and a full DPIA template.
 
 **Stage 4 — Monitoring & Controls**
-Metrics-based monitoring framework (22 KPIs), bias monitoring protocol (adverse impact ratio, four-fifths rule, demographic parity testing), and incident response plan.
+Metrics-based monitoring framework (23 KPIs), bias monitoring protocol (adverse impact ratio, four-fifths rule, demographic parity testing), and incident response plan.
 
 **Stage 5 — Commercial Packaging**
 Data Processing Agreement templates (agency customer with Art. 26 joint controller provisions + in-house HR customer), and candidate transparency notice in plain English.
