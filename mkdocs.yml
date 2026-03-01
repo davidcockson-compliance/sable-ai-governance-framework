@@ -1,0 +1,69 @@
+site_name: Sable AI — UK Recruitment AI Governance Framework
+site_description: >
+  An open-source AI governance framework for UK HR/recruitment AI providers.
+  Built under UK GDPR, DPA 2018, Data (Use and Access) Act 2025, and Equality Act 2010.
+  A speculative demonstration piece — not a legal compliance certification.
+site_author: David Cockson
+repo_url: https://github.com/davidcockson-compliance/sable-ai-governance-framework
+repo_name: sable-ai-governance-framework
+edit_uri: edit/main/
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+
+plugins:
+  - search
+  - mermaid2
+
+nav:
+  - Home: README.md
+  - Disclaimer: DISCLAIMER.md
+  - Assumptions Log: ASSUMPTIONS-LOG.md
+  - Stage 1 — Regulatory Orientation:
+    - Orientation Note: stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md
+    - Regulatory Source Summary: stage-1-regulatory-orientation/STAGE1-Regulatory-Source-Summary-v1.md
+  - Stage 2 — Governance Foundation:
+    - AI System Inventory: stage-2-governance-foundation/L1-2.1-AI-System-Inventory-v1.md
+    - Risk Classification Framework: stage-2-governance-foundation/L1-2.2-Risk-Classification-Framework-v1.md
+    - Data Flow Map: stage-2-governance-foundation/L1-2.3-Data-Flow-Map-v1.md
+    - Governance Policy: stage-2-governance-foundation/L1-2.4-Governance-Policy-v1.md
+    - Roles and Responsibilities: stage-2-governance-foundation/L1-2.5-Roles-and-Responsibilities-v1.md
+  - Stage 3 — Regulatory Alignment:
+    - UK GDPR Mapping Matrix: stage-3-regulatory-alignment/L2-3.1-UK-GDPR-Mapping-Matrix-v1.md
+    - Equality Act 2010 Compliance Map: stage-3-regulatory-alignment/L2-3.2-Equality-Act-2010-Compliance-Map-v1.md
+    - ICO Audit Gap Analysis: stage-3-regulatory-alignment/L2-3.3-ICO-Audit-Gap-Analysis-v1.md
+    - DPIA Template: stage-3-regulatory-alignment/L2-3.4-DPIA-Template-v1.md
+  - Stage 4 — Monitoring & Controls:
+    - Monitoring Framework: stage-4-monitoring-controls/L3-4.1-Monitoring-Framework-v1.md
+    - Bias Monitoring Protocol: stage-4-monitoring-controls/L3-4.2-Bias-Monitoring-Protocol-v1.md
+    - Incident Response Plan: stage-4-monitoring-controls/L3-4.3-Incident-Response-Plan-v1.md
+  - Stage 5 — Commercial Packaging:
+    - Data Processing Agreement Template: stage-5-commercial-packaging/L4-5.1-Data-Processing-Agreement-Template-v1.md
+    - Candidate Transparency Notice: stage-5-commercial-packaging/L4-5.2-Candidate-Transparency-Notice-v1.md
+  - Phase 2 — Scout Worked Examples:
+    - Scout System Profile: phase-2-worked-examples/P2-Scout-System-Profile-v1.md
+    - Scout UK GDPR Mapping: phase-2-worked-examples/P2-Scout-UK-GDPR-Mapping-v1.md
+    - Scout ICO Audit Gap Analysis: phase-2-worked-examples/P2-Scout-ICO-Audit-Gap-Analysis-v1.md
+    - Scout Bias Monitoring Protocol: phase-2-worked-examples/P2-Scout-Bias-Monitoring-Protocol-v1.md
