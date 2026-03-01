@@ -2540,7 +2540,7 @@
 </tr>
 <tr>
 <td>Accuracy (Art. 5(1)(d))</td>
-<td>Scout's outputs are AI-generated and may contain errors. Human review is the control to catch inaccuracies before they affect candidates. Accuracy testing protocols are in development. [See <code>L3-4.1-Monitoring-Framework-v1.md</code> (forthcoming)]</td>
+<td>Scout's outputs are AI-generated and may contain errors. Human review is the control to catch inaccuracies before they affect candidates. See <code>L3-4.1-Monitoring-Framework-v1.md</code> (M-01 shortlisting accuracy rate; M-11 canary accuracy test) for accuracy monitoring controls.</td>
 </tr>
 <tr>
 <td>Storage limitation (Art. 5(1)(e))</td>
@@ -2577,7 +2577,7 @@
 <tr>
 <td><strong>Anonymised screening</strong></td>
 <td>Removing name and contact details before AI processing could reduce name-based bias risk.</td>
-<td>[ASSUMPTION] Not currently implemented; recommend considering as a technical control in <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming)</td>
+<td>[ASSUMPTION] Not currently implemented; recommend considering as a technical control — see <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> Section 6 (keyword and language bias controls)</td>
 </tr>
 </tbody>
 </table>
@@ -2625,7 +2625,7 @@
 </tr>
 <tr>
 <td><strong>Mitigations</strong></td>
-<td>Mandatory human review (A-007); bias monitoring protocol (<code>L3-4.2</code>, forthcoming); customer training on criteria specification (<code>L1-2.4</code>); equality compliance controls (<code>L2-3.2</code>); incident response plan (<code>L3-4.3</code>, forthcoming)</td>
+<td>Mandatory human review (A-007); bias monitoring protocol (<code>L3-4.2</code>); customer training on criteria specification (<code>L1-2.4</code>); equality compliance controls (<code>L2-3.2</code>); incident response plan (<code>L3-4.3</code>)</td>
 </tr>
 <tr>
 <td><strong>Post-mitigation risk</strong></td>
@@ -2721,7 +2721,7 @@
 </tr>
 <tr>
 <td><strong>Mitigations</strong></td>
-<td>Mandatory human review as operational control, not just policy; monitoring of human review compliance rate (<code>L3-4.1</code>, forthcoming); customer onboarding training; Art. 22C rights surfaced in candidate transparency notice (<code>L4-5.2</code>, forthcoming)</td>
+<td>Mandatory human review as operational control, not just policy; monitoring of human review compliance rate (<code>L3-4.1</code> M-02); customer onboarding training; Arts. 22A–22C rights surfaced in candidate transparency notice (<code>L4-5.2</code>)</td>
 </tr>
 <tr>
 <td><strong>Post-mitigation risk</strong></td>
@@ -2769,7 +2769,7 @@
 </tr>
 <tr>
 <td><strong>Mitigations</strong></td>
-<td>Candidate-facing transparency notice template (<code>L4-5.2</code>, forthcoming); contractual obligation on customers to deploy notice before processing (<code>L4-5.1</code>, forthcoming); audit of customer notice deployment (<code>L3-4.1</code>, forthcoming)</td>
+<td>Candidate-facing transparency notice template (<code>L4-5.2</code>); contractual obligation on customers to deploy notice before processing (<code>L4-5.1</code>); audit of customer notice deployment (<code>L3-4.1</code> M-09)</td>
 </tr>
 <tr>
 <td><strong>Post-mitigation risk</strong></td>
@@ -2813,7 +2813,7 @@
 </tr>
 <tr>
 <td><strong>Mitigations</strong></td>
-<td>AWS security controls and encryption in transit/at rest [ASSUMPTION A-004]; Anthropic DPA [ASSUMPTION A-005]; incident response plan (<code>L3-4.3</code>, forthcoming); 72-hour ICO notification under Art. 33</td>
+<td>AWS security controls and encryption in transit/at rest [ASSUMPTION A-004]; Anthropic DPA [ASSUMPTION A-005]; incident response plan (<code>L3-4.3</code>); 72-hour ICO notification under Art. 33</td>
 </tr>
 <tr>
 <td><strong>Post-mitigation risk</strong></td>
@@ -2857,7 +2857,7 @@
 </tr>
 <tr>
 <td><strong>Mitigations</strong></td>
-<td>Controller/processor analysis in <code>L1-2.2-Risk-Classification-Framework-v1.md</code>; legal review of role determination; DPA templates covering both customer types (<code>L4-5.1</code>, forthcoming)</td>
+<td>Controller/processor analysis in <code>L1-2.3-Data-Flow-Map-v1.md</code>; legal review of role determination; DPA templates covering both customer types (<code>L4-5.1</code>)</td>
 </tr>
 <tr>
 <td><strong>Post-mitigation risk</strong></td>
@@ -2890,14 +2890,14 @@
 <td>R1 — Algorithmic bias</td>
 <td>Bias monitoring protocol with alert thresholds</td>
 <td>CTO</td>
-<td>Forthcoming</td>
-<td><code>L3-4.2</code> (forthcoming)</td>
+<td>Defined in framework; operational calibration required</td>
+<td><code>L3-4.2</code></td>
 </tr>
 <tr>
 <td>R1 — Algorithmic bias</td>
 <td>Customer training on non-discriminatory criteria</td>
 <td>Customer Success Lead</td>
-<td>Forthcoming</td>
+<td>Defined in governance policy; operational delivery required</td>
 <td><code>L1-2.4</code></td>
 </tr>
 <tr>
@@ -2905,7 +2905,7 @@
 <td>Technical detection of special category data in inputs</td>
 <td>Engineering Lead</td>
 <td>Not yet implemented [ASSUMPTION]</td>
-<td><code>L3-4.2</code> (forthcoming)</td>
+<td><code>L3-4.2</code></td>
 </tr>
 <tr>
 <td>R2 — Special category data</td>
@@ -2918,29 +2918,29 @@
 <td>R3 — Unlawful ADM</td>
 <td>Human review compliance monitoring</td>
 <td>CTO</td>
-<td>Forthcoming</td>
-<td><code>L3-4.1</code> (forthcoming)</td>
+<td>Defined in framework; operational verification required</td>
+<td><code>L3-4.1</code></td>
 </tr>
 <tr>
 <td>R3 — Unlawful ADM</td>
-<td>Art. 22C rights in candidate notice</td>
+<td>Arts. 22A–22C rights in candidate notice</td>
 <td>Customer Success Lead</td>
-<td>Forthcoming</td>
-<td><code>L4-5.2</code> (forthcoming)</td>
+<td>Defined in template; customer completion and deployment required</td>
+<td><code>L4-5.2</code></td>
 </tr>
 <tr>
 <td>R4 — Transparency failure</td>
 <td>Candidate transparency notice template</td>
 <td>Customer Success Lead</td>
-<td>Forthcoming</td>
-<td><code>L4-5.2</code> (forthcoming)</td>
+<td>Defined in template; customer completion and deployment required</td>
+<td><code>L4-5.2</code></td>
 </tr>
 <tr>
 <td>R4 — Transparency failure</td>
 <td>Contractual obligation on customers to deploy notice</td>
 <td>CTO / legal counsel</td>
-<td>Forthcoming</td>
-<td><code>L4-5.1</code> (forthcoming)</td>
+<td>Present in Stage 5 contract pack; legal tailoring required</td>
+<td><code>L4-5.1</code></td>
 </tr>
 <tr>
 <td>R5 — Data breach</td>
@@ -2953,8 +2953,8 @@
 <td>R5 — Data breach</td>
 <td>Incident response plan with 72h ICO notification</td>
 <td>CTO</td>
-<td>Forthcoming</td>
-<td><code>L3-4.3</code> (forthcoming)</td>
+<td>Defined in framework</td>
+<td><code>L3-4.3</code></td>
 </tr>
 <tr>
 <td>R6 — Role misclassification</td>
@@ -2974,7 +2974,7 @@
 <li>Candidates must have the right to contest the outcome</li>
 <li>The logical basis of Scout's assessment must be explainable in plain language to any candidate who requests it</li>
 </ul>
-<p><strong>Implementation:</strong> <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming) must surface these rights. Customer contracts (<code>L4-5.1</code>, forthcoming) must impose an obligation to provide access to these rights on request.</p>
+<p><strong>Implementation:</strong> <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> must surface these rights. Customer contracts (<code>L4-5.1</code>) must impose an obligation to provide access to these rights on request.</p>
 <hr />
 <h2 id="section-5-residual-risk-assessment">Section 5 — Residual Risk Assessment</h2>
 <p>[LEGAL REVIEW REQUIRED] — The residual risk assessment below reflects assumed controls. A qualified UK lawyer and, where appropriate, an external privacy auditor should review this assessment before Scout processes live candidate data.</p>

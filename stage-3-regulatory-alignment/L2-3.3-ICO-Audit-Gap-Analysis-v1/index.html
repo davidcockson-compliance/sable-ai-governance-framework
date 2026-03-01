@@ -1840,27 +1840,27 @@
 <tbody>
 <tr>
 <td>Monitor AI outputs for bias and accuracy issues</td>
-<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming)</td>
-<td><strong>Partially addressed</strong> — protocol is planned; no live monitoring controls yet in place</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — protocol defines monitoring methodology, thresholds, and remediation workflow; operational implementation remains customer- and deployment-dependent</td>
 </tr>
 <tr>
 <td>Establish alert thresholds and escalation for bias signals</td>
-<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming), <code>L3-4.1-Monitoring-Framework-v1.md</code> (forthcoming)</td>
-<td><strong>Partially addressed</strong> — monitoring framework is planned</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code>, <code>L3-4.1-Monitoring-Framework-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — thresholds and escalation paths are documented; live calibration and resourcing remain implementation tasks</td>
 </tr>
 <tr>
 <td>Take corrective action when bias or accuracy issues are detected</td>
-<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming — includes remediation process)</td>
-<td><strong>Partially addressed</strong> — remediation process defined in protocol (forthcoming)</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — remediation and investigation workflow is defined in the protocol</td>
 </tr>
 <tr>
 <td>Demonstrate fairness beyond accuracy alone</td>
-<td><code>L1-2.2-Risk-Classification-Framework-v1.md</code> (high-risk classification and controls)</td>
-<td><strong>Partially addressed</strong> — risk classification identifies the requirement; operational controls are in monitoring protocol (forthcoming)</td>
+<td><code>L1-2.2-Risk-Classification-Framework-v1.md</code>, <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — risk classification establishes the fairness obligation and the protocol operationalises monitoring beyond accuracy-only measures</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Overall status for this theme: Partially addressed.</strong> The framework acknowledges and plans for this obligation across two forthcoming documents. Gap closes on completion of Stage 4.</p>
+<p><strong>Overall status for this theme: Addressed at framework design level.</strong> Operational implementation — including calibration of thresholds, demographic monitoring data collection, and ongoing reporting — remains an implementation task for Sable AI Ltd.</p>
 <hr />
 <h3 id="2-adequate-and-accurate-bias-monitoring-data">2. Adequate and Accurate Bias Monitoring Data</h3>
 <p><strong>ICO finding:</strong> AI providers and recruiters must ensure that any special category data processed to monitor for bias and discriminatory outputs is adequate and accurate enough to effectively fulfil this purpose. Inferred or estimated data will not be adequate and accurate enough, and will therefore not comply with data protection law. The ICO found that some providers inferred gender, ethnicity, and other protected characteristics from CV content or candidate names — this processing often occurred without a lawful basis and without the candidate's knowledge.</p>
@@ -1880,13 +1880,13 @@
 </tr>
 <tr>
 <td>Use only adequate and accurate data sources for bias monitoring</td>
-<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming — addresses this tension directly per Section 7 spec)</td>
-<td><strong>Gap — action required</strong> — the protocol must explicitly specify approved data sources and prohibit inferred data; this has not yet been operationalised</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — protocol Section 3 explicitly prohibits inferred demographic data, specifies lawful collection routes (Option A voluntary monitoring), and prohibits Options C and D; operational implementation of the approved data collection mechanism remains an implementation task</td>
 </tr>
 <tr>
 <td>Ensure a lawful basis exists before processing special category data for monitoring</td>
-<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Art. 9 analysis), <code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — includes Art. 9 risk)</td>
-<td><strong>Partially addressed</strong> — lawful basis question is identified and flagged [LEGAL REVIEW REQUIRED]; no confirmed lawful basis route is yet implemented</td>
+<td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Art. 9 analysis), <code>L2-3.4-DPIA-Template-v1.md</code></td>
+<td><strong>Partially addressed</strong> — lawful basis question is identified and flagged [LEGAL REVIEW REQUIRED]; no confirmed lawful basis route is yet implemented; legal advice required before live demographic monitoring commences</td>
 </tr>
 </tbody>
 </table>
@@ -1905,27 +1905,27 @@
 <tbody>
 <tr>
 <td>Provide candidates with detailed privacy information about AI processing</td>
-<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming)</td>
-<td><strong>Partially addressed</strong> — a candidate-facing template is planned in Stage 5; not yet drafted</td>
+<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — template provides full candidate-facing notice in plain English covering AI use, data types, rights, and complaint routes; deployment depends on customer implementation</td>
 </tr>
 <tr>
 <td>Transparency notice must be provided before or at the point of CV processing</td>
-<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming — includes timing guidance)</td>
-<td><strong>Partially addressed</strong> — delivery timing is a design element of the forthcoming template</td>
+<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — template includes timing guidance in the Adaptation Notes; delivery timing obligation is on the customer to operationalise</td>
 </tr>
 <tr>
 <td>Disclose that AI is used in candidate screening (signposting obligation per DSIT guidance)</td>
-<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming), <code>L1-2.4-Governance-Policy-v1.md</code> (transparency principle)</td>
-<td><strong>Partially addressed</strong> — governance policy establishes the obligation at a policy level; operational delivery is in the forthcoming template</td>
+<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code>, <code>L1-2.4-Governance-Policy-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — governance policy states the obligation; candidate notice provides the operational wording for disclosure</td>
 </tr>
 <tr>
 <td>Address Art. 13/14 UK GDPR disclosure requirements for automated decision-making</td>
 <td><code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> (Arts. 13, 14, 22C disclosure obligations)</td>
-<td><strong>Addressed</strong> — GDPR matrix specifies disclosure obligations; delivery via transparency notice (forthcoming)</td>
+<td><strong>Addressed</strong> — GDPR matrix specifies disclosure obligations; <code>L4-5.2</code> delivers the candidate-facing template</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Overall status for this theme: Partially addressed.</strong> This gap closes on completion of <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> in Stage 5. The ICO audit found this to be a near-universal failing — the transparency notice is therefore a high-priority deliverable.</p>
+<p><strong>Overall status for this theme: Addressed at framework design level.</strong> The ICO audit found candidate transparency to be a near-universal failing. The template addresses this gap; operational deployment requires customers to publish and serve the notice before processing commences.</p>
 <hr />
 <h3 id="4-data-minimisation-avoiding-excess-collection-and-unlawful-repurposing">4. Data Minimisation — Avoiding Excess Collection and Unlawful Repurposing</h3>
 <p><strong>ICO finding:</strong> The ICO was concerned to find tools that collected far more personal information than was necessary. In some cases, personal information was scraped and combined with data from millions of profiles on job networking sites and social media, then used to build searchable candidate databases. Recruiters and candidates were rarely aware of this repurposing. The ICO confirmed this practice was unlawful.</p>
@@ -1955,8 +1955,8 @@
 </tr>
 <tr>
 <td>Ensure candidates are aware of how their data is being used and by whom</td>
-<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming)</td>
-<td><strong>Partially addressed</strong> — as per Theme 3 above</td>
+<td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — as per Theme 3 above</td>
 </tr>
 </tbody>
 </table>
@@ -1975,33 +1975,33 @@
 <tbody>
 <tr>
 <td>Complete a DPIA before commencing processing, not retrospectively</td>
-<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — current document, Part 7 note: completion must precede live processing)</td>
-<td><strong>Addressed</strong> — DPIA template is complete as of this run; Sable AI Ltd must complete the DPIA before Scout processes production candidate data [ASSUMPTION]</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (Section 7 sign-off requirement)</td>
+<td><strong>Addressed</strong> — DPIA template includes a sign-off requirement confirming completion must precede live processing; Sable AI Ltd must populate the template and obtain sign-off before Scout processes production candidate data [ASSUMPTION]</td>
 </tr>
 <tr>
 <td>DPIA must include a detailed map of data flows through the AI system</td>
-<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — Section 1.7), <code>L1-2.3-Data-Flow-Map-v1.md</code></td>
-<td><strong>Addressed</strong> — data flow map is a dedicated Stage 2 document; DPIA references it</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (Section 1.7), <code>L1-2.3-Data-Flow-Map-v1.md</code></td>
+<td><strong>Addressed</strong> — data flow map is a dedicated Stage 2 document; DPIA Section 1.7 references it</td>
 </tr>
 <tr>
 <td>DPIA must include meaningful assessment of necessity and proportionality</td>
-<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — Section 2)</td>
-<td><strong>Addressed</strong> — DPIA template includes a necessity and proportionality section</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (Section 2)</td>
+<td><strong>Addressed</strong> — DPIA template Section 2 provides a full necessity and proportionality assessment framework</td>
 </tr>
 <tr>
 <td>DPIA must consider alternative approaches using less personal information</td>
-<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — Section 2.3)</td>
-<td><strong>Addressed</strong> — alternatives considered in DPIA Section 2</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (Section 2.3)</td>
+<td><strong>Addressed</strong> — alternatives assessed in DPIA Section 2.3</td>
 </tr>
 <tr>
 <td>DPIA must assess risks to data subjects' rights and freedoms</td>
-<td><code>L2-3.4-DPIA-Template-v1.md</code> (forthcoming — Section 3)</td>
-<td><strong>Addressed</strong> — risk identification section covers rights and freedoms risks</td>
+<td><code>L2-3.4-DPIA-Template-v1.md</code> (Section 3)</td>
+<td><strong>Addressed</strong> — Section 3 identifies six risk categories with likelihood, severity, and mitigation analysis</td>
 </tr>
 <tr>
 <td>DPIA must be kept current and reviewed when processing changes</td>
-<td><code>L1-2.4-Governance-Policy-v1.md</code> (review cycle obligation), <code>L3-4.1-Monitoring-Framework-v1.md</code> (forthcoming — triggers for DPIA review)</td>
-<td><strong>Partially addressed</strong> — governance policy specifies review cycle; specific triggers are in monitoring framework (forthcoming)</td>
+<td><code>L1-2.4-Governance-Policy-v1.md</code> (review cycle obligation), <code>L3-4.1-Monitoring-Framework-v1.md</code> (M-18 DPIA currency metric)</td>
+<td><strong>Addressed</strong> — governance policy specifies review cycle; monitoring framework metric M-18 tracks DPIA currency and triggers review on material change</td>
 </tr>
 </tbody>
 </table>
@@ -2025,32 +2025,32 @@
 </tr>
 <tr>
 <td>Contracts must specify what personal data is processed and how</td>
-<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming — Appendix A and B)</td>
-<td><strong>Partially addressed</strong> — DPA template is planned; not yet drafted</td>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (Appendix A and B)</td>
+<td><strong>Addressed in framework design</strong> — DPA template Appendices A and B specify data types, processing purposes, and sub-processor chain; legal tailoring required before execution</td>
 </tr>
 <tr>
 <td>Contracts must clearly set out responsibilities of each party</td>
-<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming), <code>L1-2.5-Roles-and-Responsibilities-v1.md</code></td>
-<td><strong>Partially addressed</strong> — internal RACI is complete; customer-facing contract is forthcoming</td>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code>, <code>L1-2.5-Roles-and-Responsibilities-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — internal RACI is complete; DPA template sets out controller/processor obligations for each customer type</td>
 </tr>
 <tr>
 <td>Contracts must specify technical and organisational security measures</td>
-<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming)</td>
-<td><strong>Partially addressed</strong> — DPA template is planned; not yet drafted</td>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — DPA template includes security obligations clause; Sable AI Ltd must specify its actual technical and organisational measures before execution</td>
 </tr>
 <tr>
 <td>Contracts must address what happens to personal data in AI models at contract end</td>
-<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming — end-of-contract provisions per Section 7 spec)</td>
-<td><strong>Partially addressed</strong> — addressed in the DPA template specification; not yet drafted</td>
+<td><code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code></td>
+<td><strong>Addressed in framework design</strong> — end-of-contract deletion and return provisions are included in both appendices</td>
 </tr>
 <tr>
 <td>Address the joint controller question for agency customers</td>
-<td><code>L1-2.3-Data-Flow-Map-v1.md</code> (agency customer path and joint controller note), <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming — Appendix A joint controller clauses)</td>
-<td><strong>Partially addressed</strong> — data flow map identifies the joint controller risk; DPA Appendix A will include Art. 26 arrangement; [LEGAL REVIEW REQUIRED] on joint controller determination</td>
+<td><code>L1-2.3-Data-Flow-Map-v1.md</code> (agency customer path and joint controller note), <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (Appendix A joint controller clauses)</td>
+<td><strong>Addressed in framework design</strong> — data flow map identifies the joint controller risk; DPA Appendix A includes both a controller-processor structure and an Art. 26 Joint Controller Addendum; [LEGAL REVIEW REQUIRED] on which structure applies in each case</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Overall status for this theme: Partially addressed.</strong> This gap closes substantially on completion of <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> in Stage 5.</p>
+<p><strong>Overall status for this theme: Addressed at framework design level.</strong> Legal tailoring and execution of customer-specific DPAs remain implementation tasks. The joint controller determination in each agency relationship requires legal advice.</p>
 <hr />
 <h3 id="7-human-review-of-ai-outputs">7. Human Review of AI Outputs</h3>
 <p><strong>ICO finding:</strong> The ICO recommended that organisations introduce robust and meaningful human reviews or quality checks of AI outputs so that issues are addressed at an early stage. The ICO also recommended implementing a feedback mechanism for recruiters to report errors. The ICO stated that recruiters should not use AI tools to make automated recruitment decisions where the AI is not designed for this purpose.</p>
@@ -2070,8 +2070,8 @@
 </tr>
 <tr>
 <td>Implement a feedback mechanism for recruiters to report AI errors</td>
-<td><code>L3-4.1-Monitoring-Framework-v1.md</code> (forthcoming — includes error-reporting mechanism), <code>L3-4.3-Incident-Response-Plan-v1.md</code> (forthcoming — escalation pathway)</td>
-<td><strong>Partially addressed</strong> — planned in Stage 4 documents; not yet operational</td>
+<td><code>L3-4.1-Monitoring-Framework-v1.md</code> (M-06 reviewer challenge rate; M-03 human override rate), <code>L3-4.3-Incident-Response-Plan-v1.md</code> (escalation pathway)</td>
+<td><strong>Addressed in framework design</strong> — monitoring framework defines the reviewer challenge rate metric and escalation path; operational deployment requires customer onboarding and recruiter training</td>
 </tr>
 <tr>
 <td>Do not allow AI to make autonomous recruitment decisions beyond its designed scope</td>
@@ -2126,8 +2126,8 @@
 </tr>
 <tr>
 <td>Explicit prohibition on name-based ethnicity inference or age inference from career timeline</td>
-<td>Not currently contained in any framework document as a named engineering constraint</td>
-<td><strong>Gap — action required.</strong> A named engineering control or model configuration constraint prohibiting inference of protected characteristics should be added. This could be addressed in <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming) or in <code>L1-2.2-Risk-Classification-Framework-v1.md</code> as an additional system-level control.</td>
+<td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (Section 6.2 — keyword monitoring procedure; Section 3 — prohibition on inferred demographic data)</td>
+<td><strong>Partially addressed</strong> — the protocol prohibits inferred demographic data for monitoring purposes and requires keyword/proxy audits; a named engineering control at the system prompt or model configuration level is not yet documented as a standalone constraint</td>
 </tr>
 </tbody>
 </table>
@@ -2172,75 +2172,76 @@
 <tr>
 <th>ICO Theme</th>
 <th>Gap Status</th>
-<th>Stage 4 or 5 action required?</th>
+<th>Remaining action</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1. Fair processing / bias monitoring</td>
-<td>Partially addressed</td>
-<td>Yes — <code>L3-4.2</code></td>
+<td>Addressed at framework level</td>
+<td>Operational calibration and reporting — implementation task</td>
 </tr>
 <tr>
 <td>2. Adequate bias monitoring data</td>
-<td>Partially addressed / Gap</td>
-<td>Yes — <code>L3-4.2</code> + legal advice</td>
+<td>Partially addressed</td>
+<td>Legal advice on Art. 9 lawful basis for voluntary monitoring data required before live demographic monitoring commences</td>
 </tr>
 <tr>
 <td>3. Transparency to candidates</td>
-<td>Partially addressed</td>
-<td>Yes — <code>L4-5.2</code></td>
+<td>Addressed at framework level</td>
+<td>Customer deployment of notice — implementation task</td>
 </tr>
 <tr>
 <td>4. Data minimisation</td>
 <td>Addressed</td>
-<td>No</td>
+<td>No further action at framework level</td>
 </tr>
 <tr>
 <td>5. DPIAs</td>
 <td>Addressed</td>
-<td>No (template complete; Sable AI must populate)</td>
+<td>Sable AI Ltd must populate and sign off the DPIA before live processing</td>
 </tr>
 <tr>
 <td>6. Role allocation and contracting</td>
-<td>Partially addressed</td>
-<td>Yes — <code>L4-5.1</code></td>
+<td>Addressed at framework level</td>
+<td>Legal tailoring and execution of customer DPAs — implementation task</td>
 </tr>
 <tr>
 <td>7. Human review</td>
-<td>Addressed (policy level)</td>
-<td>Partially — <code>L3-4.1</code>, <code>L3-4.3</code></td>
+<td>Addressed at framework level</td>
+<td>Operational verification of recruiter review quality — implementation task</td>
 </tr>
 <tr>
 <td>2.1 Discriminatory search functionality</td>
-<td>Partially addressed / Gap</td>
-<td>UI audit control needed</td>
+<td>Partially addressed</td>
+<td>UI audit control should be added as a standing monitoring item</td>
 </tr>
 <tr>
 <td>2.2 Inferred protected characteristics</td>
-<td>Gap</td>
-<td>Engineering constraint needed — <code>L3-4.2</code> or <code>L1-2.2</code> update</td>
+<td>Partially addressed</td>
+<td>Named engineering constraint at system prompt/model configuration level not yet documented as standalone control</td>
 </tr>
 <tr>
 <td>2.3 DPIA completeness</td>
 <td>Addressed</td>
-<td>No</td>
+<td>No further action at framework level</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="part-4-framework-coverage-assessment">Part 4 — Framework Coverage Assessment</h2>
-<p><strong>Addressed (no further action at framework level):</strong> 4 of 10 themes are fully addressed within the existing framework documents. These are: data minimisation (Theme 4), DPIA obligation and completeness (Theme 5), human review at policy level (Theme 7), and DPIA completeness (Supplementary 2.3).</p>
-<p><strong>Partially addressed (gaps close on completion of Stage 4/5):</strong> Themes 1, 3, 6, and 7 (partial) will be addressed on completion of <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code>, <code>L3-4.1-Monitoring-Framework-v1.md</code>, <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code>, and <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code>.</p>
-<p><strong>Genuine gaps requiring specific action beyond framework documents:</strong></p>
+<p><strong>Addressed at framework design level (7 of 10 themes):</strong> Data minimisation (Theme 4), DPIA obligation and completeness (Theme 5 and Supplementary 2.3), human review (Theme 7), fair processing / bias monitoring (Theme 1), transparency (Theme 3), and role allocation and contracting (Theme 6) are all addressed within the framework documents as of the completion of Stages 1–5. Operational implementation, calibration, and customer deployment remain tasks for Sable AI Ltd.</p>
+<p><strong>Partially addressed — residual implementation gaps (2 themes):</strong></p>
 <ol>
 <li>
-<p><strong>Theme 2 / Supplementary 2.2 — Inferred protected characteristics and bias monitoring data lawfulness.</strong> The framework identifies the legal risk but does not yet contain a named engineering control prohibiting inference of protected characteristics, nor a confirmed lawful route for demographic monitoring data. This requires both a legal advice instruction and an operational control in the bias monitoring protocol or risk classification framework. [LEGAL REVIEW REQUIRED]</p>
+<p><strong>Theme 2 — Adequate bias monitoring data and lawful basis.</strong> The framework identifies the legal risk, establishes the approved approach (voluntary demographic monitoring with Art. 6 + Art. 9 conditions), and prohibits inferred data. However, no confirmed lawful basis route is yet implemented at an operational level. <strong>Legal advice required before live demographic monitoring commences.</strong> [LEGAL REVIEW REQUIRED]</p>
 </li>
 <li>
-<p><strong>Supplementary 2.1 — UI/feature audit for discriminatory filtering.</strong> No standing audit requirement for recruitment tool UI and API exists in the framework. Recommend adding a periodic design review obligation to <code>L3-4.1-Monitoring-Framework-v1.md</code>.</p>
+<p><strong>Supplementary 2.2 — Named engineering control against inference of protected characteristics.</strong> The bias monitoring protocol prohibits inferred data for monitoring purposes and includes keyword auditing obligations. A dedicated engineering-level constraint (e.g., a named prompt instruction or model configuration rule explicitly prohibiting inference of race, sex, disability, or age from CV content) is not yet documented as a standalone control. Recommend formalising this as part of Scout's system prompt documentation.</p>
 </li>
 </ol>
+<p><strong>Genuine gap requiring specific action beyond framework documents:</strong></p>
+<p><strong>Supplementary 2.1 — UI/feature audit for discriminatory filtering.</strong> No standing periodic audit requirement for Scout's UI and API exists in the monitoring framework. Recommend adding a periodic design review obligation (e.g., annually and before any major UI change) to <code>L3-4.1-Monitoring-Framework-v1.md</code>.</p>
 <hr />
 <h2 id="items-requiring-human-review-before-completion">Items Requiring Human Review Before Completion</h2>
 <ul>

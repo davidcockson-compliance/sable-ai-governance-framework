@@ -1861,14 +1861,14 @@
 - Discriminatory or biased shortlisting outputs
 - Model hallucination or accuracy failures affecting candidate assessments
 - Third-party service incidents (Anthropic API outage or data breach) affecting Scout operations [ASSUMPTION: A-005]
-- UK GDPR Article 22 safeguard failures (automated decisions without mandatory human review) [ASSUMPTION: A-007]</p>
+- UK GDPR Arts. 22A–22C safeguard failures (automated decisions without mandatory human review) [ASSUMPTION: A-007]</p>
 <p><strong>Related documents:</strong>
 - <code>L1-2.5-Roles-and-Responsibilities-v1.md</code> — RACI and accountability structure
 - <code>L3-4.1-Monitoring-Framework-v1.md</code> — detection metrics and alert thresholds
 - <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> — bias monitoring and bias incident escalation
 - <code>L2-3.4-DPIA-Template-v1.md</code> — residual risk assessment for Scout processing
-- <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> — contractual notification obligations by customer type (forthcoming)
-- <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> — candidate communication templates (forthcoming)</p>
+- <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> — contractual notification obligations by customer type
+- <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> — candidate communication templates</p>
 <p><strong>[LEGAL REVIEW REQUIRED]:</strong> Sable AI Ltd's notification obligations under UK GDPR Arts. 33 and 34 differ depending on whether it acts as a joint controller or processor in each customer relationship (see Section 6). This plan requires legal review before operational use.</p>
 <hr />
 <h2 id="2-incident-definition">2. Incident Definition</h2>
@@ -1912,9 +1912,9 @@
 </tr>
 <tr>
 <td><strong>D</strong></td>
-<td>Art. 22 Safeguard Failure</td>
-<td>A candidate is progressed or rejected on the basis of Scout's output without mandatory human review [ASSUMPTION: A-007], in potential breach of UK GDPR Art. 22 safeguards</td>
-<td>UK GDPR Art. 22; ICO AI in Recruitment: "Prevent using AI outputs to make automated recruitment decisions"</td>
+<td>Arts. 22A–22C Safeguard Failure</td>
+<td>A candidate is progressed or rejected on the basis of Scout's output without mandatory human review [ASSUMPTION: A-007], in potential breach of UK GDPR Arts. 22A–22C safeguards</td>
+<td>UK GDPR Arts. 22A–22C; ICO AI in Recruitment: "Prevent using AI outputs to make automated recruitment decisions"</td>
 </tr>
 <tr>
 <td><strong>E</strong></td>
@@ -1933,7 +1933,7 @@
 - Confirmed discriminatory shortlisting affecting a protected characteristic group across multiple roles or customers
 - Complete Anthropic service outage persisting more than four hours, preventing Scout from operating [ASSUMPTION: A-005]
 - ICO investigation, enforcement action, or formal request for information received
-- Evidence of systematic Art. 22 safeguard failure (not an isolated single instance) [ASSUMPTION: A-007]
+- Evidence of systematic Arts. 22A–22C safeguard failure (not an isolated single instance) [ASSUMPTION: A-007]
 - Candidate personal data exposure in a public-facing or widely accessible context</p>
 <p><strong>Detection-to-escalation timeline:</strong>
 | Step | Action | Deadline |
@@ -1971,7 +1971,7 @@
 - Personal data breach affecting 1–49 candidate records [ASSUMPTION: A-008 — threshold not confirmed]
 - Single confirmed discriminatory shortlisting output for a candidate with a protected characteristic
 - Model hallucination or materially false assessment identified for one or more specific candidates (Type C incident)
-- Art. 22 safeguard failure for an individual candidate (single instance) [ASSUMPTION: A-007]
+- Arts. 22A–22C safeguard failure for an individual candidate (single instance) [ASSUMPTION: A-007]
 - Scout accuracy degradation above the threshold defined in <code>L3-4.1-Monitoring-Framework-v1.md</code>
 - Partial Anthropic API outage causing intermittent Scout failures [ASSUMPTION: A-005]</p>
 <p><strong>Detection-to-escalation timeline:</strong>
@@ -2030,14 +2030,14 @@
 <tbody>
 <tr>
 <td><strong>P1 — Critical</strong></td>
-<td>Large-scale CV data breach; confirmed discriminatory shortlisting pattern across roles; systematic Art. 22 failure; complete Scout outage &gt;4 hrs</td>
+<td>Large-scale CV data breach; confirmed discriminatory shortlisting pattern across roles; systematic Arts. 22A–22C safeguard failure; complete Scout outage &gt;4 hrs</td>
 <td>1 hr to CTO; 2 hrs to CEO</td>
 <td>Required within 72 hrs where risk to rights and freedoms (Art. 33(1))</td>
 <td>Required without undue delay where high risk to individuals (Art. 34(1))</td>
 </tr>
 <tr>
 <td><strong>P2 — High</strong></td>
-<td>Small-scale breach (1–49 records); single confirmed discriminatory output; model hallucination affecting individual candidate(s); isolated Art. 22 failure</td>
+<td>Small-scale breach (1–49 records); single confirmed discriminatory output; model hallucination affecting individual candidate(s); isolated Arts. 22A–22C safeguard failure</td>
 <td>2 hrs to Engineering Lead; 4 hrs to CTO</td>
 <td>Assess and document decision; notify if risk likely</td>
 <td>Assess high-risk threshold; document decision</td>
@@ -2053,7 +2053,7 @@
 </table>
 <hr />
 <h2 id="6-controller-vs-processor-notification-paths">6. Controller vs. Processor — Notification Paths</h2>
-<p>Sable AI Ltd's notification obligations under UK GDPR Arts. 33–34 depend on its role in each customer relationship. <strong>[LEGAL REVIEW REQUIRED]</strong> Refer to <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming) for contractual notification obligations by customer type.</p>
+<p>Sable AI Ltd's notification obligations under UK GDPR Arts. 33–34 depend on its role in each customer relationship. <strong>[LEGAL REVIEW REQUIRED]</strong> Refer to <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> for contractual notification obligations by customer type.</p>
 <h3 id="61-agency-customer-potential-joint-controller-arrangement">6.1 — Agency Customer (Potential Joint Controller Arrangement)</h3>
 <p>Where a recruitment agency uses Scout to screen candidates on behalf of employer clients, Sable AI Ltd may be a <strong>joint controller</strong> rather than a processor [ASSUMPTION: A-003]. Joint controller arrangements are governed by UK GDPR Art. 26.</p>
 <p>Under this arrangement:
@@ -2127,7 +2127,7 @@ Expected date of follow-up notification:
 <p>Complete for all P1 incidents within seven days of containment. Complete for all P2 incidents within fourteen days.</p>
 <pre><code>INCIDENT REFERENCE:    [Internal ticket number]
 INCIDENT TYPE:         [ ] A — Data Breach  [ ] B — Discriminatory Output
-                       [ ] C — Accuracy Failure  [ ] D — Art. 22 Failure
+                       [ ] C — Accuracy Failure  [ ] D — Arts. 22A–22C Safeguard Failure
                        [ ] E — Third-Party Incident
 SEVERITY:              [ ] P1  [ ] P2  [ ] P3
 DATE INCIDENT OCCURRED: [DD/MM/YYYY]
@@ -2258,14 +2258,14 @@ Date:           [DD/MM/YYYY]
 <p>The incident register must be retained for a minimum period sufficient to demonstrate accountability under UK GDPR Art. 5(2) [ASSUMPTION: A-010 — minimum three years is recommended practice; verify with legal adviser before confirming retention period].</p>
 <hr />
 <h2 id="11-candidate-redress">11. Candidate Redress</h2>
-<p>Where a candidate has been adversely affected by a Scout incident (Type B discriminatory output, Type C accuracy failure, Type D Art. 22 safeguard failure), appropriate redress must be provided.</p>
+<p>Where a candidate has been adversely affected by a Scout incident (Type B discriminatory output, Type C accuracy failure, Type D Arts. 22A–22C safeguard failure), appropriate redress must be provided.</p>
 <p>DSIT Responsible AI in Recruitment guidance is explicit: "Where harms are identified through routes to contestability, appropriate redress should be made."</p>
 <p><strong>Redress options (select as appropriate for the incident):</strong>
 - Withdrawal of the affected shortlisting decision and rescreening by a human reviewer independent of the original Scout output
 - Exercise of the candidate's data subject rights: access to their data (UK GDPR Art. 15); rectification of inaccurate data (Art. 16); right to object to processing (Art. 21)
 - Direct communication to the candidate (delivered through the customer-controller) acknowledging that an issue occurred and explaining the corrective action taken
 - Referral to the recruiting organisation to ensure the candidate is fairly reconsidered for the role</p>
-<p><strong>[LEGAL REVIEW REQUIRED]:</strong> The appropriate form of redress and which party (Sable AI Ltd or the customer-controller) is responsible for delivering it to the candidate must be determined in the context of the applicable DPA arrangement. Refer to <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code> (forthcoming).</p>
+<p><strong>[LEGAL REVIEW REQUIRED]:</strong> The appropriate form of redress and which party (Sable AI Ltd or the customer-controller) is responsible for delivering it to the candidate must be determined in the context of the applicable DPA arrangement. Refer to <code>L4-5.1-Data-Processing-Agreement-Template-v1.md</code>.</p>
 <hr />
 <h2 id="12-raci-reference">12. RACI Reference</h2>
 <p>For the full RACI matrix governing incident response ownership, see <code>L1-2.5-Roles-and-Responsibilities-v1.md</code>.</p>

@@ -921,10 +921,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-objective-justification-test" class="md-nav__link">
+  <a href="#42-positive-action-in-recruitment-and-promotion-ea-2010-s159" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 Objective Justification Test
+        4.2 Positive Action in Recruitment and Promotion (EA 2010, s.159)
       
     </span>
   </a>
@@ -932,10 +932,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-reasonable-adjustments-duty-ea-2010-s20" class="md-nav__link">
+  <a href="#44-objective-justification-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3 Reasonable Adjustments Duty (EA 2010, s.20)
+        4.4 Objective Justification Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-reasonable-adjustments-duty-ea-2010-s20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Reasonable Adjustments Duty (EA 2010, s.20)
       
     </span>
   </a>
@@ -1681,10 +1692,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-objective-justification-test" class="md-nav__link">
+  <a href="#42-positive-action-in-recruitment-and-promotion-ea-2010-s159" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2 Objective Justification Test
+        4.2 Positive Action in Recruitment and Promotion (EA 2010, s.159)
       
     </span>
   </a>
@@ -1692,10 +1703,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-reasonable-adjustments-duty-ea-2010-s20" class="md-nav__link">
+  <a href="#44-objective-justification-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3 Reasonable Adjustments Duty (EA 2010, s.20)
+        4.4 Objective Justification Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-reasonable-adjustments-duty-ea-2010-s20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Reasonable Adjustments Duty (EA 2010, s.20)
       
     </span>
   </a>
@@ -1870,8 +1892,8 @@
 <p>This document maps the compliance obligations and risks arising under the Equality Act 2010 (EA 2010) for the Scout CV screening system. It identifies, for each relevant protected characteristic, the mechanism by which algorithmic bias may create indirect discrimination risk, the applicable ICO November 2024 audit finding, the bias audit and monitoring obligations, EHRC enforcement exposure, and the required controls cross-referenced to this framework.</p>
 <p>This is the primary equality law reference document in the Sable AI Ltd AI Governance Framework. It should be read alongside:
 - <code>L2-3.1-UK-GDPR-Mapping-Matrix-v1.md</code> — for the UK GDPR Article 9 (special category data) implications of the same characteristics
-- <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> — for the operational bias detection and audit controls (forthcoming)
-- <code>L2-3.3-ICO-Audit-Gap-Analysis-v1.md</code> — for the ICO enforcement posture (forthcoming)</p>
+- <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> — for the operational bias detection and audit controls
+- <code>L2-3.3-ICO-Audit-Gap-Analysis-v1.md</code> — for the ICO enforcement posture</p>
 <p><strong>Note on source material:</strong> The Equality Act 2010 statutory text is referenced through the EHRC Employment Statutory Code of Practice (the statutory code issued under EA 2010 s.14) and the DSIT Responsible AI in Recruitment Guide (2024). Where specific statutory sections are referenced (e.g., s.19, s.20), these are identified by section number but the verbatim text was not included in the Stage 3 extraction file. These references should be verified against the current text of the EA 2010 at legislation.gov.uk before legal reliance.</p>
 <hr />
 <h2 id="2-indirect-discrimination-the-core-legal-framework">2. Indirect Discrimination: The Core Legal Framework</h2>
@@ -1921,7 +1943,7 @@
 </tr>
 <tr>
 <td><strong>Required controls</strong></td>
-<td>(1) <strong>Prompt controls:</strong> Instructions to the Claude API must explicitly prohibit evaluation based on, or inference of, racial/ethnic characteristics, names as proxies, or educational institutions as proxies. (2) <strong>Adverse impact monitoring:</strong> Measure shortlisting rates by name-based or self-disclosed ethnic group proxies where lawfully collected — see <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming) for methodology and lawfulness constraints. (3) <strong>Keyword audit:</strong> Review Scout's shortlisting criteria and any keyword-based filters for terms that function as racial proxies. (4) <strong>Customer contract:</strong> Prohibit customers from using Scout's filter functionality to exclude candidates on the basis of racial or ethnic characteristics.</td>
+<td>(1) <strong>Prompt controls:</strong> Instructions to the Claude API must explicitly prohibit evaluation based on, or inference of, racial/ethnic characteristics, names as proxies, or educational institutions as proxies. (2) <strong>Adverse impact monitoring:</strong> Measure shortlisting rates by name-based or self-disclosed ethnic group proxies where lawfully collected — see <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> for methodology and lawfulness constraints. (3) <strong>Keyword audit:</strong> Review Scout's shortlisting criteria and any keyword-based filters for terms that function as racial proxies. (4) <strong>Customer contract:</strong> Prohibit customers from using Scout's filter functionality to exclude candidates on the basis of racial or ethnic characteristics.</td>
 </tr>
 </tbody>
 </table>
@@ -1961,7 +1983,7 @@
 </tr>
 <tr>
 <td><strong>Required controls</strong></td>
-<td>(1) <strong>Reasonable adjustment pathway:</strong> Sable AI Ltd must ensure recruiter customers have an operational alternative screening pathway for candidates who disclose a disability or request an adjustment. This must be included in customer-facing guidance. (2) <strong>Employment gap de-weighting:</strong> Scout's scoring criteria must not penalise unexplained or non-linear employment histories beyond what is objectively justified for the role. (3) <strong>Pre-deployment pilot:</strong> DSIT recommends piloting with "a diverse range of users, including employers as well as affected communities including jobseekers from different backgrounds and experiences." This should include disabled candidates. (4) <strong>Candidate self-identification:</strong> Provide candidates with a clear channel to notify the recruiter of a disability and request a reasonable adjustment before or during AI screening. See <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming).</td>
+<td>(1) <strong>Reasonable adjustment pathway:</strong> Sable AI Ltd must ensure recruiter customers have an operational alternative screening pathway for candidates who disclose a disability or request an adjustment. This must be included in customer-facing guidance. (2) <strong>Employment gap de-weighting:</strong> Scout's scoring criteria must not penalise unexplained or non-linear employment histories beyond what is objectively justified for the role. (3) <strong>Pre-deployment pilot:</strong> DSIT recommends piloting with "a diverse range of users, including employers as well as affected communities including jobseekers from different backgrounds and experiences." This should include disabled candidates. (4) <strong>Candidate self-identification:</strong> Provide candidates with a clear channel to notify the recruiter of a disability and request a reasonable adjustment before or during AI screening. See <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -2033,7 +2055,7 @@
 </tr>
 <tr>
 <td><strong>Required controls</strong></td>
-<td>(1) <strong>Name and gender-neutralisation:</strong> Scout must not infer or act on gender derived from names, pronoun use, or other signals. Prompt instructions should explicitly exclude gender inference. (2) <strong>Career gap neutral treatment:</strong> Part-time periods and career gaps must not be scored negatively per se; context and the transferable skills developed during these periods must be considered. (3) <strong>Bias testing by gender:</strong> Where lawfully possible, conduct adverse impact analysis of Scout's shortlisting rates across gender groups. See <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming). (4) <strong>Language model audit:</strong> Where Scout uses a general-purpose language model, assess whether the model has known sex-based output biases and implement mitigations.</td>
+<td>(1) <strong>Name and gender-neutralisation:</strong> Scout must not infer or act on gender derived from names, pronoun use, or other signals. Prompt instructions should explicitly exclude gender inference. (2) <strong>Career gap neutral treatment:</strong> Part-time periods and career gaps must not be scored negatively per se; context and the transferable skills developed during these periods must be considered. (3) <strong>Bias testing by gender:</strong> Where lawfully possible, conduct adverse impact analysis of Scout's shortlisting rates across gender groups. See <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code>. (4) <strong>Language model audit:</strong> Where Scout uses a general-purpose language model, assess whether the model has known sex-based output biases and implement mitigations.</td>
 </tr>
 </tbody>
 </table>
@@ -2069,7 +2091,7 @@
 </tr>
 <tr>
 <td><strong>Required controls</strong></td>
-<td>(1) <strong>Maternity leave gap treatment:</strong> Scout's scoring must treat clearly labelled maternity leave periods as non-negative — equivalent to continuous employment for the relevant period. (2) <strong>Prompt instructions:</strong> Explicit instructions to the Claude API must prohibit any scoring signal derived from pregnancy or maternity information disclosed in the CV. (3) <strong>Output audit:</strong> Periodic review of Scout outputs for cases where a candidate has disclosed maternity leave to confirm the output is not adversely affected. (4) <strong>Transparency notice:</strong> Candidates must be told that AI screening is used and how to request human review. See <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code> (forthcoming).</td>
+<td>(1) <strong>Maternity leave gap treatment:</strong> Scout's scoring must treat clearly labelled maternity leave periods as non-negative — equivalent to continuous employment for the relevant period. (2) <strong>Prompt instructions:</strong> Explicit instructions to the Claude API must prohibit any scoring signal derived from pregnancy or maternity information disclosed in the CV. (3) <strong>Output audit:</strong> Periodic review of Scout outputs for cases where a candidate has disclosed maternity leave to confirm the output is not adversely affected. (4) <strong>Transparency notice:</strong> Candidates must be told that AI screening is used and how to request human review. See <code>L4-5.2-Candidate-Transparency-Notice-v1.md</code>.</td>
 </tr>
 </tbody>
 </table>
@@ -2077,8 +2099,17 @@
 <h2 id="4-cross-cutting-obligations">4. Cross-Cutting Obligations</h2>
 <h3 id="41-positive-action-ea-2010-s158">4.1 Positive Action (EA 2010, s.158)</h3>
 <p>Section 158 EA 2010 permits, but does not require, employers to take proportionate action to enable people sharing a protected characteristic to overcome a disadvantage, or to meet different needs, where the employer reasonably thinks that persons sharing the characteristic are at a disadvantage compared to those who do not. This is positive action, not positive discrimination — Scout must not be used to give automatic preference to candidates based on protected characteristics, even in a diversity programme context.</p>
-<p>Sable AI Ltd should advise recruiter customers that Scout outputs cannot be used as a mechanism for positive discrimination. Positive action in recruitment must be implemented through human judgment at the final selection stage, not through algorithmic adjustment of shortlisting scores.</p>
-<h3 id="42-objective-justification-test">4.2 Objective Justification Test</h3>
+<p>Sable AI Ltd should advise recruiter customers that Scout outputs cannot be used as a mechanism for positive discrimination. Where positive action is lawfully used in recruitment, it must be implemented through tightly controlled human decision-making under the Equality Act framework, not through algorithmic adjustment of Scout shortlisting scores.</p>
+<h3 id="42-positive-action-in-recruitment-and-promotion-ea-2010-s159">4.2 Positive Action in Recruitment and Promotion (EA 2010, s.159)</h3>
+<p>Section 159 EA 2010 is the specific positive action provision for recruitment and promotion decisions. It permits, but does not require, a person to take a protected characteristic into account at the point of making a recruitment or promotion decision, but only where the statutory conditions are satisfied: (1) the person reasonably thinks that persons sharing the characteristic are disadvantaged or under-represented; (2) the candidates are "as qualified as" each other; and (3) the action is proportionate. [LEGAL REVIEW REQUIRED]</p>
+<p><strong>Distinction from s.158:</strong> Section 158 is the general positive action provision (enabling proportionate action to overcome disadvantage or meet different needs). Section 159 is the narrower recruitment/promotion rule, limited to the equal-merit tie-break scenario. Both are permissive, not mandatory.</p>
+<p><strong>Implication for Scout:</strong></p>
+<p>Scout must not be configured to apply an automatic score uplift, ranking preference, or decision rule based on protected characteristics in order to achieve a diversity outcome. That would exceed the narrow s.159 framework and create substantial direct discrimination risk under EA 2010 s.13.</p>
+<p><strong>Operational rule for any reliance on s.159:</strong></p>
+<p>Any reliance on s.159 must be: (1) human-led; (2) case-specific; (3) applied only at the final recruitment or promotion decision stage; (4) supported by evidence of disadvantage or under-representation; and (5) used only where candidates are genuinely of equal merit.</p>
+<p><strong>Framework consequence:</strong></p>
+<p>Scout may support lawful recruitment processes by reducing arbitrary bias and generating structured candidate comparisons, but it must not itself implement positive action logic through protected-characteristic-based scoring or ranking.</p>
+<h3 id="44-objective-justification-test">4.4 Objective Justification Test</h3>
 <p>Per EHRC Employment Statutory Code of Practice, para 3.39, the objective justification test for any potentially discriminatory PCP has two stages:</p>
 <ol>
 <li><strong>Legitimate aim:</strong> Is the aim of the PCP legal, non-discriminatory, and does it represent a real, objective consideration?</li>
@@ -2086,7 +2117,7 @@
 </ol>
 <p>Where any of Scout's screening criteria produce an adverse impact on a protected group, Sable AI Ltd and its customers must be able to demonstrate objective justification against both stages. Sable AI Ltd should document the intended aims of each screening criterion and the evidence base for proportionality as part of its AI governance documentation.</p>
 <p><strong>[LEGAL REVIEW REQUIRED]</strong> — The objective justification analysis for any criterion producing an adverse impact requires legal advice on the facts.</p>
-<h3 id="43-reasonable-adjustments-duty-ea-2010-s20">4.3 Reasonable Adjustments Duty (EA 2010, s.20)</h3>
+<h3 id="45-reasonable-adjustments-duty-ea-2010-s20">4.5 Reasonable Adjustments Duty (EA 2010, s.20)</h3>
 <p>The duty to make reasonable adjustments applies in recruitment. Where Scout's use puts a disabled candidate at a substantial disadvantage, the recruiter customer must make a reasonable adjustment. DSIT guidance states that if a reasonable adjustment cannot be made, "this may require the system's removal from the interview process" for that candidate.</p>
 <p>Sable AI Ltd must ensure that its customer-facing documentation and product design support an alternative manual assessment route for candidates who require it.</p>
 <hr />
@@ -2101,7 +2132,7 @@
 - Bias monitoring using inferred protected characteristics is <strong>unlawful</strong>
 - Bias monitoring requires lawfully collected, candidate-consented, and sufficiently accurate demographic data
 - Where such data is unavailable, bias monitoring must use proxy methods (e.g., name-based surname analysis, adversarial testing with synthetic CVs) which are imperfect but do not rely on processing real candidates' special category data</p>
-<p>This tension is addressed in detail in <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code> (forthcoming).</p>
+<p>This tension is addressed in detail in <code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code>.</p>
 <h3 id="53-adverse-impact-ratio">5.3 Adverse Impact Ratio</h3>
 <p>Where bias monitoring data is available, the standard test for adverse impact is the <strong>4/5 (80%) rule</strong>: a selection rate for a protected group that is less than 80% of the rate for the highest-scoring group triggers a review requirement. This is a US EEOC standard that the EHRC Code does not explicitly adopt, but it provides a widely recognised statistical benchmark and a reasonable starting point for bias monitoring thresholds pending further UK regulatory guidance.</p>
 <p><strong>[LEGAL REVIEW REQUIRED]</strong> — UK courts and the EHRC apply a facts-and-circumstances approach to adverse impact; the 80% threshold is a reference point, not a legal safe harbour.</p>
@@ -2164,7 +2195,7 @@
 <p><strong>Direct vs. indirect discrimination:</strong> Where Scout infers a protected characteristic and acts on it (e.g., gender from name), this may constitute direct discrimination (s.13 EA 2010) rather than indirect discrimination. Legal analysis is required.</p>
 </li>
 <li>
-<p><strong>Positive action implementation:</strong> The parameters of lawful positive action under s.158 EA 2010 in the context of AI-assisted shortlisting require legal advice before any such programme is implemented.</p>
+<p><strong>Positive action implementation:</strong> The parameters of lawful positive action under s.158 (general) and s.159 (recruitment and promotion) EA 2010 in the context of AI-assisted shortlisting require legal advice before any such programme is implemented. In particular, the equal-merit assessment required by s.159 must not be operationalised through Scout's scoring or ranking logic.</p>
 </li>
 <li>
 <p><strong>Adverse impact threshold:</strong> The appropriate adverse impact threshold for UK employment law purposes, and the point at which Scout outputs would require suspension pending investigation, requires legal advice.</p>
@@ -2193,15 +2224,15 @@
 </tr>
 <tr>
 <td><code>L2-3.3-ICO-Audit-Gap-Analysis-v1.md</code></td>
-<td>ICO enforcement posture on AI discrimination in recruitment (forthcoming)</td>
+<td>ICO enforcement posture on AI discrimination in recruitment</td>
 </tr>
 <tr>
 <td><code>L3-4.2-Bias-Monitoring-Protocol-v1.md</code></td>
-<td>Operational bias detection and audit methodology (forthcoming)</td>
+<td>Operational bias detection and audit methodology</td>
 </tr>
 <tr>
 <td><code>L4-5.2-Candidate-Transparency-Notice-v1.md</code></td>
-<td>Candidate notice covering right to human review and right to contest (forthcoming)</td>
+<td>Candidate notice covering right to human review and right to contest</td>
 </tr>
 </tbody>
 </table>
