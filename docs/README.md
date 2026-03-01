@@ -12,9 +12,9 @@ Built for **Sable AI Ltd**, a fictional UK early-stage startup whose product, **
 
 | Regulatory instrument | Scope |
 |---|---|
-| UK GDPR (retained EU law) | Lawful basis, data minimisation, Art. 22 ADM safeguards, data subject rights, DPIA |
+| UK GDPR (retained EU law, as amended) | Lawful basis, data minimisation, Arts. 22A–22D automated decision-making safeguards, data subject rights, DPIA |
 | DPA 2018 | Schedule 1 special category conditions, accountability obligations |
-| Data (Use and Access) Act 2025 | Arts. 22A–22D — updated ADM provisions |
+| Data (Use and Access) Act 2025 | Amendments to UK GDPR automated decision-making provisions (Arts. 22A–22D, in force 5 February 2026) |
 | Equality Act 2010 | Protected characteristics, indirect discrimination risk in algorithmic screening |
 | ICO AI in Recruitment guidance | ICO November 2024 audit findings — live enforcement benchmark |
 | DSIT Responsible AI in Recruitment Guide (March 2024) | Bias monitoring methodology, transparency obligations |
