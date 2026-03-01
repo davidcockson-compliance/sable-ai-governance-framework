@@ -6,7 +6,6 @@ site_description: >
 site_author: David Cockson
 repo_url: https://github.com/davidcockson-compliance/sable-ai-governance-framework
 repo_name: sable-ai-governance-framework
-edit_uri: edit/main/docs/
 docs_dir: docs
 
 theme:
@@ -31,7 +30,6 @@ theme:
     - toc.follow
     - search.suggest
     - search.highlight
-    - content.action.edit
 
 plugins:
   - search
