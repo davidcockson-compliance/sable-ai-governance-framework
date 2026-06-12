@@ -10,26 +10,47 @@ docs_dir: docs
 
 theme:
   name: material
+  font: false
+  icon:
+    logo: material/shield-account
+    repo: fontawesome/brands/github
   palette:
-    - scheme: default
-      primary: teal
-      accent: teal
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: teal
-      accent: teal
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    scheme: slate
+    primary: custom
+    accent: custom
   features:
     - navigation.sections
     - navigation.expand
     - navigation.path
+    - navigation.top
+    - navigation.footer
     - toc.follow
     - search.suggest
     - search.highlight
+    - content.code.copy
+
+extra:
+  generator: false
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - toc:
+      permalink: true
 
 plugins:
   - search

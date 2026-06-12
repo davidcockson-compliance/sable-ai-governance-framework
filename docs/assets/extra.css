@@ -1,0 +1,258 @@
+/* Theme override — matches the davidcockson.com design language:
+   near-black background, hairline borders, lime accent used sparingly,
+   self-hosted Inter / JetBrains Mono (no Google Fonts CDN). */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/inter-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/inter-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/inter-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/inter-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/jetbrains-mono-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fonts/jetbrains-mono-600.woff2") format("woff2");
+}
+
+:root {
+  --dc-bg:      #0d0e10;
+  --dc-surf:    #16181c;
+  --dc-surf-hi: #1d2026;
+  --dc-line:    #2a2d33;
+  --dc-txt:     #e9eaec;
+  --dc-sub:     #8a8d94;
+  --dc-accent:  #c2ff5b;
+
+  --md-text-font: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --md-code-font: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-hue: 220;
+  --md-default-bg-color: var(--dc-bg);
+  --md-default-fg-color: var(--dc-txt);
+  --md-default-fg-color--light: #c7c9cd;
+  --md-default-fg-color--lighter: var(--dc-sub);
+  --md-default-fg-color--lightest: var(--dc-line);
+
+  --md-primary-fg-color: var(--dc-bg);
+  --md-primary-bg-color: var(--dc-txt);
+  --md-primary-bg-color--light: var(--dc-sub);
+
+  --md-accent-fg-color: var(--dc-accent);
+  --md-accent-fg-color--transparent: rgba(194, 255, 91, 0.08);
+
+  --md-typeset-a-color: var(--dc-accent);
+  --md-typeset-mark-color: rgba(194, 255, 91, 0.25);
+  --md-typeset-table-color: var(--dc-line);
+
+  --md-code-bg-color: var(--dc-surf);
+  --md-code-fg-color: var(--dc-txt);
+
+  --md-footer-bg-color: var(--dc-bg);
+  --md-footer-bg-color--dark: var(--dc-bg);
+  --md-footer-fg-color: var(--dc-txt);
+  --md-footer-fg-color--light: var(--dc-sub);
+  --md-footer-fg-color--lighter: var(--dc-sub);
+
+  --md-admonition-fg-color: var(--dc-txt);
+  --md-shadow-z1: none;
+  --md-shadow-z2: none;
+  --md-shadow-z3: none;
+}
+
+/* Header — flat, hairline divider instead of drop shadow */
+.md-header {
+  border-bottom: 1px solid var(--dc-line);
+  box-shadow: none;
+}
+.md-header__title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Search field — card surface with hairline border */
+[data-md-color-scheme="slate"] .md-search__form {
+  background: var(--dc-surf);
+  border: 1px solid var(--dc-line);
+  border-radius: 8px;
+}
+[data-md-color-scheme="slate"] .md-search__form:hover {
+  background: var(--dc-surf-hi);
+}
+
+/* Typography */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--dc-txt);
+}
+.md-typeset h1 {
+  margin-bottom: 0.4em;
+}
+.md-typeset h1 + p > em:only-child,
+.dc-sub {
+  color: var(--dc-sub);
+  font-style: normal;
+  font-size: 0.85rem;
+}
+.md-typeset a:hover {
+  color: #d4ff85;
+}
+
+/* Inline regulatory pills */
+.dc-pill {
+  display: inline-block;
+  font-family: var(--md-code-font);
+  font-size: 0.62rem;
+  line-height: 1;
+  padding: 5px 9px;
+  margin: 2px 3px 2px 0;
+  border: 1px solid var(--dc-line);
+  border-radius: 999px;
+  background: var(--dc-surf);
+  color: var(--dc-sub);
+  white-space: nowrap;
+}
+
+/* Tables — the workhorse of these docs; card surface, hairline grid */
+.md-typeset table:not([class]) {
+  background: var(--dc-surf);
+  border: 1px solid var(--dc-line);
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 0.7rem;
+}
+.md-typeset table:not([class]) th {
+  background: var(--dc-surf-hi);
+  color: var(--dc-txt);
+  font-weight: 600;
+}
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--dc-line);
+}
+.md-typeset table:not([class]) tr:hover {
+  background: var(--dc-surf-hi);
+  box-shadow: none;
+}
+
+/* Code blocks */
+.md-typeset pre > code {
+  border: 1px solid var(--dc-line);
+  border-radius: 8px;
+}
+
+/* Admonitions — flat surfaces, keep the type colour only on the stripe */
+.md-typeset .admonition,
+.md-typeset details {
+  background: var(--dc-surf);
+  border-width: 1px;
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 0.7rem;
+}
+
+/* Sidebar navigation — lime for the active page only */
+.md-nav__link--active,
+.md-nav__link--active code {
+  color: var(--dc-accent);
+}
+.md-nav__item--section > .md-nav__link {
+  font-weight: 600;
+  color: var(--dc-txt);
+}
+
+/* Grid cards (landing page) — hover lift borrowed from the main site */
+.md-typeset .grid.cards > ol > li,
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  background: var(--dc-surf);
+  border: 1px solid var(--dc-line);
+  border-radius: 10px;
+  box-shadow: none;
+  transition: transform 0.14s ease, background 0.14s ease, border-color 0.14s ease;
+}
+.md-typeset .grid.cards > ol > li:hover,
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid > .card:hover {
+  transform: translate(-1px, -1px);
+  background: var(--dc-surf-hi);
+  border-color: var(--dc-accent);
+  box-shadow: none;
+}
+.md-typeset .grid.cards > ul > li hr,
+.md-typeset .grid.cards > ol > li hr {
+  border-color: var(--dc-line);
+}
+
+/* Buttons */
+.md-typeset .md-button {
+  border: 1px solid var(--dc-line);
+  border-radius: 8px;
+  color: var(--dc-txt);
+}
+.md-typeset .md-button:hover {
+  border-color: var(--dc-accent);
+  background: var(--dc-surf-hi);
+  color: var(--dc-txt);
+}
+.md-typeset .md-button--primary {
+  background: var(--dc-accent);
+  border-color: var(--dc-accent);
+  color: var(--dc-bg);
+}
+.md-typeset .md-button--primary:hover {
+  background: #d4ff85;
+  color: var(--dc-bg);
+}
+
+/* Footer */
+.md-footer {
+  border-top: 1px solid var(--dc-line);
+}
+
+/* Back-to-top pill */
+.md-top {
+  background: var(--dc-surf-hi);
+  border: 1px solid var(--dc-line);
+  color: var(--dc-txt);
+  box-shadow: none;
+}
+.md-top:hover {
+  background: var(--dc-surf-hi);
+  border-color: var(--dc-accent);
+  color: var(--dc-accent);
+}

@@ -1,10 +1,19 @@
-# Sable AI Ltd — AI Governance Framework
+# Sable AI — UK Recruitment AI Governance Framework
 
-An open-source AI governance and operational architecture framework for UK HR/recruitment AI providers.
+<p class="dc-sub">An open-source AI governance and operational architecture framework for UK HR/recruitment AI providers. Built for <strong>Sable AI Ltd</strong>, a fictional UK early-stage startup whose product, <strong>Scout</strong>, is an AI-powered CV screening and candidate shortlisting tool built on the Anthropic Claude API.</p>
 
-Built for **Sable AI Ltd**, a fictional UK early-stage startup whose product, **Scout**, is an AI-powered CV screening and candidate shortlisting tool built on the Anthropic Claude API.
+<span class="dc-pill">UK GDPR</span><span class="dc-pill">DPA 2018</span><span class="dc-pill">Data (Use and Access) Act 2025</span><span class="dc-pill">Equality Act 2010</span><span class="dc-pill">ICO AI in Recruitment</span><span class="dc-pill">CC BY 4.0</span>
 
-**This is a speculative demonstration piece and educational resource.** It is not a legal compliance certification and must not be used as a substitute for qualified legal advice. See the [Disclaimer](DISCLAIMER.md) before use.
+!!! warning "Speculative demonstration piece"
+
+    This framework is an educational resource. It is **not a legal compliance
+    certification** and must not be used as a substitute for qualified legal
+    advice. Every assumption is flagged inline and logged; every open legal
+    question is marked `[LEGAL REVIEW REQUIRED]`. Read the
+    [Disclaimer](DISCLAIMER.md) before use.
+
+[Start with Stage 1](stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md){ .md-button .md-button--primary }
+[Assumptions Log](ASSUMPTIONS-LOG.md){ .md-button }
 
 ---
 
@@ -25,24 +34,66 @@ Built for **Sable AI Ltd**, a fictional UK early-stage startup whose product, **
 
 ### Phase 1 — Governance Framework (14 documents)
 
-**Stage 1 — Regulatory Orientation**
-Situates Scout within UK law. Covers all applicable instruments, a UK vs EU regulatory comparison, and a source registry.
+<div class="grid cards" markdown>
 
-**Stage 2 — Governance Foundation**
-AI system inventory, risk classification, data flow map, governance policy, and RACI for a 10–15 person team.
+-   :material-compass-outline: **Stage 1 — Regulatory Orientation**
 
-**Stage 3 — Regulatory Alignment**
-UK GDPR compliance matrix, Equality Act 2010 discrimination risk map, ICO audit gap analysis, and a full DPIA template.
+    ---
 
-**Stage 4 — Monitoring & Controls**
-Metrics-based monitoring framework (23 KPIs), bias monitoring protocol (adverse impact ratio, four-fifths rule, demographic parity testing), and incident response plan.
+    Situates Scout within UK law: every applicable instrument, a UK vs EU
+    regulatory comparison, and a source registry.
 
-**Stage 5 — Commercial Packaging**
-Data Processing Agreement templates (agency customer with Art. 26 joint controller provisions + in-house HR customer), and candidate transparency notice in plain English.
+    [:octicons-arrow-right-24: Orientation Note](stage-1-regulatory-orientation/STAGE1-Regulatory-Orientation-Note-v1.md)
 
-### Phase 2 — Scout Worked Examples (4 documents)
+-   :material-office-building-cog-outline: **Stage 2 — Governance Foundation**
 
-The Phase 1 framework templates populated with Scout's confirmed technical architecture: Python/FastAPI backend, pdfplumber/python-docx CV parsing, Anthropic Claude API (`claude-sonnet-4-6`), PostgreSQL on AWS RDS, S3 file storage, React TypeScript frontend.
+    ---
+
+    AI system inventory, risk classification, data flow map, governance
+    policy, and a RACI for a 10–15 person team.
+
+    [:octicons-arrow-right-24: AI System Inventory](stage-2-governance-foundation/L1-2.1-AI-System-Inventory-v1.md)
+
+-   :material-scale-balance: **Stage 3 — Regulatory Alignment**
+
+    ---
+
+    UK GDPR compliance matrix, Equality Act 2010 discrimination risk map,
+    ICO audit gap analysis, and a full DPIA template.
+
+    [:octicons-arrow-right-24: UK GDPR Mapping Matrix](stage-3-regulatory-alignment/L2-3.1-UK-GDPR-Mapping-Matrix-v1.md)
+
+-   :material-monitor-eye: **Stage 4 — Monitoring & Controls**
+
+    ---
+
+    Metrics-based monitoring framework (23 KPIs), bias monitoring protocol
+    (adverse impact ratio, four-fifths rule, demographic parity testing),
+    and incident response plan.
+
+    [:octicons-arrow-right-24: Monitoring Framework](stage-4-monitoring-controls/L3-4.1-Monitoring-Framework-v1.md)
+
+-   :material-handshake-outline: **Stage 5 — Commercial Packaging**
+
+    ---
+
+    Data Processing Agreement templates (agency customer with Art. 26 joint
+    controller provisions + in-house HR customer), and a candidate
+    transparency notice in plain English.
+
+    [:octicons-arrow-right-24: DPA Template](stage-5-commercial-packaging/L4-5.1-Data-Processing-Agreement-Template-v1.md)
+
+-   :material-test-tube: **Phase 2 — Scout Worked Examples**
+
+    ---
+
+    The Phase 1 templates populated with Scout's confirmed architecture:
+    Python/FastAPI, pdfplumber/python-docx CV parsing, Anthropic Claude API,
+    PostgreSQL on AWS RDS, S3, React TypeScript frontend.
+
+    [:octicons-arrow-right-24: Scout System Profile](phase-2-worked-examples/P2-Scout-System-Profile-v1.md)
+
+</div>
 
 ---
 
@@ -103,3 +154,4 @@ You are free to use, adapt, and redistribute this framework with attribution. If
 ## Related
 
 - [Pickles GmbH AI Governance Framework](https://github.com/davidcockson-compliance/pickles-gmbh-ai-governance-framework) — EU/German jurisdiction equivalent (EU AI Act, GDPR, BDSG)
+- Built by [David Cockson](https://davidcockson.com)
